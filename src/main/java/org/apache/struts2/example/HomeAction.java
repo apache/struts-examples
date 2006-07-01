@@ -15,17 +15,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.struts.action2.example;
+package org.apache.struts2.example;
 
-import junit.framework.TestCase;
+import com.opensymphony.xwork.ActionSupport;
 
 /**
- * <code>HomeActionTest</code>
+ * <code>HomeAction</code>
  *
  */
-public class HomeActionTest extends TestCase {
-	
-	public void testHomeAction() throws Exception {
-		assertTrue(true);
-	}
+public class HomeAction extends ActionSupport {
+
+	private static final long serialVersionUID = -3881551454078687096L;
+
+	/**
+     * A default implementation that does nothing an returns "success".
+     *
+     * @return {@link #SUCCESS}
+     */
+    public String execute() throws Exception {
+        return SUCCESS;
+    }
 }
