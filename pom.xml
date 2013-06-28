@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>struts.apache.org</groupId>
+  <artifactId>struts2examples</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  <name>struts2examples</name>
+  <description>
+	  This is the parent pom for the Struts 2 examples that
+	  go with the Struts 2 Getting Started series of tutorials.
+  </description>
+  
+  <properties>
+	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	  <struts2.version>2.3.15</struts2.version>
+	  <log4j.version>1.2.14</log4j.version>
+  </properties>
+  
+  <developers>
+	  <developer>
+	    <id>bphillips</id>
+	    <name>Bruce Phillips</name>
+	    <email>bphillips@ku.edu</email>
+	    <organization>Apache Struts 2 Committer</organization>
+	    <roles>
+	      <role>Committer</role>
+	    </roles>
+	  </developer>
+	</developers>
+  
+  <modules>
+    <module>basic_struts</module>
+  </modules>
+</project>
