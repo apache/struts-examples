@@ -31,5 +31,6 @@
   
   <modules>
     <module>basic_struts</module>
+    <module>helloworld</module>
   </modules>
 </project>
