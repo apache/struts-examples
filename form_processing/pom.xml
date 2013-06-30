@@ -7,14 +7,15 @@
     <artifactId>struts2examples</artifactId>
     <version>1.0.0</version>
   </parent>
-  <artifactId>basic_struts</artifactId>
-  <name>basic_struts</name>
-  <description>Basic Struts 2 example application</description>
-  
-    <packaging>war</packaging>
-  
-	<build>
-		<finalName>basic_struts</finalName>
-	</build>
+  <artifactId>form_processing</artifactId>
 
+  <name>Form Processing</name>
+ 
+  <description>Form processing example application for the 
+  Struts 2 getting started tutorials</description>
+  <packaging>war</packaging>
+  
+      <build>
+		<finalName>form_processing</finalName>
+	</build>
 </project>

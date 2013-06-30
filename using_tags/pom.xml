@@ -7,14 +7,15 @@
     <artifactId>struts2examples</artifactId>
     <version>1.0.0</version>
   </parent>
-  <artifactId>basic_struts</artifactId>
-  <name>basic_struts</name>
-  <description>Basic Struts 2 example application</description>
-  
-    <packaging>war</packaging>
-  
-	<build>
-		<finalName>basic_struts</finalName>
-	</build>
+  <artifactId>using_tags</artifactId>
+  <name>using_tags</name>
+  <description>Struts 2 example application for the
+  Using Struts 2 Tags getting started tutorial</description>
 
+  <packaging>war</packaging>
+  
+  	<build>
+		<finalName>using_tags</finalName>
+	</build>
+  
 </project>

@@ -5,7 +5,7 @@
   <artifactId>struts2examples</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
-  <name>struts2examples</name>
+  <name>Struts 2 Examples</name>
   <description>
 	  This is the parent pom for the Struts 2 examples that
 	  go with the Struts 2 Getting Started series of tutorials.
@@ -32,6 +32,9 @@
   <modules>
     <module>basic_struts</module>
     <module>helloworld</module>
+    <module>using_tags</module>
+    <module>coding_actions</module>
+    <module>form_processing</module>
   </modules>
   
   	<dependencies>
