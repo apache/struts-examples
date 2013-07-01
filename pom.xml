@@ -35,6 +35,7 @@
     <module>using_tags</module>
     <module>coding_actions</module>
     <module>form_processing</module>
+    <module>form_validation</module>
   </modules>
   
   	<dependencies>
