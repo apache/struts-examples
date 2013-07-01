@@ -38,6 +38,7 @@
     <module>form_validation</module>
     <module>message_resource</module>
     <module>exception_handling</module>
+    <module>debugging_struts</module>
   </modules>
   
   	<dependencies>
