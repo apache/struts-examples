@@ -41,6 +41,7 @@
     <module>debugging_struts</module>
     <module>form_tags</module>
     <module>form_xml_validation</module>
+    <module>wildcard_method_selection</module>
   </modules>
   
   	<dependencies>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration PUBLIC "-//log4j/log4j Configuration//EN" "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+    
+    <appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.SimpleLayout"/>
+    </appender>
+    
+
+    <!-- specify the logging level for loggers from other libraries -->
+    <logger name="com.opensymphony">
+    	<level value="ERROR" />
+    </logger>
+
+    <logger name="org.apache.struts2">
+    	 <level value="ERROR" />
+    </logger>
+    
+      <!-- log only ERROR and above messages for loggers with
+    a name of the name value below -->
+    <logger name="org.apache.struts.tutorials">
+    	<level value="DEGUG" />
+    </logger>
+
+  
+
+   <!-- for all other loggers log only info and above log messages -->
+     <root>
+        <priority value="WARN"/> 
+        <appender-ref ref="STDOUT" /> 
+     </root> 
+    
+</log4j:configuration> 
+
