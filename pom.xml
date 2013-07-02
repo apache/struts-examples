@@ -40,6 +40,7 @@
     <module>exception_handling</module>
     <module>debugging_struts</module>
     <module>form_tags</module>
+    <module>form_xml_validation</module>
   </modules>
   
   	<dependencies>
