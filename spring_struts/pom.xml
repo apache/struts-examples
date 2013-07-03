@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>struts.apache.org</groupId>
+    <artifactId>struts2examples</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <artifactId>spring_struts</artifactId>
+
+  <name>spring_struts</name>
+
+  <packaging>war</packaging>
+  
+  <dependencies>
+  		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-spring-plugin</artifactId>
+			<version>${struts2.version}</version>
+		</dependency>
+  </dependencies>
+      <build>
+		<finalName>spring_struts</finalName>
+	</build>
+
+</project>

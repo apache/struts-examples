@@ -43,6 +43,7 @@
     <module>form_xml_validation</module>
     <module>wildcard_method_selection</module>
     <module>themes</module>
+    <module>spring_struts</module>
   </modules>
   
   	<dependencies>
