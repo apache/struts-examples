@@ -45,6 +45,7 @@
     <module>themes</module>
     <module>spring_struts</module>
     <module>annotations</module>
+    <module>interceptors</module>
   </modules>
   
   	<dependencies>
