@@ -14,7 +14,7 @@
 
 <p>Use the form below to edit your information.</p>
 
-<s:form action="save" method="post" theme="xhtml">
+<s:form action="save" method="post" theme="KUTheme">
 <s:textfield key="personBean.firstName" /> 
 <s:textfield key="personBean.lastName" /> 
 <s:select key="personBean.sport" list="sports" />
