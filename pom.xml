@@ -44,6 +44,7 @@
     <module>wildcard_method_selection</module>
     <module>themes</module>
     <module>spring_struts</module>
+    <module>annotations</module>
   </modules>
   
   	<dependencies>
