@@ -46,6 +46,7 @@
     <module>spring_struts</module>
     <module>annotations</module>
     <module>interceptors</module>
+    <module>unit_testing</module>
   </modules>
   
   	<dependencies>
