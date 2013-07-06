@@ -47,6 +47,7 @@
     <module>annotations</module>
     <module>interceptors</module>
     <module>unit_testing</module>
+    <module>http_session</module>
   </modules>
   
   	<dependencies>
@@ -64,4 +65,19 @@
 		</dependency>
 
 	</dependencies>
+	
+		<build>
+		
+		<plugins>
+		    <plugin>
+	    		<groupId>org.apache.maven.plugins</groupId>
+	    		<artifactId>maven-compiler-plugin</artifactId>
+	    		<version>2.3.2</version>
+	    		<configuration>
+	          		<source>1.6</source>
+	          		<target>1.6</target>
+	        	</configuration>
+    		</plugin>
+    	</plugins>
+	</build>
 </project>
