@@ -1,4 +1,4 @@
-package org.apache.struts.actions;
+package example.actions;
 
 import org.apache.log4j.Logger;
 

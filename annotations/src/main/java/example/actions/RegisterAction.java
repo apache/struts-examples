@@ -1,10 +1,11 @@
-package org.apache.struts.actions;
+package example.actions;
 
 import org.apache.log4j.Logger;
-import org.apache.struts.annotations.model.Person;
 import org.apache.struts2.convention.annotation.Action;
 
 import com.opensymphony.xwork2.ActionSupport;
+
+import example.model.Person;
 
 /**
  * Acts as a controller to handle actions

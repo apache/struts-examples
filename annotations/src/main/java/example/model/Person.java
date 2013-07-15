@@ -1,4 +1,4 @@
-package org.apache.struts.annotations.model;
+package example.model;
 
 
 /**
