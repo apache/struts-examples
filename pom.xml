@@ -50,6 +50,7 @@
     <module>http_session</module>
     <module>preparable_interface</module>
     <module>exclude_parameters</module>
+    <module>restful2actionmapper</module>
   </modules>
   
   	<dependencies>

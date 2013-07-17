@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="true" />
+
+	<constant name="struts.mapper.class"
+		value="org.apache.struts2.dispatcher.mapper.Restful2ActionMapper" />
+
+	<constant name="struts.enable.SlashesInActionNames" value="true" />
+	
+	<constant name="struts.mapper.alwaysSelectFullNamespace"
+		value="false" />
+		
+	<package name="basicstruts2" extends="struts-default">
+      <!-- the param name="id" with a value of {1} below tells Struts that the 
+      second string (delimited by the /) is the value Struts should pass to the setId method 
+      of the MovieAction class - so for example a url of movie/1 will cause
+      1 to be passed to setId method of class MovieAction
+      if no method is specified in the URL then the view method will be called
+      after the setId method -->
+		<action name="movie/*" class="org.apache.struts.example.MovieAction">
+			<param name="id">{1}</param>
+			<result name="success">/movie.jsp</result>
+		</action>
+
+	</package>
+
+</struts>
