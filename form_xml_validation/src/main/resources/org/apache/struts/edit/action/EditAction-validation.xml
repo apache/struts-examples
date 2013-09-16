@@ -23,7 +23,7 @@
  </validator>
 <validator type="regex">
 	<param name="fieldname">personBean.phoneNumber</param>
-	<param name="expression"><![CDATA[\d{3}-\d{3}-\d{4}]]></param>
+	<param name="regex"><![CDATA[\d{3}-\d{3}-\d{4}]]></param>
 	<message>Phone number must be entered as 999-999-9999.</message>
 </validator>
 <validator type="fieldexpression">
