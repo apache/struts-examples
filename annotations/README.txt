@@ -10,7 +10,7 @@ The war file is created in the target sub-folder.
 Copy the war file to your Servlet container (e.g. Tomcat, GlassFish) and 
 then startup the Servlet container.
 
-In a web browser go to:  http://localhost:8080/annotations/index.action.
+In a web browser go to:  http://localhost:8080/annotations/index.jsp 
 
 You should see a web page with Welcome to Struts 2!
 
