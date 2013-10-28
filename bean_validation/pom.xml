@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>struts.apache.org</groupId>
+		<artifactId>struts2examples</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>bean_validation</artifactId>
+
+	<name>Bean Validation</name>
+	<description>bean (JSR 303) validation example application for the 
+  Struts 2 getting started tutorials</description>
+
+	<packaging>war</packaging>
+
+	<build>
+		<finalName>bean_validation</finalName>
+	</build>
+	<dependencies>
+
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.3.1.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.umeshawasthi</groupId>
+			<artifactId>struts2-jsr303-validation-plugin</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+	</dependencies>
+
+</project>
