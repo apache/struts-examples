@@ -14,14 +14,14 @@
 
 <p>Use the form below to edit your information.</p>
 
-<s:form action="save" method="post" theme="xhtml">
-<s:textfield key="personBean.firstName" /> 
-<s:textfield key="personBean.lastName" /> 
+<s:form action="save" method="post">
+<s:textfield key="personBean.firstName" />
+<s:textfield key="personBean.lastName" />
 <s:select key="personBean.sport" list="sports" />
 <s:radio key="personBean.gender" list="genders" />
 <s:select key="personBean.residency" list="states" listKey="stateAbbr" listValue="stateName" />
 <s:checkbox key="personBean.over21" />
-<s:checkboxlist key="personBean.carModels" list="carModelsAvailable" theme="KUTheme" />
+<s:checkboxlist key="personBean.carModels" list="carModelsAvailable" />
 <s:submit key="submit" />
 </s:form>
 
