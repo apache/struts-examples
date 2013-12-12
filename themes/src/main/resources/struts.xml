@@ -6,6 +6,7 @@
 <struts>
 
 	<constant name="struts.devMode" value="true" />
+    <constant name="struts.ui.theme" value="KUTheme"/>
 
 	<package name="basicstruts2" extends="struts-default">
 
