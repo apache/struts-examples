@@ -1,61 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>struts.apache.org</groupId>
-  <artifactId>struts2examples</artifactId>
-  <version>1.0.0</version>
-  <packaging>pom</packaging>
-  <name>Struts 2 Examples</name>
-  <description>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>struts.apache.org</groupId>
+	<artifactId>struts2examples</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	<name>Struts 2 Examples</name>
+	<description>
 	  This is the parent pom for the Struts 2 examples that
 	  go with the Struts 2 Getting Started series of tutorials.
   </description>
-  
-  <properties>
-	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	  <struts2.version>2.3.15.3</struts2.version>
-	  <log4j.version>1.2.14</log4j.version>
-  </properties>
-  
-  <developers>
-	  <developer>
-	    <id>bphillips</id>
-	    <name>Bruce Phillips</name>
-	    <email>bphillips@ku.edu</email>
-	    <organization>Apache Struts 2 Committer</organization>
-	    <roles>
-	      <role>Committer</role>
-	    </roles>
-	  </developer>
+
+	<properties>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<struts2.version>2.3.16</struts2.version>
+
+		<log4j.version>1.2.17</log4j.version>
+
+	</properties>
+
+	<developers>
+		<developer>
+			<id>bphillips</id>
+			<name>Bruce Phillips</name>
+			<email>bphillips@ku.edu</email>
+			<organization>Apache Struts 2 Committer</organization>
+			<roles>
+				<role>Committer</role>
+			</roles>
+		</developer>
 	</developers>
-  
-  <modules>
-    <module>basic_struts</module>
-    <module>helloworld</module>
-    <module>using_tags</module>
-    <module>coding_actions</module>
-    <module>form_processing</module>
-    <module>form_validation</module>
-    <module>message_resource</module>
-    <module>exception_handling</module>
-    <module>debugging_struts</module>
-    <module>form_tags</module>
-    <module>form_xml_validation</module>
-    <module>control_tags</module>
-    <module>wildcard_method_selection</module>
-    <module>themes</module>
-    <module>spring_struts</module>
-    <module>annotations</module>
-    <module>interceptors</module>
-    <module>unit_testing</module>
-    <module>http_session</module>
-    <module>preparable_interface</module>
-    <module>exclude_parameters</module>
-    <module>restful2actionmapper</module>
-    <module>bean_validation</module>
-  </modules>
-  
-  	<dependencies>
+
+	<modules>
+		<module>basic_struts</module>
+		<module>helloworld</module>
+		<module>using_tags</module>
+		<module>coding_actions</module>
+		<module>form_processing</module>
+		<module>form_validation</module>
+		<module>message_resource</module>
+		<module>exception_handling</module>
+		<module>debugging_struts</module>
+		<module>form_tags</module>
+		<module>form_xml_validation</module>
+		<module>control_tags</module>
+		<module>wildcard_method_selection</module>
+		<module>themes</module>
+		<module>spring_struts</module>
+		<module>annotations</module>
+		<module>interceptors</module>
+		<module>unit_testing</module>
+		<module>http_session</module>
+		<module>preparable_interface</module>
+		<module>exclude_parameters</module>
+		<module>restful2actionmapper</module>
+		<module>bean_validation</module>
+	</modules>
+
+
+
+	<dependencies>
 
 		<dependency>
 			<groupId>org.apache.struts</groupId>
@@ -70,19 +77,23 @@
 		</dependency>
 
 	</dependencies>
-	
-		<build>
-		
+
+
+
+	<build>
+
+
+
 		<plugins>
-		    <plugin>
-	    		<groupId>org.apache.maven.plugins</groupId>
-	    		<artifactId>maven-compiler-plugin</artifactId>
-	    		<version>2.3.2</version>
-	    		<configuration>
-	          		<source>1.6</source>
-	          		<target>1.6</target>
-	        	</configuration>
-    		</plugin>
-    	</plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>
