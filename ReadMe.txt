@@ -11,4 +11,4 @@ You can then copy the .war files to your Servlet container
 (e.g. Tomcat, Jetty, GlassFish, etc).
 
 There is a ReadMe.txt file in each module with instructions 
-the URL to view that application.
+and the URL to view that application.
