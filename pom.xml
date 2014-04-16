@@ -58,6 +58,7 @@
         <module>exclude_parameters</module>
         <module>restful2actionmapper</module>
         <module>bean_validation</module>
+        <module>crud</module>
     </modules>
 
 
