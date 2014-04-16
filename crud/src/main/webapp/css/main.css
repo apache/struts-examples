@@ -1,0 +1,56 @@
+html, body  {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    color: black;
+    background-color: white;
+    font-family: Verdana, Arial, sans-serif;
+    font-size:12px;
+}
+.titleDiv {
+    background-color: #EFFBEF;
+    font-weight:bold;
+    font-size:18px;
+    text-align:left;
+    padding-left:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border:2px solid #8F99EF;
+}
+h1 { font-weight:bold; color: brown; font-size:15px; text-align:left;}
+
+td { font-size:12px; padding-right:10px; }
+th { text-align:left; font-weight:bold; font-size:13px; padding-right:10px; }
+.tdLabel { font-weight: bold; white-space:nowrap; vertical-align:top;}
+
+A { color:#4A825A; text-decoration:none;}
+A:link { text-decoration:none;}
+A:visited { text-decoration:none;}
+A:hover { text-decoration:none; color: red;}
+
+.borderAll {
+    border: 2px solid #8F99EF;
+}
+
+.butStnd {
+    font-family:arial,sans-serif;
+    font-size:11px;
+    width:105px;
+    background-color:#DCDFFA ;color:#4A825A;font-weight:bold;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+.errorSection {
+    padding-left:18px;
+    padding-top:2px;
+    padding-bottom:10px;
+    padding-right:5px;
+}
+
+.even { background-color: #EFFBEF; }
+.odd { background-color: white; }
+
+.nowrap { white-space:nowrap; }
