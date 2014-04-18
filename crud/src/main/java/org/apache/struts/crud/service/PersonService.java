@@ -3,6 +3,11 @@ package org.apache.struts.crud.service;
 import org.apache.struts.crud.model.Country;
 import org.apache.struts.crud.model.Person;
 
+/**
+ * Define methods a PersonService must implement
+ * to provide services related to a Person class.
+ * @author bphillips
+ */
 public interface PersonService {
 
     Person getPerson(Integer id);

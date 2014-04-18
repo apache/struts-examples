@@ -5,15 +5,15 @@ import java.util.List;
 import org.apache.struts.crud.model.Person;
 
 /**
- *
+ *In memory data repository for Person objects.
  * @author antonio sanchez
  */
 public class MemoryPersonDao implements PersonDao {
 
-    private static List<Person> persons;
+    private final static List<Person> persons;
 
     static {
-        persons = new ArrayList<Person>();
+        persons = new ArrayList<>();
         persons.add(new Person(1, "Bruce", "Phillips", "basketball", "male", "US", true, new String[]{"Ford", "Nissan"}, "bphillips@ku.edu", "123-456-9999"));
         persons.add(new Person(2, "Antonio", "Sanchez", "mtb", "male", "ES", true, new String[]{"Toyota", "Seat"}, "asanchez@correoe.es", "555-999-8888"));
     }

@@ -1,7 +1,7 @@
 package org.apache.struts.crud.model;
 
 /**
- * TODO rename 'Abbr'
+ * Model a country.
  * 
  * @author antonio sánchez
  */

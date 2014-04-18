@@ -4,13 +4,13 @@ package org.apache.struts.crud.dao;
 import org.apache.struts.crud.model.Country;
 
 /**
+ * Methods a PersonSupportDao class must implement to provide
+ * additional information related to a Person.
  * @author antonio sanchez
  */
 public interface PersonSupportDao {
 
     Country[] getCountries();
-
-//    Map<String, Country> getCountriesMap();
     
     String[] getCarModels();
     

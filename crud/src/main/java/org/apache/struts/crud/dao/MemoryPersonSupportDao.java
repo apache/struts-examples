@@ -10,11 +10,11 @@ import org.apache.struts.crud.model.Country;
  * @author antonio sanchez
  */
 public class MemoryPersonSupportDao implements PersonSupportDao {
-    private static Country[] countries;
-    private static Map<String, Country> countriesMap;
-    private static String[] genders = {"male", "female"};
-    private static String[] sports = {"football", "baseball", "basketball", "mtb" };
-    private static String [] carModelsAvailable = {"Ford", "Chrysler", "Toyota", "Nissan", "Seat"};
+    private static final Country[] countries;
+    private static final Map<String, Country> countriesMap;
+    private static final String[] genders = {"male", "female"};
+    private static final String[] sports = {"football", "baseball", "basketball", "mtb" };
+    private static final String [] carModelsAvailable = {"Ford", "Chrysler", "Toyota", "Nissan", "Seat"};
 
     static {
         countries = new Country[] {new Country("ES", "Spain"),
@@ -29,10 +29,7 @@ public class MemoryPersonSupportDao implements PersonSupportDao {
         }
     }
 
-//    @Override
-//    public Map<String, Country> getCountriesMap() {
-//        return countriesMap;
-//    }
+
 
     @Override
     public String[] getCarModels() {
