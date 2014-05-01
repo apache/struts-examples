@@ -9,6 +9,9 @@
 .project
 .settings/
 
+# Netbeans
+nb-configuration.xml
+
 # OSX
 .DS_Store
 
