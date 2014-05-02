@@ -1,5 +1,3 @@
-<%-- TODO I18e all static text --%>
-<%-- TODO Simplify table header texts  --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -23,7 +21,7 @@
                 <th><s:text name="person.phoneNumber"/></th>
                 <th><s:text name="person.sport"/></th>
                 <th><s:text name="person.gender"/></th>
-                <th><s:text name="person.residency"/></th>
+                <th><s:text name="person.country"/></th>
                 <th><s:text name="person.over21"/></th>
                 <th><s:text name="person.carModels"/></th>
                 <th>&nbsp;</th>
@@ -36,8 +34,15 @@
                     <td class="nowrap"><s:property value="phoneNumber"/></td>
                     <td class="nowrap"><s:property value="sport"/></td>
                     <td class="nowrap"><s:property value="gender"/></td>
-                    <td class="nowrap"><s:property value="residency"/></td>
-                    <td class="nowrap"><s:property value="over21"/></td>
+                    <td class="nowrap"><s:property value="country.countryName"/></td>
+                    <td class="nowrap">
+                        <s:if test="over21">
+                            <span style="color:green; font-size: large;">&#x2714;</span>
+                        </s:if>
+                        <s:else>
+                            <span style="color:red; font-size: large;">&#x2717;</span>
+                        </s:else>                        
+                    </td>
                     <td class="nowrap"><s:property value="carModels"/></td>
                     <td class="nowrap">
                         <s:url action="inputPerson" id="url">

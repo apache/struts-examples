@@ -6,7 +6,9 @@ import org.apache.struts.crud.model.Country;
 /**
  * Methods a PersonSupportDao class must implement to provide
  * additional information related to a Person.
- * @author antonio sanchez
+ * 
+ * @author bruce phillips
+ * @author antonio sánchez
  */
 public interface PersonSupportDao {
 

@@ -14,7 +14,7 @@ public class Person {
     private String lastName;
     private String sport;
     private String gender;
-    private String residency;
+    private Country country = new Country("", "");
     private boolean over21;
     private String[] carModels;
     private String email;
@@ -25,14 +25,14 @@ public class Person {
     }
     
     public Person(Integer id, String firstName, String lastName, String sport, 
-                String gender, String residency, boolean over21, String[] carModels, 
+                String gender, Country country, boolean over21, String[] carModels, 
                 String email, String phoneNumber) {
         this.personId = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.sport = sport;
         this.gender = gender;
-        this.residency = residency;
+        this.country = country;
         this.over21 = over21;
         this.carModels = carModels;
         this.email = email;
@@ -79,12 +79,12 @@ public class Person {
         return gender;
     }
 
-    public void setResidency(String residency) {
-        this.residency = residency;
+    public void setCountry(Country country) {
+        this.country = country;
     }
 
-    public String getResidency() {
-        return residency;
+    public Country getCountry() {
+        return country;
     }
 
     public void setOver21(boolean over21) {
@@ -126,7 +126,7 @@ public class Person {
                 + " Last Name:  " + getLastName() + " | "
                 + " Favorite Sport: " + getSport() + " | "
                 + " Gender: " + getGender() + " | "
-                + " Residency: " + getResidency() + " | "
+                + " Country: " + getCountry() + " | "
                 + " Over 21: " + isOver21() + " | "
                 + " Car models: " + Arrays.asList(getCarModels()) + " | "
                 + " Email: " + getEmail() + " | "

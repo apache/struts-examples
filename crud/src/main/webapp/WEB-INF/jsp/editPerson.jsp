@@ -1,4 +1,3 @@
-<%-- TODO I18e all static text --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <s:if test="person==null || person.personId == null">
@@ -27,7 +26,7 @@
             <s:textfield key="person.phoneNumber" />
             <s:select key="person.sport" list="sports" />
             <s:radio key="person.gender" list="genders" />
-            <s:select key="person.residency" list="countries" listKey="countryAbbr" listValue="countryName" />
+            <s:select name="person.country.countryId" list="countries" listKey="countryId" listValue="countryName" label="%{getText('person.country')}"/>
             <s:checkbox key="person.over21" />
             <s:checkboxlist key="person.carModels" list="carModelsAvailable" />
             

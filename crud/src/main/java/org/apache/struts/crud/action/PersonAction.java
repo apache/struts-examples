@@ -15,7 +15,15 @@ import org.apache.struts.crud.service.PersonService;
  * TODO display country name instead of code
  * TODO logging
  * TODO prepareInput 
- *
+ * TODO I18e messages in validation.xml
+ * TODO use templates for patterns: X is required... Person... in properties file
+ * TODO I18e all static text in jsps
+ * 
+ * SUBTASK I18e database text data
+ * SUBTASK Definitely, improve 'country' data implementation
+ * SUBTASK add jetty and tomcat plugins to pom.xml
+ * SUBTASK look & feel like that of showcase applications; enhance visualization
+ * 
  * @author bruce phillips
  * @author antonio sánchez
  */

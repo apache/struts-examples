@@ -5,8 +5,7 @@ import java.util.Map;
 import org.apache.struts.crud.model.Country;
 
 /**
- * TODO I18e database text data
- * 
+ * @author bruce phillips
  * @author antonio sanchez
  */
 public class MemoryPersonSupportDao implements PersonSupportDao {
@@ -25,7 +24,7 @@ public class MemoryPersonSupportDao implements PersonSupportDao {
         
         countriesMap = new HashMap<>();
         for (Country c : countries) {
-            countriesMap.put(c.getCountryAbbr(), c);
+            countriesMap.put(c.getCountryId(), c);
         }
     }
 
@@ -49,5 +48,9 @@ public class MemoryPersonSupportDao implements PersonSupportDao {
     @Override
     public Country[] getCountries() {
         return countries;
+    }
+    
+    static Country getCountry(String countryId) {
+        return countriesMap.get(countryId);
     }
 }
