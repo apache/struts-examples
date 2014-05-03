@@ -2,6 +2,8 @@ package org.apache.struts.crud.dao;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.apache.struts.crud.model.Person;
 
 /**
@@ -24,7 +26,11 @@ public class MemoryPersonDao implements PersonDao {
     public Person getPerson(Integer id) {
         for (Person p : persons) {
             if (p.getPersonId().equals(id)) {
-                return p;
+                try {
+                    return (Person) p.clone();
+                } catch (CloneNotSupportedException ex) {
+                    //TODO LOG Logger.getLogger(MemoryPersonDao.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         }
         return null;

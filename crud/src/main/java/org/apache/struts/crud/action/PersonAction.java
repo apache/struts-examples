@@ -12,17 +12,14 @@ import org.apache.struts.crud.service.PersonService;
 /**
  * Acts as a controller to handle actions related to editing a Person.
  * 
- * TODO display country name instead of code
  * TODO logging
  * TODO prepareInput 
- * TODO I18e messages in validation.xml
  * TODO use templates for patterns: X is required... Person... in properties file
- * TODO I18e all static text in jsps
  * 
- * SUBTASK I18e database text data
- * SUBTASK Definitely, improve 'country' data implementation
+ * SUBTASK Fully i18e application: database text data; static text in jsp; validation.xml; links for locales.
+ * SUBTASK Definitely, improve 'country' implementation
  * SUBTASK add jetty and tomcat plugins to pom.xml
- * SUBTASK look & feel like that of showcase applications; enhance visualization
+ * SUBTASK look & feel like that of showcase applications; enhance visualization (style, css)
  * 
  * @author bruce phillips
  * @author antonio sánchez

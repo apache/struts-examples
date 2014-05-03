@@ -4,11 +4,13 @@ import java.util.Arrays;
 
 /**
  * Models a Person who registers.
+ * 
+ * Person is Cloneable just an implemention technique for in-memory daos.
  *
  * @author bruce phillips
  * @author antonio sanchez
  */
-public class Person {
+public class Person implements Cloneable {
     private Integer personId;
     private String firstName;
     private String lastName;
@@ -117,6 +119,11 @@ public class Person {
 
     public String getPhoneNumber() {
         return phoneNumber;
+    }
+    
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 
     @Override
