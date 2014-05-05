@@ -12,16 +12,12 @@ import org.apache.struts.crud.service.PersonService;
 /**
  * Acts as a controller to handle actions related to editing a Person.
  * 
- * TODO display country name instead of code
- * TODO logging
- * TODO prepareInput 
- *
  * @author bruce phillips
  * @author antonio sánchez
  */
 public class PersonAction extends ActionSupport implements Preparable {
     
-    private static final Logger LOGGER = Logger.getLogger(PersonAction.class.getName());
+    private static final Logger LOG = Logger.getLogger(PersonAction.class.getName());
     private PersonService personService = new DefaultPersonService();
     private Person person;
     private Person[] persons;
@@ -32,36 +28,37 @@ public class PersonAction extends ActionSupport implements Preparable {
 
     @Override
     public void prepare() throws Exception {
-        
-        LOGGER.info("In prepare method");
         carModelsAvailable = personService.getCarModels();
         sports = personService.getSports();
         countries = personService.getCountries();
         genders = personService.getGenders();
+        LOG.info("Prepared support data for Person entity.");        
         
         if (person != null && person.getPersonId() != null) {
             person = personService.getPerson(person.getPersonId());
+            LOG.info("Preparing actual data for Person: " + person);
         }
     }
 
     /**
      * Get all persons for display in the view.
-     * @return success
      */
     public String list() {
         persons = personService.getAllPersons();
+        LOG.info("Listing persons");
         return SUCCESS;
     }
     
     /**
      * Save the state of the Person object instance field.
-     * @return success
      */
     public String save() {
         if (person.getPersonId() == null) {
             personService.insertPerson(person);
+            LOG.info("Created new Person: " + person);
         } else {
             personService.updatePerson(person);
+            LOG.info("Updated Person: " + person);
         }
         return SUCCESS;
     }
@@ -69,10 +66,10 @@ public class PersonAction extends ActionSupport implements Preparable {
     /**
      * Delete from Person identified by the person
      * instance field's personId value.
-     * @return 
      */
     public String delete() {
         personService.deletePerson(person.getPersonId());
+        LOG.info("Deleted Person: " + person);
         return SUCCESS;
     }
     

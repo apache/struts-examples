@@ -1,7 +1,6 @@
 <!DOCTYPE validators PUBLIC
          "-//Apache Struts//XWork Validator 1.0.3//EN"
            "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
-<!-- TODO I18e messages -->           
 <validators>
     <validator type="requiredstring">
         <param name="fieldname">person.firstName</param>

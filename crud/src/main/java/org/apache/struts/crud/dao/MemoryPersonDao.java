@@ -2,27 +2,36 @@ package org.apache.struts.crud.dao;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.log4j.Logger;
+import org.apache.struts.crud.action.PersonAction;
 import org.apache.struts.crud.model.Person;
 
 /**
- *In memory data repository for Person objects.
+ * In memory data repository for Person objects.
+ * 
+ * @author bruce phillips
  * @author antonio sanchez
  */
 public class MemoryPersonDao implements PersonDao {
+    private static final Logger LOG = Logger.getLogger(MemoryPersonDao.class.getName());
 
     private final static List<Person> persons;
 
     static {
         persons = new ArrayList<>();
-        persons.add(new Person(1, "Bruce", "Phillips", "basketball", "male", "US", true, new String[]{"Ford", "Nissan"}, "bphillips@ku.edu", "123-456-9999"));
-        persons.add(new Person(2, "Antonio", "Sanchez", "mtb", "male", "ES", true, new String[]{"Toyota", "Seat"}, "asanchez@correoe.es", "555-999-8888"));
+        persons.add(new Person(1, "Bruce", "Phillips", "basketball", "male", MemoryPersonSupportDao.getCountry("US"), true, new String[]{"Ford", "Nissan"}, "bphillips@ku.edu", "123-456-9999"));
+        persons.add(new Person(2, "Antonio", "Sanchez", "mtb", "male", MemoryPersonSupportDao.getCountry("ES"), true, new String[]{"Toyota", "Seat"}, "asanchez@correo-e.es", "555-999-8888"));
     }
 
     @Override
     public Person getPerson(Integer id) {
         for (Person p : persons) {
             if (p.getPersonId().equals(id)) {
-                return p;
+                try {
+                    return (Person) p.clone();
+                } catch (CloneNotSupportedException ex) {
+                    LOG.error("Unexpected exception cloning Person");
+                }
             }
         }
         return null;
@@ -39,7 +48,7 @@ public class MemoryPersonDao implements PersonDao {
         for (int i = 0; i < persons.size(); i++) {
             Person p = persons.get(i);
             if (p.getPersonId().equals(id)) {
-//                person.setDepartment(departmentsMap.get(person.getDepartment().getDepartmentId()));
+                person.setCountry(MemoryPersonSupportDao.getCountry(person.getCountry().getCountryId()));
                 persons.set(i, person);
                 break;
             }
@@ -54,8 +63,8 @@ public class MemoryPersonDao implements PersonDao {
                 lastId = p.getPersonId();
             }
         }
-//        person.setDepartment(departmentsMap.get(person.getDepartment().getDepartmentId()));
         person.setPersonId(lastId + 1);
+        person.setCountry(MemoryPersonSupportDao.getCountry(person.getCountry().getCountryId()));
         persons.add(person);
     }
 

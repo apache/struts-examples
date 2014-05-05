@@ -10,14 +10,16 @@
     </appender>
  
     <!-- specify the logging level for loggers from other libraries -->
-
-    <logger name="org.apache.struts">
-    	 <level value="INFO" />
+    <logger name="com.opensymphony">
+        <level value="DEBUG" />
+    </logger>    
+    <logger name="org.apache.struts2">
+    	 <level value="DEBUG" />
     </logger>
   
    <!-- for all other loggers log only debug and above log messages -->
      <root>
-        <priority value="WARN"/> 
+        <priority value="INFO"/> 
         <appender-ref ref="STDOUT" /> 
      </root> 
     

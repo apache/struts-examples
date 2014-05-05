@@ -6,7 +6,9 @@ import org.apache.struts.crud.model.Person;
  * Data access methods that a PersonDao class
  * must define to provide information about
  * a Person or collection of Person objects.
- * @author antonio sanchez
+ * 
+ * @author bruce phillips
+ * @author antonio sánchez
  */
 public interface PersonDao {
     
