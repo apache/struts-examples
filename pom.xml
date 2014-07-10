@@ -13,13 +13,9 @@
     </description>
 
     <properties>
-
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
         <struts2.version>2.3.18-SNAPSHOT</struts2.version>
-
         <log4j.version>1.2.17</log4j.version>
-
     </properties>
 
     <developers>
@@ -61,20 +57,12 @@
         <module>themes_override</module>
     </modules>
 
-
-
     <dependencies>
 
         <dependency>
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-core</artifactId>
             <version>${struts2.version}</version>
-            <exclusions>
-                <exclusion>  <!-- exclude the transitive dependency to older version of commons-fileupload due to security issue -->
-                    <groupId>commons-fileupload</groupId>
-                    <artifactId>commons-fileupload</artifactId>
-                </exclusion>
-            </exclusions>                        
         </dependency>
 
         <dependency>
@@ -82,20 +70,10 @@
             <artifactId>log4j</artifactId>
             <version>${log4j.version}</version>
         </dependency>
-        
-        <dependency> <!--explicitly include dependency on new version of commons-fileupload that fixes security issue-->
-            <groupId>commons-fileupload</groupId>
-            <artifactId>commons-fileupload</artifactId>
-            <version>1.3.1</version>
-        </dependency>
 
     </dependencies>
 
-
-
     <build>
-
-
 
         <plugins>
             <plugin>
@@ -108,5 +86,7 @@
                 </configuration>
             </plugin>
         </plugins>
+
     </build>
+
 </project>
