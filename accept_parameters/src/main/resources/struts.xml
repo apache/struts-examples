@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="true" />
+
+	<package name="basicstruts2" extends="struts-default">
+		<action name="index">
+			<result>/index.jsp</result>
+		</action>
+	</package>
+
+	<package name="accept_parameters" namespace="/accept" extends="struts-default">
+		<action name="a1" class="org.apache.struts.edit.action.Action1">
+			<interceptor-ref name="params">
+				<param name="acceptParamNames">para1</param>
+			</interceptor-ref>
+			<interceptor-ref name="basicStack"/>
+			<result>/a1.jsp</result>
+		</action>
+		<action name="a2" class="org.apache.struts.edit.action.Action2">
+			<result>/a2.jsp</result>
+		</action>
+		<action name="a3" class="org.apache.struts.edit.action.Action3">
+			<interceptor-ref name="params">
+				<param name="acceptParamNames">someParameter</param>
+			</interceptor-ref>
+			<interceptor-ref name="basicStack"/>
+			<result>/a3.jsp</result>
+		</action>
+	</package>
+</struts>

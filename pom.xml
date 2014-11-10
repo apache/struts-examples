@@ -55,6 +55,7 @@
         <module>restful2actionmapper</module>
         <module>bean_validation</module>
         <module>themes_override</module>
+        <module>accept_parameters</module>
     </modules>
 
     <dependencies>
