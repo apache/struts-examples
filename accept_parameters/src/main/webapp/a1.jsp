@@ -9,7 +9,7 @@
 </head>
 <body>
 <h1>Welcome To Struts 2!</h1>
-<p>Block every parameter except para1</p>
+<p>In struts.xml we have defined, that we only accept parameter with name "para1"</p>
 <p>Para1:<s:property value="%{para1}"/></p>
 <p>Para2:<s:property value="%{para2}"/></p>
 </body>
