@@ -14,3 +14,10 @@ In a web browser go to:  http://localhost:8080/accept_parameters/
 
 You should see a web page with Welcome to Struts 2!
 
+Explanation
+===========
+params - prepare - params
+
+First set some paras that are required in the prepare method.
+After prepare is finished set the some more params
+ and don't overwrite the ones from the first params call.

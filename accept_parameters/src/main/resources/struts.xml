@@ -13,6 +13,10 @@
 		</action>
 	</package>
 
+	<!-- params - prepare - params -->
+	<!-- 1) set params -->
+	<!-- 2) prepare is called (from basicStack) -->
+	<!-- 3) set params (from basicStack) with default exclude/accept -->
 	<package name="accept_parameters" namespace="/accept" extends="struts-default">
 		<action name="a1" class="org.apache.struts.edit.action.Action1">
 			<interceptor-ref name="params">
@@ -22,6 +26,7 @@
 			<result>/a1.jsp</result>
 		</action>
 		<action name="a2" class="org.apache.struts.edit.action.Action2">
+			<!-- no extra params interceptor defined -->
 			<result>/a2.jsp</result>
 		</action>
 		<action name="a3" class="org.apache.struts.edit.action.Action3">

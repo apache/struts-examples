@@ -9,7 +9,7 @@
 </head>
 <body>
 <h1>Welcome To Struts 2!</h1>
-<p>In struts.xml we have defined nothing special, so all parameters should be passed to the action</p>
+<p>See Action2 for documentation</p>
 <p>Para1:<s:property value="%{para1}"/></p>
 <p>Para2:<s:property value="%{para2}"/></p>
 </body>

@@ -1,19 +1,31 @@
 package org.apache.struts.edit.action;
 
+import org.apache.log4j.Logger;
+
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.Preparable;
 
 /**
  * In struts.xml the only accepted parameter is para1, para2 should be null
  */
-public class Action1 extends ActionSupport {
+public class Action1 extends ActionSupport implements Preparable {
 	
+	private static final Logger LOGGER = Logger.getLogger(Action1.class );
 	private static final long serialVersionUID = 1L;
 	
 	private String para1, para2;
+	
+	@Override
+	public void prepare() throws Exception {
+		LOGGER.info("prepare: Only para1 should be present. We have defined in struts.xml that it is the only parameter we accept.");
+		LOGGER.info("para1:" + para1);
+		LOGGER.info("para2:" + para2);
+	}
 
 	public String execute() throws Exception {
-		System.out.println("para1:" + para1);
-		System.out.println("para2:" + para2);
+		LOGGER.info("execute: After prepare both parameters should be present. Parameters Interceptor from basicStack is called.");
+		LOGGER.info("para1:" + para1);
+		LOGGER.info("para2:" + para2);
 		return SUCCESS;
 	}
 
