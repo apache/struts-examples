@@ -18,6 +18,5 @@ Explanation
 ===========
 params - prepare - params
 
-First set some paras that are required in the prepare method.
-After prepare is finished set the some more params
- and don't overwrite the ones from the first params call.
+First set some params that are required in the prepare method.
+After prepare is finished set more params and don't overwrite the ones from the first params call.
