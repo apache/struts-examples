@@ -35,6 +35,7 @@
         <module>basic_struts</module>
         <module>blank</module>
         <module>jboss-blank</module>
+        <module>mailreader</module>
         <module>helloworld</module>
         <module>using_tags</module>
         <module>coding_actions</module>
