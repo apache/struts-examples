@@ -1,129 +1,93 @@
 package org.apache.struts.tutorials.wildcardmethod.action;
 
-import java.util.List;
-
-import org.apache.log4j.Logger;
+import com.opensymphony.xwork2.ActionSupport;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.struts.tutorials.wildcardmethod.model.Person;
 import org.apache.struts.tutorials.wildcardmethod.service.PersonService;
 
-
-
-
-
-import com.opensymphony.xwork2.ActionSupport;
-
+import java.util.List;
 
 
 public class PersonAction extends ActionSupport {
-	
-	//Create a Logger object
-	private static final Logger logger = Logger.getLogger( PersonAction.class.getName() );
 
-	
-	private static final long serialVersionUID = 1L;
+    //Create a Logger object
+    private static final Logger log = LogManager.getLogger(PersonAction.class);
+    private static final long serialVersionUID = 1L;
 
-	Person person ;
-	
-	int id ;
-	
-	List<Person> personList = PersonService.getPersons();
-	
-	PersonService personService = new PersonService();
-	
-	public String execute() throws Exception {
-	
-		logger.debug("In execute method");
-		return SUCCESS;
-	}
-	
-	
-	public String create() {
-		
-		logger.debug("In create method");
-		person = new Person();
-		
-		return INPUT;
-		
-		
-	}
-	
-	
-	public String edit() {
-		
-		    logger.debug("In edit method");
-		    person = personService.getPerson(id);
-		
-			return INPUT;
+    Person person;
+    int id;
+    List<Person> personList = PersonService.getPersons();
+    PersonService personService = new PersonService();
 
-		
-	}
-	
-	
-	public String saveOrUpdate() {
-		
+    public String execute() throws Exception {
+        log.debug("In execute method");
+        return SUCCESS;
+    }
 
-		logger.debug("In saveOrUpdate method");
-		if ( person.getId()  > -1 ) {
-			
-			personService.update(person) ;
-			
-			
-		} else {
-			
-			personService.save(person);
-		}
-		
-		
-		personList = PersonService.getPersons() ;
-		
-		return SUCCESS;
+    public String create() {
+        log.debug("In create method");
+        person = new Person();
 
-	
-	}
-	
-	
-	public String delete() {
-		
-		logger.debug("In delete method");
-		personService.deletePerson(id);
-		
-		personList = PersonService.getPersons() ;
-		
-		return SUCCESS;
-	}
+        return INPUT;
+    }
+
+    public String edit() {
+        log.debug("In edit method");
+        person = personService.getPerson(id);
+
+        return INPUT;
+    }
+
+    public String saveOrUpdate() {
+        log.debug("In saveOrUpdate method");
+        if (person.getId() > -1) {
+            personService.update(person);
+        } else {
+            personService.save(person);
+        }
+
+        personList = PersonService.getPersons();
+        return SUCCESS;
+    }
 
 
-	public Person getPerson() {
-		return person;
-	}
+    public String delete() {
+        log.debug("In delete method");
+        personService.deletePerson(id);
+
+        personList = PersonService.getPersons();
+
+        return SUCCESS;
+    }
 
 
-	public void setPerson(Person person) {
-		this.person = person;
-	}
+    public Person getPerson() {
+        return person;
+    }
 
 
-	public List<Person> getPersonList() {
-		return personList;
-	}
+    public void setPerson(Person person) {
+        this.person = person;
+    }
 
 
-	public void setPersonList(List<Person> personList) {
-		this.personList = personList;
-	}
+    public List<Person> getPersonList() {
+        return personList;
+    }
 
 
-	public int getId() {
-		return id;
-	}
+    public void setPersonList(List<Person> personList) {
+        this.personList = personList;
+    }
 
 
-	public void setId(int id) {
-		this.id = id;
-	}
-	
-	
-	
-	
+    public int getId() {
+        return id;
+    }
 
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

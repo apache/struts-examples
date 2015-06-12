@@ -1,0 +1,1 @@
+<% response.sendRedirect("Person.action"); %>
