@@ -3,7 +3,6 @@ package org.apache.struts.edit.model;
 public class State {
 	
 	private String stateAbbr;
-	
 	private String stateName;
 	
 	public State (String stateAbbr, String stateName) {
@@ -30,6 +29,4 @@ public class State {
 	public String toString() {
 		return getStateAbbr() ;
 	}
-	
-
 }

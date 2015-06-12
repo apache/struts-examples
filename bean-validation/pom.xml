@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>struts.apache.org</groupId>
+        <artifactId>struts2examples</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>bean-validation</artifactId>
+
+    <name>Bean Validation</name>
+    <description>bean (JSR 303) validation example application for the Struts 2 getting started tutorials</description>
+
+    <packaging>war</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>4.3.1.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-bean-validation-plugin</artifactId>
+            <version>${struts2.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>bean-validation</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>8.1.16.v20140903</version>
+                <configuration>
+                    <webApp>
+                        <contextPath>/${artifactId}</contextPath>
+                    </webApp>
+                    <stopKey>CTRL+C</stopKey>
+                    <stopPort>8999</stopPort>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <scanTargets>
+                        <scanTarget>src/main/webapp/WEB-INF/web.xml</scanTarget>
+                    </scanTargets>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
