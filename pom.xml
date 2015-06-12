@@ -50,7 +50,7 @@
         <module>form_validation</module>
         <module>message_resource</module>
         <module>exception_handling</module>
-        <module>debugging_struts</module>
+        <module>debugging-struts</module>
         <module>form_tags</module>
         <module>form_xml_validation</module>
         <module>control-tags</module>
