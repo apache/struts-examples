@@ -53,7 +53,7 @@
         <module>debugging_struts</module>
         <module>form_tags</module>
         <module>form_xml_validation</module>
-        <module>control_tags</module>
+        <module>control-tags</module>
         <module>wildcard_method_selection</module>
         <module>themes</module>
         <module>spring_struts</module>
