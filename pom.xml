@@ -14,7 +14,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <struts2.version>2.3.25-SNAPSHOT</struts2.version>
+        <struts2.version>2.5-SNAPSHOT</struts2.version>
         <log4j2.version>2.3</log4j2.version>
     </properties>
 
@@ -39,7 +39,7 @@
     </repositories>
 
     <modules>
-        <module>basic_struts</module>
+        <module>basic-struts</module>
         <module>blank</module>
         <module>jboss-blank</module>
         <module>mailreader</module>
@@ -64,7 +64,7 @@
         <module>preparable_interface</module>
         <module>exclude_parameters</module>
         <module>restful2actionmapper</module>
-        <module>bean_validation</module>
+        <module>bean-validation</module>
         <module>themes_override</module>
     </modules>
 
