@@ -13,10 +13,6 @@
 
 	<name>Unit Testing</name>
 
-	<build>
-		<finalName>unit-testing</finalName>
-	</build>
-
 	<packaging>war</packaging>
 
 	<dependencies>
@@ -42,4 +38,26 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<finalName>unit-testing</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>8.1.16.v20140903</version>
+				<configuration>
+					<webApp>
+						<contextPath>/${artifactId}</contextPath>
+					</webApp>
+					<stopKey>CTRL+C</stopKey>
+					<stopPort>8999</stopPort>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<scanTargets>
+						<scanTarget>src/main/webapp/WEB-INF/web.xml</scanTarget>
+					</scanTargets>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

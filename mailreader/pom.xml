@@ -21,7 +21,8 @@
  * under the License.
  */
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>struts.apache.org</groupId>
@@ -43,9 +44,9 @@
         </dependency>
 
         <dependency>
-           <groupId>org.apache.struts</groupId>
-           <artifactId>struts-mailreader-dao</artifactId>
-           <version>1.3.5</version>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts-mailreader-dao</artifactId>
+            <version>1.3.5</version>
         </dependency>
 
         <!-- Logging -->
@@ -73,19 +74,18 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>8.1.16.v20140903</version>
                 <configuration>
+                    <webApp>
+                        <contextPath>/${artifactId}</contextPath>
+                    </webApp>
                     <stopKey>CTRL+C</stopKey>
                     <stopPort>8999</stopPort>
-                   <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
                     <webAppSourceDirectory>${basedir}/src/main/webapp/</webAppSourceDirectory>
-                    <webAppConfig>
-                        <contextPath>/struts2-mailreader</contextPath>
-                        <descriptor>${basedir}/src/main/webapp/WEB-INF/web.xml</descriptor>
-                    </webAppConfig>
                 </configuration>
             </plugin>
         </plugins>
     </build>
     <properties>
-    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>
