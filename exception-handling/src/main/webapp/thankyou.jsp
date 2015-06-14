@@ -1,19 +1,22 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Registration Successful</title>
+    <meta charset="UTF-8">
+    <title>Exception Handling - Registration Successful</title>
 </head>
+
 <body>
-<h3>Thank you for registering for a prize.</h3>
+    <h3>Thank you for registering for a prize.</h3>
 
-<p>Your registration information: <s:property value="personBean" /> </p>
+    <p>Your registration information:</p>
+    <pre><s:property value="personBean"/> </pre>
 
-<p><a href="<s:url action='index' />" >Return to home page</a>.</p>
+    <p><a href="<s:url action='index' />">Return to home page</a>.</p>
 
+    <hr>
+
+    <s:debug/>
 </body>
 </html>

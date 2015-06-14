@@ -1,17 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Exception Handling Struts 2 Application - Login</title>
+    <meta charset="UTF-8">
+    <title>Exception Handling - Login</title>
 </head>
 <body>
-<h1>You Must Login</h1>
-<p>Please login</p>
+    <h1>You Must Login</h1>
 
-<p><a href="index.jsp">Return to the home page.</a></p>
-	  
+    <p>Please login</p>
+
+    <p><a href="index.jsp">Return to the home page.</a></p>
+
+    <hr>
+
+    <s:debug/>
 </body>
 </html>

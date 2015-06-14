@@ -8,15 +8,15 @@
 </head>
 
 <body>
-<h3>Thank you for registering for a prize.</h3>
+    <h3>Thank you for registering for a prize.</h3>
 
-<p>Your registration information:</p>
-<pre><s:property value="personBean"/> </pre>
+    <p>Your registration information:</p>
+    <pre><s:property value="personBean"/> </pre>
 
-<p><a href="<s:url action='index' />">Return to home page</a>.</p>
+    <p><a href="<s:url action='index' />">Return to home page</a>.</p>
 
-<hr>
+    <hr>
 
-<s:debug/>
+    <s:debug/>
 </body>
 </html>
