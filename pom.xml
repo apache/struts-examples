@@ -12,23 +12,37 @@
         go with the Struts 2 Getting Started series of tutorials.
     </description>
 
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments/>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>Apache Software Foundation</name>
+        <url>http://www.apache.org</url>
+    </organization>
+
+    <scm>
+        <connection>scm:git:git://git.apache.org/struts.git</connection>
+        <developerConnection>scm:git:https://git-wip-us.apache.org/repos/asf/struts-examples.git</developerConnection>
+        <url>http://git.apache.org/struts-examples.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <issueManagement>
+        <system>JIRA</system>
+        <url>https://issues.apache.org/jira/browse/WW</url>
+    </issueManagement>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <struts2.version>2.5-SNAPSHOT</struts2.version>
         <log4j2.version>2.3</log4j2.version>
     </properties>
-
-    <developers>
-        <developer>
-            <id>bphillips</id>
-            <name>Bruce Phillips</name>
-            <email>bphillips@ku.edu</email>
-            <organization>Apache Struts 2 Committer</organization>
-            <roles>
-                <role>Committer</role>
-            </roles>
-        </developer>
-    </developers>
 
     <repositories>
         <repository>
