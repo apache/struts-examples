@@ -1,23 +1,24 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>struts.apache.org</groupId>
-    <artifactId>struts2examples</artifactId>
-    <version>1.0.0</version>
-  </parent>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>struts.apache.org</groupId>
+        <artifactId>struts2examples</artifactId>
+        <version>1.0.0</version>
+    </parent>
 
-  <artifactId>interceptors</artifactId>
+    <artifactId>interceptors</artifactId>
 
-  <name>Struts 2 Interceptors</name>
-  
-  <description>Form XML validation example application for the 
-  Struts 2 getting started tutorials</description>
-  <packaging>war</packaging>
-  
-      <build>
-		<finalName>interceptors</finalName>
-	</build>
-	
+    <name>Struts 2 Interceptors</name>
+
+    <description>Form XML validation example application for the Struts 2 getting started tutorials</description>
+
+    <packaging>war</packaging>
+
+    <build>
+        <finalName>interceptors</finalName>
+    </build>
+
 </project>

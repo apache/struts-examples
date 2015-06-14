@@ -44,28 +44,28 @@
         <module>jboss-blank</module>
         <module>mailreader</module>
         <module>helloworld</module>
-        <module>using_tags</module>
+        <module>using-tags</module>
         <module>coding-actions</module>
-        <module>form_processing</module>
-        <module>form_validation</module>
-        <module>message_resource</module>
-        <module>exception_handling</module>
+        <module>form-processing</module>
+        <module>form-validation</module>
+        <module>message-resource</module>
+        <module>exception-handling</module>
         <module>debugging-struts</module>
-        <module>form_tags</module>
-        <module>form_xml_validation</module>
+        <module>form-tags</module>
+        <module>form-xml-validation</module>
         <module>control-tags</module>
-        <module>wildcard_method_selection</module>
+        <module>wildcard-method-selection</module>
         <module>themes</module>
-        <module>spring_struts</module>
+        <module>spring-struts</module>
         <module>annotations</module>
         <module>interceptors</module>
-        <module>unit_testing</module>
-        <module>http_session</module>
-        <module>preparable_interface</module>
-        <module>exclude_parameters</module>
+        <module>unit-testing</module>
+        <module>http-session</module>
+        <module>preparable-interface</module>
+        <module>exclude-parameters</module>
         <module>restful2actionmapper</module>
         <module>bean-validation</module>
-        <module>themes_override</module>
+        <module>themes-override</module>
     </modules>
 
     <dependencies>
