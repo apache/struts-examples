@@ -40,7 +40,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <struts2.version>2.5-SNAPSHOT</struts2.version>
+        <struts2.version>2.5-BETA1</struts2.version>
         <log4j2.version>2.3</log4j2.version>
     </properties>
 
@@ -49,6 +49,10 @@
             <id>apache.snapshots</id>
             <name>ASF Maven 2 Snapshot</name>
             <url>https://repository.apache.org/content/groups/snapshots/</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
     </repositories>
 
@@ -114,15 +118,4 @@
 
     </build>
     
-    <repositories>
-        <repository>
-            <id>apache-snapshots</id>
-            <url>https://repository.apache.org/content/groups/snapshots/</url>
-            <layout>default</layout>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
 </project>
