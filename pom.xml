@@ -45,33 +45,33 @@
     </properties>
 
     <modules>
+        <module>annotations</module>
         <module>basic-struts</module>
+        <module>bean-validation</module>
         <module>blank</module>
+        <module>coding-actions</module>
+        <module>control-tags</module>
+        <module>debugging-struts</module>
+        <module>exception-handling</module>
+        <module>exclude-parameters</module>
+        <module>form-processing</module>
+        <module>form-tags</module>
+        <module>form-validation</module>
+        <module>form-xml-validation</module>
+        <module>helloworld</module>
+        <module>http-session</module>
+        <module>interceptors</module>
         <module>jboss-blank</module>
         <module>mailreader</module>
-        <module>helloworld</module>
-        <module>using-tags</module>
-        <module>coding-actions</module>
-        <module>form-processing</module>
-        <module>form-validation</module>
         <module>message-resource</module>
-        <module>exception-handling</module>
-        <module>debugging-struts</module>
-        <module>form-tags</module>
-        <module>form-xml-validation</module>
-        <module>control-tags</module>
-        <module>wildcard-method-selection</module>
-        <module>themes</module>
-        <module>spring-struts</module>
-        <module>annotations</module>
-        <module>interceptors</module>
-        <module>unit-testing</module>
-        <module>http-session</module>
         <module>preparable-interface</module>
-        <module>exclude-parameters</module>
         <module>restful2actionmapper</module>
-        <module>bean-validation</module>
+        <module>spring-struts</module>
+        <module>themes</module>
         <module>themes-override</module>
+        <module>using-tags</module>
+        <module>unit-testing</module>
+        <module>wildcard-method-selection</module>
     </modules>
 
     <dependencies>
