@@ -28,16 +28,20 @@
         <finalName>annotations</finalName>
         <plugins>
             <plugin>
-                <groupId>org.mortbay.jetty</groupId>
+                <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>8.1.16.v20140903</version>
+                <version>9.3.3.v20150827</version>
                 <configuration>
+                    <webApp>
+                        <contextPath>/${artifactId}</contextPath>
+                    </webApp>
                     <stopKey>CTRL+C</stopKey>
                     <stopPort>8999</stopPort>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
-                    <scanTargets>
-                        <scanTarget>src/main/webapp/WEB-INF/web.xml</scanTarget>
-                    </scanTargets>
+                    <webAppSourceDirectory>${basedir}/src/main/webapp/</webAppSourceDirectory>
+                    <webAppConfig>
+                        <descriptor>${basedir}/src/main/webapp/WEB-INF/web.xml</descriptor>
+                    </webAppConfig>
                 </configuration>
             </plugin>
         </plugins>
