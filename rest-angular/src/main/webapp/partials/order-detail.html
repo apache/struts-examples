@@ -1,0 +1,22 @@
+<div class="page-header">
+    <h1>{{'order' | translate}} - {{vm.order.id}}</h1>
+</div>
+
+<table class="table table-striped">
+    <tr>
+        <td class="span3">ID</td>
+        <td class="span9">{{vm.order.id}}</td>
+    </tr>
+    <tr>
+        <td class="span3">{{'order.client' | translate}}</td>
+        <td class="span9">{{vm.order.clientName}}</td>
+    </tr>
+    <tr>
+        <td class="span3">{{'order.amount' | translate}}</td>
+        <td class="span9">{{vm.order.amount}}</td>
+    </tr>
+</table>
+<a href="/orders" class="btn btn-info">
+    <span class="glyphicon glyphicon-arrow-left"></span> {{'orders.back' | translate}}
+</a>
+

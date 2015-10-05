@@ -66,6 +66,7 @@
         <module>message-resource</module>
         <module>preparable-interface</module>
         <module>restful2actionmapper</module>
+        <module>rest-angular</module>
         <module>spring-struts</module>
         <module>themes</module>
         <module>themes-override</module>
@@ -96,10 +97,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>3.3</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>

@@ -1,0 +1,46 @@
+<div class="page-header">
+    <h1 ng-if="vm.mode == 'Add'">{{'order.new' | translate}}</h1>
+    <h1 ng-if="vm.mode == 'Edit'">{{'order.edit' | translate}} - {{vm.order.id}}</h1>
+</div>
+
+<form class="form-horizontal" ng-submit="vm.submitOrder(vm.order)">
+    <div ng-if="vm.mode == 'Edit'" class="form-group">
+        <label class="col-sm-2 control-label" for="id">ID</label>
+        <div class="col-sm-4">
+            <input type="text" id="id" ng-model="vm.order.id" disabled="disabled" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group" ng-class="{'has-error has-feedback': vm.errors.fieldErrors.clientName}">
+        <label class="col-sm-2 control-label" for="clientName">{{'order.client' | translate}}</label>
+        <div class="col-sm-4">
+            <input type="text" id="clientName" ng-model="vm.order.clientName" class="form-control"/>
+            <span class="glyphicon glyphicon-remove form-control-feedback" ng-if="vm.errors.fieldErrors.clientName"></span>
+            <span class="help-block" ng-if="vm.errors.fieldErrors.clientName">
+                <span ng-repeat="message in vm.errors.fieldErrors.clientName">{{message}}<br></span>
+            </span>
+        </div>
+    </div>
+    <div class="form-group" ng-class="{'has-error has-feedback': vm.errors.fieldErrors.amount}">
+        <label class="col-sm-2 control-label" for="amount">{{'order.amount' | translate}}</label>
+        <div class="col-sm-4">
+            <input type="text" id="amount" ng-model="vm.order.amount" class="form-control" />
+            <span class="glyphicon glyphicon-remove form-control-feedback" ng-if="vm.errors.fieldErrors.amount"></span>
+            <span class="help-block" ng-if="vm.errors.fieldErrors.amount">
+                <span ng-repeat="message in vm.errors.fieldErrors.amount">{{message}}<br></span>
+            </span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-4">
+            <button class="btn btn-primary">
+                <span class="glyphicon glyphicon-save"> {{'save' | translate}}</span>
+            </button>
+        </div>
+    </div>
+    <table>
+</form>
+
+<a href="/orders" class="btn btn-info">
+    <span class="glyphicon glyphicon-arrow-left"></span> {{'orders.back' | translate}}
+</a>
+

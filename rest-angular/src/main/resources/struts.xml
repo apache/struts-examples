@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+
+    <!-- Disable dev mode in productions -->
+    <constant name="struts.devMode" value="false"/>
+    <constant name="struts.handle.exception" value="false"/>
+
+    <!--  Overwrite Convention -->
+    <constant name="struts.convention.action.suffix" value="Controller"/>
+    <constant name="struts.convention.action.mapAllMatches" value="true"/>
+    <constant name="struts.convention.package.locators" value="actions"/>
+    <constant name="struts.convention.default.parent.package" value="rest-angular"/>
+    <constant name="struts.action.extension" value=",,xml,json,action"/>
+
+    <constant name="struts.custom.i18n.resources" value="frontend,validation,exceptions"/>
+
+    <constant name="struts.mapper.class" value="rest"/>
+
+    <!-- Use Jackson lib as content handler for all JSON requests -->
+    <bean type="org.apache.struts2.rest.handler.ContentTypeHandler" name="jackson" class="org.apache.struts2.rest.handler.JacksonLibHandler"/>
+    <constant name="struts.rest.handlerOverride.json" value="jackson"/>
+
+    <!-- Set to false if the json content can be returned for any kind of http method -->
+    <constant name="struts.rest.content.restrictToGET" value="false"/>
+
+    <!-- Set validation failure status code -->
+    <constant name="struts.rest.validationFailureStatusCode" value="406"/>
+
+
+    <!-- Set encoding to UTF-8, default is ISO-8859-1 -->
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <package name="rest-angular" extends="rest-default">
+        <default-action-ref name="index" />
+        <global-allowed-methods>index,show,create,update,destroy</global-allowed-methods>
+    </package>
+    <package name="data" extends="rest-angular" namespace="/data">
+        <interceptors>
+            <!-- See BaseDataController -->
+            <interceptor name="dataError" class="org.apache.examples.struts.interceptors.ExceptionHandlerInterceptor"/>
+            <interceptor name="beanValidation" class="org.apache.struts.beanvalidation.validation.interceptor.BeanValidationInterceptor"/>
+
+            <interceptor-stack name="dataDefaultStack">
+                <interceptor-ref name="dataError"/>
+                <interceptor-ref name="alias"/>
+                <interceptor-ref name="servletConfig"/>
+                <interceptor-ref name="messages">
+                    <param name="operationMode">AUTOMATIC</param>
+                </interceptor-ref>
+                <interceptor-ref name="prepare"/>
+                <interceptor-ref name="i18n"/>
+                <interceptor-ref name="chain"/>
+                <interceptor-ref name="actionMappingParams"/>
+                <interceptor-ref name="scopedModelDriven"/>
+                <interceptor-ref name="modelDriven">
+                    <param name="refreshModelBeforeResult">true</param>
+                </interceptor-ref>
+                <interceptor-ref name="fileUpload"/>
+                <interceptor-ref name="checkbox"/>
+                <interceptor-ref name="staticParams"/>
+                <interceptor-ref name="params"/>
+                <interceptor-ref name="rest" />
+                <interceptor-ref name="conversionError"/>
+                <interceptor-ref name="beanValidation">
+                    <param name="excludeMethods">input,back,cancel,browse,index,show,edit,editNew</param>
+                </interceptor-ref>
+                <interceptor-ref name="restWorkflow">
+                    <param name="excludeMethods">input,back,cancel,browse,index,show,edit,editNew</param>
+                </interceptor-ref>
+            </interceptor-stack>
+
+        </interceptors>
+
+        <default-interceptor-ref name="dataDefaultStack"/>
+
+    </package>
+
+</struts>
