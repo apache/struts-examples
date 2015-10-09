@@ -14,12 +14,12 @@
         <td>{{order.amount}}</td>
         <td>
             <div class="btn-group">
-                <a href="/order/{{order.id}}" class="btn btn-default"><span class="glyphicon glyphicon-eye-open"></span> {{'orders.view' | translate}}</a>
-                <a href="/order/{{order.id}}/edit" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span> {{'orders.edit' | translate}}</a>
+                <a href="order/{{order.id}}" class="btn btn-default"><span class="glyphicon glyphicon-eye-open"></span> {{'orders.view' | translate}}</a>
+                <a href="order/{{order.id}}/edit" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span> {{'orders.edit' | translate}}</a>
                 <a ng-click="vm.deleteOrder(order)" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> {{'orders.delete' | translate}}</a>
             </div>
         </td>
     </tr>
 </table>
 
-<a href="/order/new" class="btn btn-primary"><span class="glyphicon glyphicon-file"></span> {{'orders.new' | translate}}</a>
+<a href="order/new" class="btn btn-primary"><span class="glyphicon glyphicon-file"></span> {{'orders.new' | translate}}</a>

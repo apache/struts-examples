@@ -35,8 +35,8 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/orders">Home</a></li>
-                    <li><a href="/order/new">{{'order.new' | translate}}</a></li>
+                    <li><a href="orders">Home</a></li>
+                    <li><a href="order/new">{{'order.new' | translate}}</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li ng-class="{'active': lang == 'en'}"><a ng-click="app.switchLanguage('en')">EN</a></li>
