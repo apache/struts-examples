@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>struts.apache.org</groupId>
-    <artifactId>struts2examples</artifactId>
+    <artifactId>struts-examples</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>Struts 2 Examples</name>
@@ -68,6 +68,7 @@
         <module>restful2actionmapper</module>
         <module>rest-angular</module>
         <module>spring-struts</module>
+        <module>tiles</module>
         <module>themes</module>
         <module>themes-override</module>
         <module>using-tags</module>
