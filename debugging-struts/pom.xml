@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>struts.apache.org</groupId>
-    <artifactId>struts2examples</artifactId>
+    <artifactId>struts-examples</artifactId>
     <version>1.0.0</version>
   </parent>
 

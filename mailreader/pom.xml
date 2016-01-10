@@ -26,11 +26,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>struts.apache.org</groupId>
-        <artifactId>struts2examples</artifactId>
+        <artifactId>struts-examples</artifactId>
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>struts2-mailreader</artifactId>
+    <artifactId>mailreader</artifactId>
     <packaging>war</packaging>
     <name>Struts 2 Mail Reader Webapp</name>
 
