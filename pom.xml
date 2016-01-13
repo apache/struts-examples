@@ -40,7 +40,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <struts2.version>2.5-BETA2</struts2.version>
+        <struts2.version>2.5-SNAPSHOT</struts2.version>
         <log4j2.version>2.3</log4j2.version>
     </properties>
 
