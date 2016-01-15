@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+    <definition name="baseLayoutFtl" template="/tiles/layout.ftl">
+        <put-attribute name="title" value="Template" cascade="true"/>
+        <put-attribute name="header" value="/tiles/header.jsp"/>
+        <put-attribute name="menu" value="/tiles/menu.jsp"/>
+        <put-attribute name="body" value="/tiles/body.jsp"/>
+        <put-attribute name="footer" value="/tiles/footer.ftl"/>
+    </definition>
+
+    <definition name="hello4" extends="baseLayoutFtl" templateType="freemarker">
+        <put-attribute name="title" value="Witam 4" cascade="true"/>
+        <put-attribute name="body" value="/example/HelloWorld.jsp"/>
+    </definition>
+
+</tiles-definitions>
