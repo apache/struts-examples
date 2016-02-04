@@ -74,7 +74,8 @@
         <module>using-tags</module>
         <module>unit-testing</module>
         <module>wildcard-method-selection</module>
-    </modules>
+        <module>message-store</module>
+  </modules>
 
     <dependencies>
 
