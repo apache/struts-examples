@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<!-- 
+  - This file is included by the struts.xml file as an example
+  - of how to break up the configuration file into multiple files.
+-->
+<struts>
+    <package name="example" namespace="/example" extends="struts-default">
+
+        <default-action-ref name="HelloWorld" />
+
+        <action name="HelloWorld1" class="org.apache.struts.example.HelloWorld1">
+            <interceptor-ref name="createSession"/>
+            <interceptor-ref name="basicStack"/>
+            <interceptor-ref name="store">
+                <param name="operationMode">AUTOMATIC</param>
+            </interceptor-ref>
+
+            <result type="redirectAction">HelloWorld2</result>
+
+        </action>
+
+        <action name="HelloWorld2" class="org.apache.struts.example.HelloWorld2">
+            <interceptor-ref name="createSession"/>
+            <interceptor-ref name="basicStack"/>
+            <interceptor-ref name="store">
+                <param name="operationMode">AUTOMATIC</param>
+            </interceptor-ref>
+
+            <result>/WEB-INF/example/HelloWorld2.jsp</result>
+
+        </action>
+
+    </package>
+</struts>
