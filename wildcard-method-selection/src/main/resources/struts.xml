@@ -21,6 +21,11 @@
 			<result name="input">input.jsp</result>
 		</action>
 		
+		<action name="person!*" class="org.apache.struts.tutorials.wildcardmethod.action.PersonAction" method="run{1}This">
+			<result name="success">view.jsp</result>
+			<result name="input">input.jsp</result>
+		</action>
+
    </package>
 
 </struts>

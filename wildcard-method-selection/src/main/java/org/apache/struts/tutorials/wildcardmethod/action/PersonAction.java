@@ -32,6 +32,13 @@ public class PersonAction extends ActionSupport {
         return INPUT;
     }
 
+    public String runCreateThis() {
+        log.debug("In create method");
+        person = new Person();
+
+        return INPUT;
+    }
+
     public String edit() {
         log.debug("In edit method");
         person = personService.getPerson(id);
