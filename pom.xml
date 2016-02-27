@@ -75,6 +75,7 @@
         <module>unit-testing</module>
         <module>wildcard-method-selection</module>
         <module>message-store</module>
+        <module>type-conversion</module>
   </modules>
 
     <dependencies>
