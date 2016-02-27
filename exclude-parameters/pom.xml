@@ -10,11 +10,8 @@
     </parent>
 
     <artifactId>exclude-parameters</artifactId>
-
-    <name>exclude-parameters</name>
-
+    <name>Exclude Parameters</name>
     <description>Struts 2 example application for the exclude parameters getting started tutorial</description>
-
     <packaging>war</packaging>
 
     <build>
