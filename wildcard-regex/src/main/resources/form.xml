@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<!-- 
+  - This file is included by the struts.xml file as an example
+  - of how to break up the configuration file into multiple files.
+-->
+<struts>
+    <package name="form" namespace="/form" extends="struts-default">
+
+        <default-action-ref name="Start" />
+
+        <action name="Start" class="org.apache.struts.form.Start">
+            <result>/WEB-INF/form/Start.jsp</result>
+        </action>
+
+    </package>
+</struts>

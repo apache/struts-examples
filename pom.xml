@@ -76,6 +76,7 @@
         <module>wildcard-method-selection</module>
         <module>message-store</module>
         <module>type-conversion</module>
+        <module>wildcard-regex</module>
   </modules>
 
     <dependencies>
