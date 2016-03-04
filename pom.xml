@@ -77,6 +77,7 @@
         <module>message-store</module>
         <module>type-conversion</module>
         <module>wildcard-regex</module>
+        <module>unknown-handler</module>
   </modules>
 
     <dependencies>

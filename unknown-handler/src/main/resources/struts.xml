@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+  <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+  <constant name="struts.devMode" value="true"/>
+
+  <constant name="struts.convention.action.packages" value="org.apache.strutsexamples.web.actions"/>
+  <constant name="struts.convention.default.parent.package" value="default"/>
+
+  <bean type="com.opensymphony.xwork2.UnknownHandler" name="tiles-convention" class="org.apache.strutsexamples.web.TilesUnknownHandler"/>
+
+  <package name="default" namespace="/" extends="struts-default">
+
+    <result-types>
+      <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" default="true" />
+    </result-types>
+
+    <default-action-ref name="index"/>
+
+    <global-results>
+      <result name="home" type="redirectAction">
+        <param name="actionName">home</param>
+        <param name="namespace">/</param>
+      </result>
+    </global-results>
+
+  </package>
+
+  <unknown-handler-stack>
+    <unknown-handler-ref name="tiles-convention"/>
+  </unknown-handler-stack>
+
+</struts>
