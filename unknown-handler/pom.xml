@@ -11,12 +11,10 @@
 
   <groupId>org.apache.org</groupId>
   <artifactId>unknown-handler</artifactId>
-  <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>Unknown handler</name>
 
   <properties>
-    <struts2.version>2.3.24.1</struts2.version>
     <log4j2.version>2.2</log4j2.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>

@@ -11,6 +11,8 @@ import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.views.tiles.TilesResult;
 import org.apache.tiles.TilesContainer;
 import org.apache.tiles.access.TilesAccess;
+import org.apache.tiles.request.servlet.ServletApplicationContext;
+import org.apache.tiles.request.servlet.ServletRequest;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
@@ -33,7 +35,8 @@ public class TilesUnknownHandler implements UnknownHandler {
         HttpServletRequest request = ServletActionContext.getRequest();
         HttpServletResponse response = ServletActionContext.getResponse();
 
-        TilesContainer container = TilesAccess.getContainer(servletContext);
+        ServletApplicationContext context = new ServletApplicationContext(servletContext);
+        TilesContainer container = TilesAccess.getContainer(context);
 
         String namespace = ServletActionContext.getActionMapping().getNamespace();
         Set<String> definitions = buildDefinitionNames(namespace, actionName, resultCode);
@@ -41,7 +44,7 @@ public class TilesUnknownHandler implements UnknownHandler {
         for (String definition : definitions) {
             LOG.debug("Looking for tiles definition: {}", definition);
 
-            if (container.isValidDefinition(definition, request, response)) {
+            if (container.isValidDefinition(definition, new ServletRequest(context, request, response))) {
                 return new TilesResult(definition);
             }
         }
