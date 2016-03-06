@@ -10,6 +10,15 @@
 
     <package name="default" namespace="/" extends="struts-default">
 
+        <interceptors>
+            <interceptor-stack name="default">
+                <interceptor-ref name="createSession"/>
+                <interceptor-ref name="basicStack"/>
+            </interceptor-stack>
+        </interceptors>
+
+        <default-interceptor-ref name="default"/>
+
         <default-action-ref name="index"/>
 
         <action name="index">

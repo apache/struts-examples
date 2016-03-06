@@ -7,13 +7,12 @@
   - of how to break up the configuration file into multiple files.
 -->
 <struts>
-    <package name="example" namespace="/example" extends="struts-default">
+    <package name="example" namespace="/example" extends="default">
 
         <default-action-ref name="HelloWorld" />
 
         <action name="HelloWorld1" class="org.apache.struts.example.HelloWorld1">
-            <interceptor-ref name="createSession"/>
-            <interceptor-ref name="basicStack"/>
+            <interceptor-ref name="default"/>
             <interceptor-ref name="store">
                 <param name="operationMode">AUTOMATIC</param>
             </interceptor-ref>
@@ -23,8 +22,7 @@
         </action>
 
         <action name="HelloWorld2" class="org.apache.struts.example.HelloWorld2">
-            <interceptor-ref name="createSession"/>
-            <interceptor-ref name="basicStack"/>
+            <interceptor-ref name="default"/>
             <interceptor-ref name="store">
                 <param name="operationMode">AUTOMATIC</param>
             </interceptor-ref>
