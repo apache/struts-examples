@@ -13,7 +13,6 @@
         <interceptors>
             <interceptor-stack name="default">
                 <interceptor-ref name="createSession"/>
-                <interceptor-ref name="basicStack"/>
             </interceptor-stack>
         </interceptors>
 

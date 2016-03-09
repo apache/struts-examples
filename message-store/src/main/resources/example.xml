@@ -22,7 +22,6 @@
         </action>
 
         <action name="HelloWorld2" class="org.apache.struts.example.HelloWorld2">
-            <interceptor-ref name="default"/>
             <interceptor-ref name="store">
                 <param name="operationMode">AUTOMATIC</param>
             </interceptor-ref>
