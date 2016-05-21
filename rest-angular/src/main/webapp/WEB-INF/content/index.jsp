@@ -48,7 +48,7 @@
 
     <div class="row">
         <div id="alerts" class="col-md-12">
-            <alert ng-repeat="alert in app.alerts" type="{{alert.type}}" close="app.closeAlert($index)">{{alert.msg}}</alert>
+            <uib-alert ng-repeat="alert in app.alerts" type="{{alert.type}}" close="app.closeAlert($index)" dismiss-on-timeout="4000">{{alert.msg}}</uib-alert>
         </div><!--/col-md-12--->
 
         <div class="col-md-12" ng-view>
@@ -62,7 +62,7 @@
 <s:else>
     <script src="<s:url value="js/lib/angular/angular.min.js" />"></script>
     <script src="<s:url value="js/lib/angular/angular-route.min.js" />"></script>
-    <script src="<s:url value="js/lib/ui-bootstrap-tpls-0.13.3.min.js" />"></script>
+    <script src="<s:url value="js/lib/ui-bootstrap-tpls-1.3.2.min.js" />"></script>
     <script src="<s:url value="js/lib/angular-translate.min.js" />"></script>
     <script src="<s:url value="js/lib/angular-translate-loader-url.min.js" />"></script>
     <script src="<s:url value="js/app.js" />"></script>

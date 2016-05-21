@@ -166,7 +166,7 @@
                             <jsSourceFiles>
                                 <jsSourceFile>lib/angular/angular.min.js</jsSourceFile>
                                 <jsSourceFile>lib/angular/angular-route.min.js</jsSourceFile>
-                                <jsSourceFile>lib/ui-bootstrap-tpls-0.13.3.min.js</jsSourceFile>
+                                <jsSourceFile>lib/ui-bootstrap-tpls-1.3.2.min.js</jsSourceFile>
                                 <jsSourceFile>lib/angular-translate.min.js</jsSourceFile>
                                 <jsSourceFile>lib/angular-translate-loader-url.min.js</jsSourceFile>
                             </jsSourceFiles>
