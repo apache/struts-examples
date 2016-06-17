@@ -9,4 +9,15 @@
   <include file="example.xml"/>
   
   <!-- Add addition packages and configuration here. -->
+
+  <package name="default" extends="struts-default">
+    <default-action-ref name="index"/>
+    <action name="index">
+      <result type="redirectAction">
+        <param name="namespace">example</param>
+        <param name="actionName">HelloWorld</param>
+      </result>
+    </action>
+
+  </package>
 </struts>
