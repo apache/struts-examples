@@ -61,7 +61,6 @@
         <module>helloworld</module>
         <module>http-session</module>
         <module>interceptors</module>
-        <module>jboss-blank</module>
         <module>mailreader</module>
         <module>message-resource</module>
         <module>preparable-interface</module>
