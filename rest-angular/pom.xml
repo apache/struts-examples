@@ -10,7 +10,7 @@
 
     <artifactId>rest-angular</artifactId>
 
-    <name>REST Plugin based application with AngularJS frontend</name>
+    <name>REST Plugin based application with AngularJS</name>
 
     <description>A REST Plugin based Struts2 application with AngularJS frontend, Bean validation, Exception Handling and multi language support.</description>
 
@@ -93,6 +93,17 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.6.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j2.version}</version>
         </dependency>
 
         <dependency>
