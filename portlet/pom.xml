@@ -25,13 +25,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.apache.struts</groupId>
-        <artifactId>struts2-apps</artifactId>
-        <version>2.5.3-SNAPSHOT</version>
+        <artifactId>struts-examples</artifactId>
+        <version>1.0.0</version>
     </parent>
 
-    <artifactId>struts2-portlet</artifactId>
+    <artifactId>portlet</artifactId>
     <packaging>war</packaging>
-    <name>Struts 2 Portlet Webapp</name>
+    <name>Portlet Webapp</name>
 
     <profiles>
         <profile>
@@ -90,48 +90,40 @@
         <dependency>
             <groupId>javax.portlet</groupId>
              <artifactId>portlet-api</artifactId>
+            <version>2.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-spring-plugin</artifactId>
+            <version>${struts2.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-portlet-plugin</artifactId>
+            <version>${struts2.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-dwr-plugin</artifactId>
+            <version>${struts2.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-portlet-tiles-plugin</artifactId>
+            <version>${struts2.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity</artifactId>
+            <version>1.7</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity-tools</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-digester</groupId>
-            <artifactId>commons-digester</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>javax.servlet</groupId>
-                    <artifactId>servlet-api</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>commons-fileupload</groupId>
-            <artifactId>commons-fileupload</artifactId>
+            <version>2.0</version>
         </dependency>
 
         <!-- Logging -->
@@ -149,6 +141,7 @@
         <dependency>
             <groupId>org.mortbay.jetty</groupId>
             <artifactId>jetty</artifactId>
+            <version>6.1.9</version>
             <scope>test</scope>
         </dependency>
 
@@ -175,17 +168,14 @@
         <dependency>
             <groupId>org.mortbay.jetty</groupId>
             <artifactId>jsp-2.1</artifactId>
+            <version>6.1.9</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
-        
-        <dependency>
             <groupId>xerces</groupId>
             <artifactId>xercesImpl</artifactId>
+            <version>2.10.0</version>
             <scope>test</scope>
         </dependency>
 
