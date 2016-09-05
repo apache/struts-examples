@@ -1,0 +1,53 @@
+<!doctype>
+<html>
+<head>
+  <title>How to consume a JSON request</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script type="application/javascript">
+    function performSubmit(responseAs) {
+      var arrNames = [];
+
+      $("[name=names]").each(function() {
+         arrNames.push($(this).val());
+      });
+
+      var params = {
+        counter: $("[name=counter]").val(),
+        names: arrNames
+      };
+
+      var acceptHeader = 'application/json';
+      if (responseAs === 'html') {
+        acceptHeader = 'text/html';
+      }
+
+      $.ajax({
+        url: 'consume.action',
+        type: 'POST',
+        data: JSON.stringify(params),
+        headers: {
+          Accept: acceptHeader,
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        dataType: 'json'
+      })
+      .always(function (data) {
+        $("#response").text(JSON.stringify(data));
+      });
+    }
+  </script>
+</head>
+
+<body>
+<form>
+  <div>Counter: <input type="number" name="counter"></div>
+  <div>Name 1: <input type="text" name="names"></div>
+  <div>Name 2: <input type="text" name="names"></div>
+  <button type="button" onclick="performSubmit('json'); return false;">Submit as JSON, response as JSON</button>
+  <button type="button" onclick="performSubmit('html'); return false;">Submit as JSON, response as HTML</button>
+</form>
+
+<textarea rows="20" cols="60" id="response"></textarea>
+</body>
+</html>

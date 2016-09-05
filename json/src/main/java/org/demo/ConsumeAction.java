@@ -22,12 +22,19 @@
 package org.demo;
 
 import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.interceptor.ServletRequestAware;
 
-public class ConsumeAction extends ActionSupport {
+import javax.servlet.http.HttpServletRequest;
+
+public class ConsumeAction extends ActionSupport implements ServletRequestAware {
 
     private MyBean bean = new MyBean();
+    private boolean responseAsJson = true;
 
     public String execute() throws Exception {
+        if (responseAsJson) {
+            return "JSON";
+        }
         return SUCCESS;
     }
 
@@ -35,4 +42,7 @@ public class ConsumeAction extends ActionSupport {
         return bean;
     }
 
+    public void setServletRequest(HttpServletRequest request) {
+        responseAsJson = request.getHeader("Accept").contains("application/json");
+    }
 }

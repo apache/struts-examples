@@ -8,7 +8,11 @@
 
   <package name="default" namespace="/" extends="json-default">
 
-    <default-action-ref name="produce"/>
+    <default-action-ref name="index"/>
+
+    <action name="index">
+      <result>/WEB-INF/index.jsp</result>
+    </action>
 
     <action name="produce" class="org.demo.ProduceAction">
       <result type="json">
@@ -20,9 +24,11 @@
       <interceptor-ref name="basicStack"/>
       <interceptor-ref name="json">
         <param name="root">bean</param>
-        <param name="accept">application/json</param>
       </interceptor-ref>
-      <result>WEB-INF/result.jsp</result>
+      <result>/WEB-INF/result.jsp</result>
+      <result name="JSON" type="json">
+        <param name="root">bean</param>
+      </result>
     </action>
 
   </package>
