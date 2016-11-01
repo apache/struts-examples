@@ -20,10 +20,9 @@
  */
 package org.apache.struts2.portlet.example;
 
-import java.util.Map;
-
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.dispatcher.HttpParameters;
 
 public class ExampleAction extends ActionSupport {
 
@@ -33,7 +32,7 @@ public class ExampleAction extends ActionSupport {
         return name;
     }
 
-    public Map getRenderParameters() {
+    public HttpParameters getRenderParameters() {
         return ActionContext.getContext().getParameters();
     }
 }
