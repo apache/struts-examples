@@ -29,7 +29,7 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>struts2-blank</artifactId>
+    <artifactId>blank</artifactId>
     <packaging>war</packaging>
     <name>Struts 2 Blank Webapp</name>
 
@@ -53,17 +53,6 @@
             <artifactId>jsp-api</artifactId>
             <version>2.0</version>
             <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>${log4j2.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>${log4j2.version}</version>
         </dependency>
 
         <dependency>

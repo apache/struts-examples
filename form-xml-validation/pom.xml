@@ -16,20 +16,6 @@
     <description>Form XML validation example application for the Struts 2 getting started tutorials</description>
     <packaging>war</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-            <version>${log4j2.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.7.12</version>
-        </dependency>
-    </dependencies>
-
     <build>
         <finalName>form-xml-validation</finalName>
         <plugins>
