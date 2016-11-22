@@ -52,6 +52,7 @@
         <module>debugging-struts</module>
         <module>exception-handling</module>
         <module>exclude-parameters</module>
+        <module>file-upload</module>
         <module>form-processing</module>
         <module>form-tags</module>
         <module>form-validation</module>
