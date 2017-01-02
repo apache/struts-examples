@@ -20,12 +20,6 @@
   <dependencies>
 
     <dependency>
-      <groupId>org.apache.struts</groupId>
-      <artifactId>struts2-core</artifactId>
-      <version>${struts2.version}</version>
-    </dependency>
-
-    <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
       <version>2.4</version>
