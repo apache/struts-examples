@@ -39,7 +39,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <struts2.version>2.5.6-SNAPSHOT</struts2.version>
+        <struts2.version>2.5.9-SNAPSHOT</struts2.version>
     </properties>
 
     <modules>
