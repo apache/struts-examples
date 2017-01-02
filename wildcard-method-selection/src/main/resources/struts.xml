@@ -5,10 +5,9 @@
 
 <struts>
 
-   <constant name="struts.devMode" value="true" />
+   <constant name="struts.devMode" value="false" />
    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
 
-   
    <package name="wildcardmethodexample" extends="struts-default">
 
         <!-- Whatever value is before Person for the name of
@@ -19,11 +18,13 @@
 		<action name="*Person" class="org.apache.struts.tutorials.wildcardmethod.action.PersonAction" method="{1}">
 			<result name="success">view.jsp</result>
 			<result name="input">input.jsp</result>
+			<allowed-methods>create,edit,saveOrUpdate,delete</allowed-methods>
 		</action>
 		
 		<action name="person!*" class="org.apache.struts.tutorials.wildcardmethod.action.PersonAction" method="run{1}This">
 			<result name="success">view.jsp</result>
 			<result name="input">input.jsp</result>
+			<allowed-methods>runCreateThis</allowed-methods>
 		</action>
 
    </package>
