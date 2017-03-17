@@ -63,19 +63,20 @@
         <module>json</module>
         <module>mailreader</module>
         <module>message-resource</module>
+        <module>message-store</module>
         <module>portlet</module>
         <module>preparable-interface</module>
         <module>restful2actionmapper</module>
         <module>rest-angular</module>
         <module>spring-struts</module>
+        <module>text-provider</module>
         <module>tiles</module>
         <module>themes</module>
         <module>themes-override</module>
-        <module>using-tags</module>
-        <module>unit-testing</module>
-        <module>wildcard-method-selection</module>
-        <module>message-store</module>
         <module>type-conversion</module>
+        <module>unit-testing</module>
+        <module>using-tags</module>
+        <module>wildcard-method-selection</module>
         <module>wildcard-regex</module>
         <module>unknown-handler</module>
   </modules>
