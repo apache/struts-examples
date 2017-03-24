@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+  <constant name="struts.devMode" value="true"/>
+  <constant name="struts.convention.action.packages" value="org.apache.struts_example"/>
+  <constant name="struts.action.extension" value=","/>
+
+  <constant name="struts.custom.i18n.resources" value="DefaultMessages"/>
+
+  <!--
+  This factory overrides the one defined in Struts and will be used a default one across the framework
+  -->
+  <bean type="com.opensymphony.xwork2.TextProviderFactory"
+        class="org.apache.struts_example.MyTextProviderFactory"
+        name="myTextProviderFactory"
+        scope="singleton"/>
+
+  <constant name="struts.textProviderFactory" value="myTextProviderFactory"/>
+
+  <package name="default" extends="struts-default">
+
+    <default-action-ref name="index"/>
+
+  </package>
+</struts>
