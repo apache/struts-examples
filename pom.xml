@@ -43,6 +43,7 @@
     </properties>
 
     <modules>
+        <module>action-chaining</module>
         <module>annotations</module>
         <module>basic-struts</module>
         <module>bean-validation</module>
