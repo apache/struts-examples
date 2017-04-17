@@ -30,17 +30,13 @@ public class HelloWorldAction extends ActionSupport {
      * @see com.opensymphony.xwork2.ActionSupport#execute()
      */
     public String execute() throws Exception {
-        
         messageStore = new MessageStore() ;
+        
         return SUCCESS;
     }
 
     public MessageStore getMessageStore() {
         return messageStore;
-    }
-
-    public void setMessageStore(MessageStore messageStore) {
-        this.messageStore = messageStore;
     }
 
 }
