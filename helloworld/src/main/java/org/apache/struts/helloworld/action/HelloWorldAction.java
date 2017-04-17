@@ -29,7 +29,7 @@ public class HelloWorldAction extends ActionSupport {
      * (non-Javadoc)
      * @see com.opensymphony.xwork2.ActionSupport#execute()
      */
-    public String execute() throws Exception {
+    public String execute() {
         messageStore = new MessageStore() ;
         
         return SUCCESS;
