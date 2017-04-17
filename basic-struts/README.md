@@ -10,12 +10,12 @@ The war file is created in the `target` sub-folder.
 ### Using Maven
 run the command `mvn jetty:run`
 
-### Using a servlet container
+### Using a Servlet container
 Copy the war file to your Servlet container (e.g. Tomcat) and then startup the Servlet container.
 
 ## Accessing the application
 
-In a web browser go to:  [http://localhost:8080/basic-struts/index.action]([http://localhost:8080/basic-struts/index.action) 
+In a web browser go to:  [http://localhost:8080/basic-struts/index.action](http://localhost:8080/basic-struts/index.action) 
 
 You should see a web page with 
 
