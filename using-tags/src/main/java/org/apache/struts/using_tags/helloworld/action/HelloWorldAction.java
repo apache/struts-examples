@@ -7,7 +7,7 @@ import org.apache.struts.using_tags.helloworld.model.MessageStore;
 /**
  * Acts as a Struts 2 controller that responds
  * to a user action by setting the value
- * of the Message model class, and returns a String 
+ * of the MessageStore model class, and returns a String 
  * result.
  * @author Bruce Phillips
  *
