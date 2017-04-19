@@ -52,8 +52,4 @@ public class HelloWorldAction extends ActionSupport {
         return messageStore;
     }
 
-    public void setMessageStore(MessageStore messageStore) {
-        this.messageStore = messageStore;
-    }
-    
 }
