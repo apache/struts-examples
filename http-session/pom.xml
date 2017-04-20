@@ -10,11 +10,8 @@
     </parent>
 
     <artifactId>http-session</artifactId>
-
-    <name>http-session</name>
-
+    <name>Http Session</name>
     <description>Struts 2 example application for the HTTP Session getting started tutorial</description>
-
     <packaging>war</packaging>
 
     <build>
