@@ -28,10 +28,6 @@ public class HelloWorldAction extends ActionSupport {
         return helloCount;
     }
 
-    public void setHelloCount(int helloCount) {
-        HelloWorldAction.helloCount = helloCount;
-    }
-
     /*
      * Creates the MessageStore model object, 
      * increase helloCount by 1 and 
