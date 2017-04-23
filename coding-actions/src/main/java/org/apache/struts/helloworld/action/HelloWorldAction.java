@@ -27,10 +27,6 @@ public class HelloWorldAction extends ActionSupport {
         return helloCount;
     }
 
-    public void setHelloCount(int helloCount) {
-        HelloWorldAction.helloCount = helloCount;
-    }
-    
     private String userName;
 
     public String getUserName() {
