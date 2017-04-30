@@ -55,9 +55,7 @@ public class HelloWorldAction extends ActionSupport {
         //Action included a query string parameter of userName
         //or a form field with name of userName
         if (userName != null) {
-            
             messageStore.setMessage( messageStore.getMessage() + " " + userName);
-            
         }
         
         helloCount++;
