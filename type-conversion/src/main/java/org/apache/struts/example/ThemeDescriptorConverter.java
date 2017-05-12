@@ -1,8 +1,8 @@
 package org.apache.struts.example;
 
 import com.opensymphony.xwork2.conversion.TypeConversionException;
-import com.opensymphony.xwork2.util.logging.Logger;
-import com.opensymphony.xwork2.util.logging.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.struts.model.ThemeDescriptor;
 import org.apache.struts.model.Themes;
 import org.apache.struts2.util.StrutsTypeConverter;
@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class ThemeDescriptorConverter extends StrutsTypeConverter {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ThemeDescriptorConverter.class);
+    private static final Logger LOG = LogManager.getLogger(ThemeDescriptorConverter.class);
 
     @SuppressWarnings("rawtypes")
     @Override

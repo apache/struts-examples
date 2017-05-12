@@ -22,16 +22,16 @@
 package org.apache.struts.example;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.util.logging.Logger;
-import com.opensymphony.xwork2.util.logging.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.struts.model.ThemeDescriptor;
 import org.apache.struts.model.Themes;
 
 import java.util.Map;
 
-public class Theme extends ActionSupport {
+public class ThemeAction extends ActionSupport {
 
-    private static final Logger LOG = LoggerFactory.getLogger(Theme.class);
+    private static final Logger LOG = LogManager.getLogger(ThemeAction.class);
 
     private Map<String, ThemeDescriptor> themes = Themes.list();
     private ThemeDescriptor selectedTheme = Themes.get("simple");

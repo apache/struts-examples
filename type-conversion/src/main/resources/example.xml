@@ -11,7 +11,7 @@
 
         <default-action-ref name="Theme" />
 
-        <action name="Theme" class="org.apache.struts.example.Theme">
+        <action name="Theme" class="org.apache.struts.example.ThemeAction">
             <result>/WEB-INF/example/Theme.jsp</result>
         </action>
 
