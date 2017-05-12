@@ -18,5 +18,9 @@
   </table>
 </s:form>
 
+<pre>
+  <s:property value="selectedTheme.toString"/>
+</pre>
+
 </body>
 </html>
