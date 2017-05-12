@@ -1,12 +1,15 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <title>Theme selector</title>
 </head>
 
 <body>
-<h2><s:property value="message"/></h2>
+
+<s:url var="numberAction" action="Number"/>
+<s:a value="%{numberAction}">Number conversion</s:a>
 
 <s:form method="POST" action="design" theme="simple">
   <table>
