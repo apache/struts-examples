@@ -9,7 +9,7 @@ public class ShiroBaseAction extends ActionSupport
 {
     private static final long serialVersionUID = 1L;
     
-    private Subject shiroUser;
+    private transient Subject shiroUser;
 
     public boolean isAuthenticated() 
     {

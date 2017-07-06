@@ -21,7 +21,8 @@ public class WelcomeAction extends ShiroBaseAction
             // Retrieve value from session
             Session session = getShiroUser().getSession();
             String value = (String) session.getAttribute("MyUsername");
-            if (value.equals(username)) {
+            if (value.equals(username)) 
+            {
                 log.info("Retrieved the correct 'username' value [" + value + "] from session");
             }
         
@@ -43,6 +44,7 @@ public class WelcomeAction extends ShiroBaseAction
         {
             log.info("User '" + username + "' is missing role 'admin'");
         }
+        
         if (getShiroUser().hasRole("schwartz"))
         {
             log.info("User '" + username + "' has role of 'schwartz'");
@@ -51,6 +53,7 @@ public class WelcomeAction extends ShiroBaseAction
         {
             log.info("User '" + username + "' is missing role 'schwartz'");
         }
+        
         if (getShiroUser().hasRole("goodguy"))
         {
             log.info("User '" + username + "' has role of 'goodguy'");
@@ -71,6 +74,7 @@ public class WelcomeAction extends ShiroBaseAction
         {
             log.info("User '" + username + "' is missing permission 'lightsaber'");
         }
+        
         if (getShiroUser().isPermitted("winnebago"))
         {
             log.info("User '" + username + "' has 'winnebago' permission");
@@ -79,6 +83,7 @@ public class WelcomeAction extends ShiroBaseAction
         {
             log.info("User '" + username + "' is missing permission 'winnebago'");
         }
+        
         if (getShiroUser().isPermitted("winnebago:drive:eagle5"))
         {
             log.info("User '" + username + "' has 'winnebago:drive:eagle5' permission");
@@ -88,6 +93,7 @@ public class WelcomeAction extends ShiroBaseAction
             log.info("User '" + username + "' is missing permission 'winnebago:drive:eagle5'");
         }
     }
+    
     public String getUsername() 
     {
         return username;
