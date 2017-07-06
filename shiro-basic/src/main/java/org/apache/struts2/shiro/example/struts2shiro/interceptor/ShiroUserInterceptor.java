@@ -1,7 +1,7 @@
 /**
  * 
  */
-package example.struts2shiro.interceptor;
+package org.apache.struts2.shiro.example.interceptor;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
@@ -10,16 +10,9 @@ import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.Interceptor;
 
 /**
- * @author tkofford
- *
- */
-
-/**
  * Inserts the current Shiro user into the value stack so that it can be
  * injected into Struts 2 actions should they have a JavaBeans setter
  * <code>setShiroUser(org.apache.shiro.subject.Subject shiroUser)</code>.
- *
- * @version $Revision: $ $Date: $
  */
 public class ShiroUserInterceptor implements Interceptor {
 
@@ -52,7 +45,7 @@ public class ShiroUserInterceptor implements Interceptor {
     @Override
     public String intercept(ActionInvocation actionInvocation) throws Exception 
     {
-        if (actionInvocation.getAction() instanceof example.struts2shiro.action.ShiroBaseAction)
+        if (actionInvocation.getAction() instanceof org.apache.struts2.shiro.example.action.ShiroBaseAction)
         {
             Subject shiroUser = SecurityUtils.getSubject();
             actionInvocation.getStack().setValue("shiroUser", shiroUser);

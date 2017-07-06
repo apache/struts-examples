@@ -1,4 +1,4 @@
-package example.struts2shiro.action;
+package org.apache.struts2.shiro.example.action;
 
 public class LogoutAction extends ShiroBaseAction
 {

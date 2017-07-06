@@ -6,7 +6,7 @@
 <struts>
     <package name="default" namespace="/" extends="struts-default">
         <interceptors>
-            <interceptor name="shiroUser" class="example.struts2shiro.interceptor.ShiroUserInterceptor"/>
+            <interceptor name="shiroUser" class="org.apache.struts2.shiro.example.interceptor.ShiroUserInterceptor"/>
             <interceptor-stack name="shiro-default">
                 <interceptor-ref name="shiroUser"/>
                 <interceptor-ref name="params"/> <!-- Run the params interceptor before the default stack. This allows us to access param values in our prepare() methods. -->
@@ -18,17 +18,17 @@
         <action name="login">
             <result>pages/login.jsp</result>
         </action>
-        <action name="welcome" class="example.struts2shiro.action.WelcomeAction">
+        <action name="welcome" class="org.apache.struts2.shiro.example.action.WelcomeAction">
             <result>pages/welcome.jsp</result>
         </action>
-        <action name="authuser" class="example.struts2shiro.action.LoginAction">
+        <action name="authuser" class="org.apache.struts2.shiro.example.action.LoginAction">
             <result name="success" type="redirectAction">
                 <param name="actionName">welcome</param>
                 <param name="username">${username}</param>
             </result>
             <result name="input">pages/login.jsp</result>
         </action>
-        <action name="logout" class="example.struts2shiro.action.LogoutAction">
+        <action name="logout" class="org.apache.struts2.shiro.example.action.LogoutAction">
             <result name="success">pages/login.jsp</result>
         </action>
 

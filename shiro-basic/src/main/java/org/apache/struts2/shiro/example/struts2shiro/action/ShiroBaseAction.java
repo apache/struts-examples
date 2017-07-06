@@ -1,16 +1,10 @@
-/**
- * 
- */
-package example.struts2shiro.action;
+package org.apache.struts2.shiro.example.action;
 
 import org.apache.shiro.subject.Subject;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-/**
- * @author tkofford
- *
- */
+
 public class ShiroBaseAction extends ActionSupport
 {
     private static final long serialVersionUID = 1L;

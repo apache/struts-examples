@@ -1,4 +1,4 @@
-package example.struts2shiro.action;
+package org.apache.struts2.shiro.example.action;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;

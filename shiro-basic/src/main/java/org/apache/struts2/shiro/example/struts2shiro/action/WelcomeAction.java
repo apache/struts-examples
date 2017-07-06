@@ -1,4 +1,4 @@
-package example.struts2shiro.action;
+package org.apache.struts2.shiro.example.action;
 
 import org.apache.shiro.session.Session;
 import org.apache.logging.log4j.LogManager;
