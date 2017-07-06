@@ -71,6 +71,7 @@
         <module>preparable-interface</module>
         <module>restful2actionmapper</module>
         <module>rest-angular</module>
+        <module>shiro-basic</module>
         <module>spring-struts</module>
         <module>text-provider</module>
         <module>tiles</module>
