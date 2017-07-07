@@ -52,6 +52,7 @@
         <module>blank</module>
         <module>coding-actions</module>
         <module>control-tags</module>
+        <module>crud</module>
         <module>debugging-struts</module>
         <module>exception-handling</module>
         <module>exclude-parameters</module>
