@@ -3,21 +3,44 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
-        <groupId>struts.apache.org</groupId>
-        <artifactId>struts2examples</artifactId>
+        <groupId>org.apache.struts</groupId>
+        <artifactId>struts-examples</artifactId>
         <version>1.0.0</version>
     </parent>
     
-    <artifactId>struts_crud</artifactId>
+    <artifactId>crud</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
+    <name>CRUD Example</name>
 
+    <description>
+        Example of using Struts 2 for a web app that allows users to
+        Create, Read, Update, and Delete data.
+    </description>
 
-    <name>Struts CRUD Example</name>
-    <description>Example of using Struts 2 for a web app that allows users to 
-        Create, Read, Update, and Delete data.</description>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <build>
-        <finalName>crud_struts</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>8.1.16.v20140903</version>
+                <configuration>
+                    <stopKey>CTRL+C</stopKey>
+                    <stopPort>8999</stopPort>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <webAppSourceDirectory>${basedir}/src/main/webapp/</webAppSourceDirectory>
+                    <webAppConfig>
+                        <descriptor>${basedir}/src/main/webapp/WEB-INF/web.xml</descriptor>
+                    </webAppConfig>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
+
 </project>

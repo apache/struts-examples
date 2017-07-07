@@ -1,9 +1,9 @@
 package org.apache.struts.crud.action;
 
-import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.Preparable;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.struts.crud.model.Country;
 import org.apache.struts.crud.model.Person;
 import org.apache.struts.crud.service.DefaultPersonService;
@@ -17,7 +17,7 @@ import org.apache.struts.crud.service.PersonService;
  */
 public class PersonAction extends ActionSupport implements Preparable {
     
-    private static final Logger LOG = Logger.getLogger(PersonAction.class.getName());
+    private static final Logger LOG = LogManager.getLogger(PersonAction.class.getName());
     private PersonService personService = new DefaultPersonService();
     private Person person;
     private Person[] persons;
