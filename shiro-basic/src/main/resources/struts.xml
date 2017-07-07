@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="default" namespace="/" extends="struts-default">
+        <interceptors>
+            <interceptor name="shiroUser" class="org.apache.struts2.shiro.example.interceptor.ShiroUserInterceptor"/>
+            <interceptor-stack name="shiro-default">
+                <interceptor-ref name="shiroUser"/>
+                <interceptor-ref name="params"/> <!-- Run the params interceptor before the default stack. This allows us to access param values in our prepare() methods. -->
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="shiro-default"/>
+
+        <action name="login">
+            <result>pages/login.jsp</result>
+        </action>
+        <action name="welcome" class="org.apache.struts2.shiro.example.action.WelcomeAction">
+            <result>pages/welcome.jsp</result>
+        </action>
+        <action name="authuser" class="org.apache.struts2.shiro.example.action.LoginAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">welcome</param>
+                <param name="username">${username}</param>
+            </result>
+            <result name="input">pages/login.jsp</result>
+        </action>
+        <action name="logout" class="org.apache.struts2.shiro.example.action.LogoutAction">
+            <result name="success">pages/login.jsp</result>
+        </action>
+
+    </package>
+
+</struts>
