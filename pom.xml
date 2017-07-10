@@ -143,6 +143,11 @@
             <layout>default</layout>
         </repository>
         <repository>
+            <id>apache-staging</id>
+            <url>https://repository.apache.org/content/groups/staging/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
             <id>apache-snapshots</id>
             <url>https://repository.apache.org/content/groups/snapshots/</url>
             <layout>default</layout>
