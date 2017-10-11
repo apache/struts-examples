@@ -67,9 +67,9 @@
         </configuration>
       </plugin>
       <plugin>
-        <groupId>org.mortbay.jetty</groupId>
+        <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
-        <version>8.1.16.v20140903</version>
+        <version>${jetty-plugin.version}</version>
         <configuration>
           <stopKey>CTRL+C</stopKey>
           <stopPort>8999</stopPort>
@@ -80,10 +80,6 @@
             </systemProperty>
           </systemProperties>
           <scanIntervalSeconds>10</scanIntervalSeconds>
-          <webAppSourceDirectory>${basedir}/src/main/webapp/</webAppSourceDirectory>
-          <webAppConfig>
-            <descriptor>${basedir}/src/main/webapp/WEB-INF/web.xml</descriptor>
-          </webAppConfig>
         </configuration>
       </plugin>
     </plugins>
