@@ -71,14 +71,11 @@
         <artifactId>jetty-maven-plugin</artifactId>
         <version>${jetty-plugin.version}</version>
         <configuration>
+          <webApp>
+            <contextPath>/${project.artifactId}</contextPath>
+          </webApp>
           <stopKey>CTRL+C</stopKey>
           <stopPort>8999</stopPort>
-          <systemProperties>
-            <systemProperty>
-              <name>xwork.loggerFactory</name>
-              <value>com.opensymphony.xwork2.util.logging.log4j2.Log4j2LoggerFactory</value>
-            </systemProperty>
-          </systemProperties>
           <scanIntervalSeconds>10</scanIntervalSeconds>
         </configuration>
       </plugin>
