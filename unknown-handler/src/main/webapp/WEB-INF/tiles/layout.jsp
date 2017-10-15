@@ -31,17 +31,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Home</a>
+      <s:a cssClass="navbar-brand" action="home" namespace="/">Home</s:a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li>
-          <s:url var="login" action="login" namespace="/"/>
-          <s:a href="%{login}">Login</s:a>
+          <s:a action="login" namespace="/">Login</s:a>
         </li>
         <li>
-          <s:url var="users" action="users" namespace="/admin"/>
-          <s:a href="%{users}">Users</s:a>
+          <s:a action="users" namespace="/admin">Users</s:a>
         </li>
         <li><a href="#contact">Contact</a></li>
       </ul>

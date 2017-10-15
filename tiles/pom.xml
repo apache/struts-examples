@@ -69,12 +69,12 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>${jetty-plugin.version}</version>
                 <configuration>
+                    <webApp>
+                        <contextPath>/${project.artifactId}</contextPath>
+                    </webApp>
                     <stopKey>CTRL+C</stopKey>
                     <stopPort>8999</stopPort>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
-                    <webAppConfig>
-                        <contextPath>/</contextPath>
-                    </webAppConfig>
                 </configuration>
             </plugin>
         </plugins>

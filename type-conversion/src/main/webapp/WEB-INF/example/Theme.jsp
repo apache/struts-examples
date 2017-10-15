@@ -8,10 +8,9 @@
 
 <body>
 
-<s:url var="numberAction" action="Number"/>
-<s:a value="%{numberAction}">Number conversion</s:a>
+<s:a action="Number" namespace="/example">Number conversion</s:a>
 
-<s:form method="POST" action="design" theme="simple">
+<s:form method="POST" action="Theme" namespace="/example" theme="simple">
   <table>
     <tr>
       <td>Choose</td>
