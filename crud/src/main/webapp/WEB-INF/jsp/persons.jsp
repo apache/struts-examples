@@ -10,7 +10,7 @@
     <body>
         <div class="titleDiv"><s:text name="application.title"/></div>
         <h1><s:text name="label.persons"/></h1>
-        <s:url id="url" action="inputPerson" />
+        <s:url var="url" action="inputPerson" />
         <a href="<s:property value="#url"/>">Add New Person</a>
         <br/><br/>
         <table class="borderAll">
@@ -45,12 +45,12 @@
                     </td>
                     <td class="nowrap"><s:property value="carModels"/></td>
                     <td class="nowrap">
-                        <s:url action="inputPerson" id="url">
+                        <s:url action="inputPerson" var="url">
                             <s:param name="person.personId" value="personId"/>
                         </s:url>
                         <a href="<s:property value="#url"/>">Edit</a>
                         &nbsp;&nbsp;&nbsp;
-                        <s:url action="deletePerson" id="url">
+                        <s:url action="deletePerson" var="url">
                             <s:param name="person.personId" value="personId"/>
                         </s:url>
                         <a href="<s:property value="#url"/>">Delete</a>

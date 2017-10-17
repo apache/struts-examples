@@ -30,18 +30,14 @@
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.3.3.v20150827</version>
+                <version>${jetty-plugin.version}</version>
                 <configuration>
                     <webApp>
-                        <contextPath>/${artifactId}</contextPath>
+                        <contextPath>/${project.artifactId}</contextPath>
                     </webApp>
                     <stopKey>CTRL+C</stopKey>
                     <stopPort>8999</stopPort>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
-                    <webAppSourceDirectory>${basedir}/src/main/webapp/</webAppSourceDirectory>
-                    <webAppConfig>
-                        <descriptor>${basedir}/src/main/webapp/WEB-INF/web.xml</descriptor>
-                    </webAppConfig>
                 </configuration>
             </plugin>
         </plugins>

@@ -7,25 +7,24 @@
 
 <body>
 
-<s:url var="themeAction" action="Theme"/>
-<s:a value="%{themeAction}">Theme conversion</s:a>
+<s:a action="Theme" namespace="/example">Theme conversion</s:a>
 
-<s:url var="switchToEN" action="Number">
+<s:url var="switchToEN" action="Number" namespace="/example">
   <s:param name="request_locale">en</s:param>
 </s:url>
-<s:a value="%{switchToEN}">Switch to EN</s:a>
+<a href='<s:property value="%{switchToEN}"/>'>Switch to EN</a>
 
-<s:url var="switchToPL" action="Number">
+<s:url var="switchToPL" action="Number" namespace="/example">
   <s:param name="request_locale">pl</s:param>
 </s:url>
-<s:a value="%{switchToPL}">Switch to PL</s:a>
+<a href='<s:property value="%{switchToPL}"/>'>Switch to PL</a>
 
-<s:url var="switchToDE" action="Number">
+<s:url var="switchToDE" action="Number" namespace="/example">
   <s:param name="request_locale">de</s:param>
 </s:url>
-<s:a value="%{switchToDE}">Switch to DE</s:a>
+<a href='<s:property value="%{switchToDE}"/>'>Switch to DE</a>
 
-<s:form method="POST" action="Number">
+<s:form method="POST" action="Number" namlespace="/example">
   <table>
     <tr>
       <td>BigDecimal</td>
