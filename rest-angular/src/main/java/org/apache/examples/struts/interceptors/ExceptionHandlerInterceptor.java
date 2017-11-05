@@ -46,7 +46,7 @@ public class ExceptionHandlerInterceptor extends MethodFilterInterceptor {
                 }  else {
                     errors.put(ACTION_ERROR, exception.getMessage());
                 }
-            return manager.handleResult(actionInvocation.getProxy().getConfig(), httpHeaders, errors);
+            return manager.handleResult(actionInvocation, httpHeaders, errors);
         }
     }
 }
