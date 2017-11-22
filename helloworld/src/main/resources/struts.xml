@@ -16,7 +16,7 @@
 			<result>/index.jsp</result>
 		</action>
 		
-		<!-- If the URL is hello.action the call the execute method of class HelloWorldAction.
+		<!-- If the URL is hello.action then call the execute method of class HelloWorldAction.
 		If the result returned by the execute method is success render the HelloWorld.jsp -->
 		<action name="hello" class="org.apache.struts.helloworld.action.HelloWorldAction" method="execute">
 			<result name="success">/HelloWorld.jsp</result>
