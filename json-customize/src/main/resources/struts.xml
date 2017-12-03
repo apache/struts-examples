@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+  <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+  <constant name="struts.devMode" value="true"/>
+
+  <bean type="org.apache.struts2.json.JSONWriter" name="flexJSONWriter" class="org.demo.FlexJSONWriter"
+        scope="prototype"/>
+  <constant name="struts.json.writer" value="flexJSONWriter"/>
+  <constant name="struts.json.dateformat" value="MM/dd/yyyy"/>
+
+  <package name="default" namespace="/" extends="json-default">
+
+    <default-action-ref name="index"/>
+
+    <action name="index">
+      <result>/WEB-INF/index.jsp</result>
+    </action>
+
+    <action name="produce" class="org.demo.ProduceAction">
+      <result type="json">
+        <param name="includeProperties">addresses</param>
+        <param name="excludeProperties">addresses.state</param>
+        <param name="excludeNullProperties">true</param>
+        <param name="root">user</param>
+      </result>
+    </action>
+
+  </package>
+
+  <!-- Add addition packages and configuration here. -->
+</struts>
