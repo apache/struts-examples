@@ -16,6 +16,7 @@ public class Person {
     private String[] carModels;
     private String email;
     private String phoneNumber;
+    private Integer age;
 
     public String getFirstName() {
         return firstName;
@@ -89,16 +90,28 @@ public class Person {
         return phoneNumber;
     }
 
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    @Override
     public String toString() {
-        return "First Name: " + getFirstName() + " | " +
-                " Last Name:  " + getLastName() + " | " +
-                " Favorite Sport: " + getSport() + " | " +
-                " Gender: " + getGender() + " | " +
-                " Residency: " + getResidency() + " | " +
-                " Over 21: " + isOver21() + " | " +
-                " Car models: " + Arrays.asList(getCarModels()) + " | " +
-                " Email: " + getEmail() + " | " +
-                " Phone: " + getPhoneNumber();
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", sport='" + sport + '\'' +
+                ", gender='" + gender + '\'' +
+                ", residency='" + residency + '\'' +
+                ", over21=" + over21 +
+                ", carModels=" + Arrays.toString(carModels) +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", age=" + age +
+                '}';
     }
 
 }

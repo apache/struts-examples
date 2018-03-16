@@ -18,6 +18,7 @@
 <s:textfield key="personBean.lastName" /> 
 <s:textfield key="personBean.email" />
 <s:textfield key="personBean.phoneNumber" />
+<s:textfield key="personBean.age" />
 <s:select key="personBean.sport" list="sports" />
 <s:radio key="personBean.gender" list="genders" />
 <s:select key="personBean.residency" list="states" listKey="stateAbbr" listValue="stateName" />
