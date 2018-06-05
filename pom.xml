@@ -83,10 +83,11 @@
         <module>type-conversion</module>
         <module>unit-testing</module>
         <module>using-tags</module>
+        <module>validation-messages</module>
         <module>wildcard-method-selection</module>
         <module>wildcard-regex</module>
         <module>unknown-handler</module>
-    </modules>
+  </modules>
 
     <dependencies>
 
