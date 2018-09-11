@@ -28,6 +28,10 @@
     type="com.opensymphony.xwork2.TextProvider" />
   <constant name="struts.xworkTextProvider" value="MyTextProviderSupport" />
   -->
+
+  <bean type="com.opensymphony.xwork2.LocalizedTextProvider" name="myProvider" class="org.apache.struts_example.MyLocalizedTextProvider" scope="singleton" />
+
+  <constant name="struts.localizedTextProvider" value="myProvider" />
   
   <package name="default" extends="struts-default">
 

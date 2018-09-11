@@ -11,6 +11,10 @@
   <s:text name="default.index.title"/>
 </h1>
 
+<h2>
+  <s:text name="global.key"/>
+</h2>
+
 <h3>Select your provider</h3>
 <ul>
   <li>
