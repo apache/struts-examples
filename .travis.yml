@@ -1,8 +1,13 @@
+dist: xenial
 language: java
 sudo: false
 
 jdk:
-  - oraclejdk8
+  - openjdk8
 
 install: true
-script: mvn test
+script: ./mvnw test
+
+cache:
+  directories:
+    - $HOME/.m2
