@@ -31,7 +31,7 @@
         <version>${jetty-plugin.version}</version>
         <configuration>
           <webApp>
-            <contextPath>/${artifactId}</contextPath>
+            <contextPath>/${project.artifactId}</contextPath>
           </webApp>
           <stopKey>CTRL+C</stopKey>
           <stopPort>8999</stopPort>
