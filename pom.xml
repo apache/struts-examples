@@ -40,9 +40,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <struts2.version>2.5.17</struts2.version>
-        <log4j2.version>2.9.1</log4j2.version>
-        <jetty-plugin.version>9.4.11.v20180605</jetty-plugin.version>
+        <struts2.version>2.5.20</struts2.version>
+        <log4j2.version>2.12.1</log4j2.version>
+        <jetty-plugin.version>9.4.22.v20191022</jetty-plugin.version>
     </properties>
 
     <modules>
