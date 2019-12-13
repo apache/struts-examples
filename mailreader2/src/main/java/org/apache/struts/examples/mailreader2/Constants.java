@@ -53,11 +53,6 @@ public final class Constants {
     public static final String EDIT = "Edit";
 
     /**
-     * <p> The package name for this application. </p>
-     */
-    public static final String PACKAGE = "org.apache.struts.apps.mailreader";
-
-    /**
      * <p> The session scope attribute under which the Subscription object
      * currently selected by our logged-in User is stored. </p>
      */

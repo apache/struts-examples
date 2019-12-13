@@ -82,7 +82,7 @@ public final class ApplicationListener implements ServletContextListener {
     /**
      * <p>Logging output for this plug in instance.</p>
      */
-    private Logger log = LogManager.getLogger(this.getClass());
+    private Logger log = LogManager.getLogger(ApplicationListener.class);
 
     /**
      * <p>The web application resource path of our persistent database storage

@@ -16,9 +16,7 @@
 
     <!-- Application Listener for Mailreader database -->
     <listener>
-        <listener-class>
-            org.apache.struts.examples.mailreader2.ApplicationListener
-        </listener-class>
+        <listener-class>org.apache.struts.examples.mailreader2.ApplicationListener</listener-class>
     </listener>
 
     <welcome-file-list>

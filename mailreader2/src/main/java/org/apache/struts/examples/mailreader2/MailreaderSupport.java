@@ -384,7 +384,7 @@ public class MailreaderSupport extends ActionSupport implements SessionAware, Ap
     /**
      * <p><code>Log</code> instance for this application. </p>
      */
-    protected Logger log = LogManager.getLogger(Constants.PACKAGE);
+    private Logger log = LogManager.getLogger(MailreaderSupport.class);
 
     /**
      * <p> Persist the User object, including subscriptions, to the database.
