@@ -6,11 +6,10 @@
 	<parent>
 		<groupId>org.apache.struts</groupId>
 		<artifactId>struts-examples</artifactId>
-		<version>1.0.0</version>
+		<version>1.1.0</version>
 	</parent>
 
 	<artifactId>unit-testing</artifactId>
-
 	<name>Unit Testing</name>
 
 	<packaging>war</packaging>

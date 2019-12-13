@@ -6,12 +6,11 @@
     <parent>
         <groupId>org.apache.struts</groupId>
         <artifactId>struts-examples</artifactId>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
     </parent>
 
     <artifactId>using-tags</artifactId>
     <name>Using Struts 2 Tags</name>
-
     <description>Struts 2 example application for the Using Struts 2 Tags getting started tutorial</description>
 
     <packaging>war</packaging>

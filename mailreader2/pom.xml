@@ -25,14 +25,21 @@
     <parent>
         <groupId>org.apache.struts</groupId>
         <artifactId>struts-examples</artifactId>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
     </parent>
 
     <artifactId>mailreader2</artifactId>
-    <packaging>war</packaging>
     <name>Struts 2 Mail Reader Webapp</name>
 
+    <packaging>war</packaging>
+
     <dependencies>
+
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-config-browser-plugin</artifactId>
+            <version>${struts2.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>commons-digester</groupId>

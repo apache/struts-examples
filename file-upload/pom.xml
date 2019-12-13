@@ -6,13 +6,13 @@
     <parent>
         <artifactId>struts-examples</artifactId>
         <groupId>org.apache.struts</groupId>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
     </parent>
 
     <artifactId>file-upload</artifactId>
-
     <name>File upload</name>
     <description>Simple file upload example</description>
+
     <packaging>war</packaging>
 
     <properties>

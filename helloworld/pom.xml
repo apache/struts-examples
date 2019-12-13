@@ -6,15 +6,14 @@
     <parent>
         <groupId>org.apache.struts</groupId>
         <artifactId>struts-examples</artifactId>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
     </parent>
 
     <artifactId>helloworld</artifactId>
-    <packaging>war</packaging>
-
     <name>Hello World Struts 2 Example Application</name>
-
     <description>Hello world example application for the Struts 2 Getting Started tutorials</description>
+
+    <packaging>war</packaging>
 
     <build>
         <finalName>hello-world</finalName>

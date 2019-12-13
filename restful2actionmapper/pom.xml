@@ -6,18 +6,14 @@
     <parent>
         <groupId>org.apache.struts</groupId>
         <artifactId>struts-examples</artifactId>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
     </parent>
 
     <artifactId>restful2actionmapper</artifactId>
+    <name>REST to Action Mapper Example Application</name>
+    <description>Example of using Rest style URLs for Struts 2 Getting Started tutorials</description>
 
     <packaging>war</packaging>
-
-    <name>REST to Action Mapper Example Application</name>
-
-    <description>Example of using Rest style URLs for
-        Struts 2 Getting Started tutorials
-    </description>
 
     <build>
         <finalName>reststyleactionmapper</finalName>
