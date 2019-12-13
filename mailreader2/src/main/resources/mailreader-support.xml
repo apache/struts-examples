@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="mailreader-support" namespace="/" extends="mailreader-default">
+
+        <action name="Tour">
+            <result>/tour.html</result>
+            <interceptor-ref name="guest"/>
+        </action>
+
+        <action name="Welcome" class="org.apache.struts.examples.mailreader2.WelcomeAction">
+            <result>WEB-INF/jsp/Welcome.jsp</result>
+            <interceptor-ref name="guest"/>
+        </action>
+
+        <action name="Logout" class="org.apache.struts.examples.mailreader2.LogoutAction">
+            <result type="redirectAction">Welcome</result>
+        </action>
+
+        <action name="Login_*"  method="{1}" class="org.apache.struts.examples.mailreader2.LoginAction">
+            <result name="input">/WEB-INF/jsp/Login.jsp</result>
+            <result name="cancel" type="redirectAction">Welcome</result>
+            <result type="redirectAction">MainMenu</result>
+            <result name="expired" type="chain">ChangePassword</result>
+            <exception-mapping
+                    exception="org.apache.struts.apps.mailreader.dao.ExpiredPasswordException"
+                    result="expired"/>
+            <interceptor-ref name="guest"/>
+        </action>
+
+        <action name="Registration_*" method="{1}" class="org.apache.struts.examples.mailreader2.RegistrationAction">
+            <result name="input">/WEB-INF/jsp/Registration.jsp</result>
+            <result type="redirectAction">MainMenu</result>
+            <interceptor-ref name="guest"/>
+        </action>
+    </package>
+
+    <package name="subscription" namespace="/" extends="mailreader-support">
+
+        <global-results>
+            <result name="input">/WEB-INF/jsp/Subscription.jsp</result>
+            <result type="redirectAction">Registration_input</result>
+        </global-results>
+
+        <action name="Subscription_save" method="save" class="org.apache.struts.examples.mailreader2.SubscriptionAction">
+            <interceptor-ref name="user-submit" />
+        </action>
+
+        <action name="Subscription_*" method="{1}" class="org.apache.struts.examples.mailreader2.SubscriptionAction" />
+
+    </package>
+
+    <package name="wildcard" namespace="/" extends="mailreader-support">
+
+        <action name="*" class="org.apache.struts.examples.mailreader2.MailreaderSupport">
+            <result>/WEB-INF/jsp/{1}.jsp</result>
+        </action>
+        
+    </package>
+</struts>

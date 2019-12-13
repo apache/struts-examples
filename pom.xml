@@ -89,6 +89,7 @@
         <module>interceptors</module>
         <module>json</module>
         <module>json-customize</module>
+        <module>mailreader2</module>
         <module>message-resource</module>
         <module>message-store</module>
         <module>portlet</module>
