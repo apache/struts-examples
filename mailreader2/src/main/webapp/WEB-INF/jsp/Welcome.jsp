@@ -23,19 +23,19 @@
 <h3>Language Options</h3>
 <ul>
     <li>
-        <s:url id="en" action="Welcome">
+        <s:url var="en" action="Welcome">
             <s:param name="request_locale">en</s:param>
         </s:url>
         <s:a href="%{en}">English</s:a>
     </li>
     <li>
-        <s:url id="ja" action="Welcome">
+        <s:url var="ja" action="Welcome">
             <s:param name="request_locale">ja</s:param>
         </s:url>
         <s:a href="%{ja}">Japanese</s:a>
     </li>
     <li>
-        <s:url id="ru" action="Welcome">
+        <s:url var="ru" action="Welcome">
             <s:param name="request_locale">ru</s:param>
         </s:url>
         <s:a href="%{ru}">Russian</s:a>
