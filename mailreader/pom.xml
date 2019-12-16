@@ -46,12 +46,18 @@
             <artifactId>struts-mailreader-dao</artifactId>
             <version>1.3.5</version>
         </dependency>
-        <!-- override transitive version from struts-mailreader-dao -->
+        <!-- begin: override transitive version from struts-mailreader-dao -->
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.4</version>
+        </dependency>
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
             <version>3.2.2</version>
         </dependency>
+        <!-- end: override transitive version from struts-mailreader-dao -->
     </dependencies>
 
     <build>
