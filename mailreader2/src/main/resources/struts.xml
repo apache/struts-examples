@@ -5,7 +5,7 @@
 
 <struts>
 
-    <constant name="struts.action.extension" value="" />
+    <constant name="struts.action.extension" value="do" />
     <constant name="struts.devMode" value="true" />
 
     <include file="mailreader-default.xml"/>
