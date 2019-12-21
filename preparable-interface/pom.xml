@@ -6,13 +6,11 @@
     <parent>
         <groupId>org.apache.struts</groupId>
         <artifactId>struts-examples</artifactId>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
     </parent>
 
     <artifactId>preparable-interface</artifactId>
-
     <name>Preparable Interface</name>
-
     <description>Struts 2 example application for the preparable interface getting started tutorial</description>
 
     <packaging>war</packaging>

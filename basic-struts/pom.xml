@@ -6,8 +6,9 @@
     <parent>
         <groupId>org.apache.struts</groupId>
         <artifactId>struts-examples</artifactId>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
     </parent>
+
     <artifactId>basic-struts</artifactId>
     <name>Basic Struts2 Example</name>
     <description>Basic Struts 2 example application</description>
