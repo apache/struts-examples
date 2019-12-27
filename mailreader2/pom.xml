@@ -46,6 +46,13 @@
             <version>3.2</version>
         </dependency>
 
+        <!-- commons-digester3 is using outdated version -->
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.4</version>
+        </dependency>
+
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
