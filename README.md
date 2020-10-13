@@ -1,7 +1,7 @@
 Struts Examples
 ---------------
 
-[![Build Status @ Jenkins](https://builds.apache.org/buildStatus/icon?job=Struts-examples-JDK8-master)](https://builds.apache.org/view/S-Z/view/Struts/job/Struts-examples-JDK8-master/)
+[![Build Status](https://ci-builds.apache.org/buildStatus/icon?job=Struts%2FStruts-examples-JDK8-master)](https://ci-builds.apache.org/job/Struts/job/Struts-examples-JDK8-master/)
 [![Build Status @ Travis](https://travis-ci.org/apache/struts-examples.svg?branch=master)](https://travis-ci.org/apache/struts-examples)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
