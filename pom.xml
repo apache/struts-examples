@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.apache.struts</groupId>
@@ -96,6 +95,7 @@
         <module>message-store</module>
         <module>portlet</module>
         <module>preparable-interface</module>
+        <module>quarkus</module>
         <module>restful2actionmapper</module>
         <module>rest-angular</module>
         <module>shiro-basic</module>
@@ -106,11 +106,11 @@
         <module>themes-override</module>
         <module>type-conversion</module>
         <module>unit-testing</module>
+        <module>unknown-handler</module>
         <module>using-tags</module>
         <module>validation-messages</module>
         <module>wildcard-method-selection</module>
         <module>wildcard-regex</module>
-        <module>unknown-handler</module>
   </modules>
 
     <dependencies>
