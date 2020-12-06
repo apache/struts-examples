@@ -1,0 +1,11 @@
+# Basic dependabot.yml file with
+# minimum configuration for two package managers
+
+version: 2
+updates:
+  # Enable version updates for Docker
+  - package-ecosystem: "maven"
+    directory: "/"
+    # Check for updates once a week
+    schedule:
+      interval: "weekly"
