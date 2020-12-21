@@ -208,4 +208,51 @@
         <packageUrl regex="true">^pkg:maven/org\.apache\.struts/struts\-core@.*$</packageUrl>
         <vulnerabilityName>CVE-2015-2992</vulnerabilityName>
     </suppress>
+    <!-- quarkus, see: https://github.com/quarkusio/quarkus/issues/2611#issuecomment-553409186 -->
+    <suppress>
+        <notes>
+            <![CDATA[
+                Suppress the false positive CPE for quarkus-jdbc-postgresql to postgresql
+            ]]>
+        </notes>
+        <gav regex="true">^io\.quarkus:quarkus-jdbc-postgresql:.*$</gav>
+        <cpe>cpe:/a:postgresql:postgresql</cpe>
+    </suppress>
+    <suppress>
+        <notes>
+            <![CDATA[
+                Suppress the false positive CPE for quarkus-resteasy to resteasy
+            ]]>
+        </notes>
+        <gav regex="true">^io\.quarkus:quarkus-resteasy.*:.*$</gav>
+        <cpe>cpe:/a:redhat:resteasy</cpe>
+    </suppress>
+    <suppress>
+        <notes>
+            <![CDATA[
+                Suppress the false positive CPE for quarkus-undertow to undertow
+            ]]>
+        </notes>
+        <gav regex="true">^io\.quarkus:quarkus-undertow.*:.*$</gav>
+        <cpe>cpe:/a:redhat:undertow</cpe>
+    </suppress>
+    <suppress>
+        <notes>
+            <![CDATA[
+                Suppress the false positive CPE for quarkus-swagger-ui to swagger_project:swagger-ui
+            ]]>
+        </notes>
+        <gav regex="true">^io\.quarkus:quarkus-swagger-ui.*:.*$</gav>
+        <cpe>cpe:/a:swagger_project:swagger-ui</cpe>
+    </suppress>
+    <suppress>
+        <notes>
+            <![CDATA[
+                Suppress the false positive CPE for quarkus-netty to netty
+            ]]>
+        </notes>
+        <gav regex="true">^io\.quarkus:quarkus-netty.*:.*$</gav>
+        <cpe>cpe:/a:netty:netty</cpe>
+    </suppress>
+    <!-- quarkus -->
 </suppressions>
