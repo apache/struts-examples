@@ -41,9 +41,10 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <struts2.version>2.5.26</struts2.version>
-        <log4j2.version>2.14.1</log4j2.version>
-        <jetty-plugin.version>11.0.5</jetty-plugin.version>
+        <struts2.version>2.5.28</struts2.version>
+        <log4j2.version>2.10.0</log4j2.version>
+        <jetty-plugin.version>9.4.35.v20201120</jetty-plugin.version>
+        <maven.javadoc.skip>true</maven.javadoc.skip>
     </properties>
 
     <profiles>
@@ -162,8 +163,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -171,7 +172,7 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.3.1</version>
                 <configuration>
-                    <additionalparam>-Xdoclint:none</additionalparam>
+                    <doclint>none</doclint>
                 </configuration>
             </plugin>
         </plugins>
