@@ -3,7 +3,7 @@ language: java
 sudo: false
 
 jdk:
-  - openjdk8
+  - oraclejdk11
 
 install: true
 script: ./mvnw test
