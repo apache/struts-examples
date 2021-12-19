@@ -21,10 +21,6 @@
 
     <constant name="struts.mapper.class" value="rest"/>
 
-    <!-- Use Jackson lib as content handler for all JSON requests -->
-    <bean type="org.apache.struts2.rest.handler.ContentTypeHandler" name="jackson" class="org.apache.struts2.rest.handler.JacksonLibHandler"/>
-    <constant name="struts.rest.handlerOverride.json" value="jackson"/>
-
     <!-- Set to false if the json content can be returned for any kind of http method -->
     <constant name="struts.rest.content.restrictToGET" value="false"/>
 

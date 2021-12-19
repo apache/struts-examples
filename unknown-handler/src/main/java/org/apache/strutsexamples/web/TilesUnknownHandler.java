@@ -3,11 +3,11 @@ package org.apache.strutsexamples.web;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.Result;
 import com.opensymphony.xwork2.UnknownHandler;
-import com.opensymphony.xwork2.XWorkException;
 import com.opensymphony.xwork2.config.entities.ActionConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.StrutsException;
 import org.apache.struts2.views.tiles.TilesResult;
 import org.apache.tiles.TilesContainer;
 import org.apache.tiles.access.TilesAccess;
@@ -23,13 +23,13 @@ import java.util.Set;
 
 public class TilesUnknownHandler implements UnknownHandler {
 
-    private static Logger LOG = LogManager.getLogger(TilesUnknownHandler.class);
+    private static final Logger LOG = LogManager.getLogger(TilesUnknownHandler.class);
 
-    public ActionConfig handleUnknownAction(String namespace, String actionName) throws XWorkException {
+    public ActionConfig handleUnknownAction(String namespace, String actionName) throws StrutsException {
         return null;
     }
 
-    public Result handleUnknownResult(ActionContext actionContext, String actionName, ActionConfig actionConfig, String resultCode) throws XWorkException {
+    public Result handleUnknownResult(ActionContext actionContext, String actionName, ActionConfig actionConfig, String resultCode) throws StrutsException {
 
         ServletContext servletContext = ServletActionContext.getServletContext();
         HttpServletRequest request = ServletActionContext.getRequest();
@@ -54,7 +54,7 @@ public class TilesUnknownHandler implements UnknownHandler {
     }
 
     protected Set<String> buildDefinitionNames(String namespace, String actionName, String resultCode) {
-        Set<String> definitions = new LinkedHashSet<String>();
+        Set<String> definitions = new LinkedHashSet<>();
 
         if (namespace.startsWith("/")) {
             namespace = namespace.substring(1);

@@ -22,6 +22,7 @@ package example;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.config.entities.ActionConfig;
 
+import java.util.List;
 import java.util.Map;
 
 public class LoginTest extends ConfigTest {
@@ -45,9 +46,9 @@ public class LoginTest extends ConfigTest {
         Login login = new Login();
         String result = login.execute();
         assertInput(result);
-        Map errors = assertFieldErrors(login);
-        assertFieldError(errors,"username","Username is required.");
-        assertFieldError(errors,"password","Password is required.");
+        Map<String, List<String>> errors = assertFieldErrors(login);
+        assertFieldError(errors, "username", "Username is required.");
+        assertFieldError(errors, "password", "Password is required.");
     }
 
 }
