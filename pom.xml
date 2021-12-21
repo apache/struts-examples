@@ -79,6 +79,7 @@
         <module>control-tags</module>
         <module>crud</module>
         <module>debugging-struts</module>
+        <module>dynamic-href</module>
         <module>exception-handling</module>
         <module>exclude-parameters</module>
         <module>file-upload</module>
