@@ -90,6 +90,7 @@
         <module>helloworld</module>
         <module>http-session</module>
         <module>interceptors</module>
+        <module>jfreechart</module>
         <module>json</module>
         <module>json-customize</module>
         <module>mailreader2</module>
