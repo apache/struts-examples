@@ -82,6 +82,7 @@
         <module>dynamic-href</module>
         <module>exception-handling</module>
         <module>exclude-parameters</module>
+        <module>expression-cache</module>
         <module>file-upload</module>
         <module>form-processing</module>
         <module>form-tags</module>
