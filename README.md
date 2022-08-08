@@ -1,8 +1,8 @@
 Struts Examples
 ---------------
 
-[![Build Status](https://ci-builds.apache.org/buildStatus/icon?job=Struts%2FStruts-examples-master)](https://ci-builds.apache.org/job/Struts/job/Struts-examples-master/)
-[![Build Status @ Travis](https://travis-ci.org/apache/struts-examples.svg?branch=master)](https://travis-ci.org/apache/struts-examples)
+[![Build Status @ ASF](https://ci-builds.apache.org/buildStatus/icon?job=Struts%2FStruts-examples-master)](https://ci-builds.apache.org/job/Struts/job/Struts-examples-master/)
+[![Build Status @ Travis](https://app.travis-ci.com/apache/struts-examples.svg?branch=master)](https://app.travis-ci.com/apache/struts-examples)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 
