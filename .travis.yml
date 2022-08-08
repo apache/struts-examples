@@ -1,12 +1,7 @@
-dist: trusty
 language: java
-sudo: false
 
 jdk:
-  - oraclejdk11
-
-install: true
-script: ./mvnw test
+  - openjdk11
 
 cache:
   directories:
