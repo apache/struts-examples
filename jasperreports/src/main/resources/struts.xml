@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+  <constant name="struts.devMode" value="true" />
+  <package name="default" extends="jasperreports-default">
+    <default-action-ref name="index" />
+
+    <action name="index">
+      <result>/index.jsp</result>
+    </action>
+
+    <action name="myJasperTest" class="org.apache.struts.example.jasperreports.action.JasperAction">
+      <result name="success" type="jasper">
+        <param name="location">/WEB-INF/jasper/our_compiled_template.jasper</param>
+        <param name="dataSource">myList</param>
+        <param name="format">PDF</param>
+      </result>
+    </action>
+  </package>
+</struts>
