@@ -16,13 +16,32 @@
   <name>JasperReports Tutorial</name>
   <url>https://struts.apache.org/getting-started/jasper-reports-tutorial</url>
   <properties>
+    <spring.platformVersion>5.3.20</spring.platformVersion>
     <jasperreports.version>6.20.0</jasperreports.version>
   </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-framework-bom</artifactId>
+        <version>${spring.platformVersion}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <dependencies>
     <dependency>
       <groupId>org.apache.struts</groupId>
       <artifactId>struts2-jasperreports-plugin</artifactId>
+      <version>${struts2.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.struts</groupId>
+      <artifactId>struts2-spring-plugin</artifactId>
       <version>${struts2.version}</version>
     </dependency>
 
@@ -45,6 +64,7 @@
       <version>2.0</version>
       <scope>provided</scope>
     </dependency>
+
   </dependencies>
 
   <build>

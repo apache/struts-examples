@@ -115,6 +115,7 @@
         <module>validation-messages</module>
         <module>wildcard-method-selection</module>
         <module>wildcard-regex</module>
+        <module>jasperreports</module>
   </modules>
 
     <dependencies>
