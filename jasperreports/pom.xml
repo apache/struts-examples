@@ -16,7 +16,7 @@
   <name>JasperReports Tutorial</name>
   <url>https://struts.apache.org/getting-started/jasper-reports-tutorial</url>
   <properties>
-    <spring.platformVersion>5.3.20</spring.platformVersion>
+    <spring.platformVersion>5.3.22</spring.platformVersion>
     <jasperreports.version>6.20.0</jasperreports.version>
   </properties>
 
