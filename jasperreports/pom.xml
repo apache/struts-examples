@@ -16,21 +16,8 @@
   <name>JasperReports Tutorial</name>
   <url>https://struts.apache.org/getting-started/jasper-reports-tutorial</url>
   <properties>
-    <spring.platformVersion>5.3.22</spring.platformVersion>
     <jasperreports.version>6.20.0</jasperreports.version>
   </properties>
-
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-framework-bom</artifactId>
-        <version>${spring.platformVersion}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
 
   <dependencies>
     <dependency>
