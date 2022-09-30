@@ -1,11 +1,5 @@
 package org.apache.struts.register.model;
 
-
-/**
- * Models a Person who registers.
- * @author bruce phillips
- *
- */
 public class Person {
     private String firstName;
     private String lastName;
@@ -45,7 +39,9 @@ public class Person {
     }
 
     public String toString() {
-        return "First Name: " + getFirstName() + " Last Name:  " + getLastName() + 
-        " Email:      " + getEmail() + " Age:      " + getAge() ;
+        return "First Name: " + getFirstName() +
+                " Last Name: " + getLastName() +
+                " Email: " + getEmail() +
+                " Age: " + getAge();
     }
 }
