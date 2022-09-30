@@ -13,7 +13,7 @@ then startup the Servlet container.
 Or if you are using maven you can run command:
 mvn jetty:run
 
-In a web browser go to:  http://localhost:8080/hello-world/index.action.
+In a web browser go to:  http://localhost:8080/helloworld/index.action.
 
 You should see a web page with Welcome to Struts 2!
 
