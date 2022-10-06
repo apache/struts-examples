@@ -9,7 +9,7 @@
 <body>
 <h3>Register for a prize by completing this form.</h3>
 
-<s:form action="register-submit">
+<s:form action="register-submit" namespace="test">
     <s:textfield name="personBean.firstName" label="First name"/>
     <s:textfield name="personBean.lastName" label="Last name"/>
     <s:textfield name="personBean.email" label="Email"/>

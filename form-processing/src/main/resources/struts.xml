@@ -7,7 +7,15 @@
     <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
     <constant name="struts.mapper.action.prefix.enabled" value="true"/>
 
-    <package name="basicstruts2" extends="struts-default">
+    <package name="basicstruts" namespace="/" extends="struts-default">
+        <default-action-ref name="index"/>
+        <action name="index">
+            <result type="redirectAction">test/index</result>
+        </action>
+
+    </package>
+
+    <package name="basicstruts2" namespace="/test" extends="struts-default">
         <default-action-ref name="index"/>
         <!-- If no class attribute is specified the framework will assume success and
         render the result index.jsp -->
@@ -25,10 +33,10 @@
         <action name="register" class="org.apache.struts.register.action.Register" method="input">
             <result name="input">/WEB-INF/register.jsp</result>
         </action>
-        <action name="register-cancel" class="org.apache.struts.register.action.Register" method="cancel">
+        <action name="register-cancel" class="org.apache.struts.register.action.Register" method="cancel2">
             <result type="redirectAction">index</result>
         </action>
-        <action name="register-submit" class="org.apache.struts.register.action.Register" method="execute">
+        <action name="register-submit" class="org.apache.struts.register.action.Register" method="execute2">
             <result>/WEB-INF/thankyou.jsp</result>
         </action>
     </package>

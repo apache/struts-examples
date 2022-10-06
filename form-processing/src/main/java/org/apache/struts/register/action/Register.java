@@ -7,12 +7,12 @@ public class Register extends ActionSupport {
 
     private Person personBean;
 
-    public String execute() throws Exception {
+    public String execute2() throws Exception {
         //call Service class to store personBean's state in database
         return SUCCESS;
     }
 
-    public String cancel() throws Exception {
+    public String cancel2() throws Exception {
         return SUCCESS;
     }
 
