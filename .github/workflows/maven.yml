@@ -43,7 +43,7 @@ jobs:
           distribution: adopt
           java-version: ${{ matrix.java }}
       - name: Build with Maven on Java ${{ matrix.java }}
-        run: ./mvnw -B -V test --no-transfer-progress
+        run: mvn -B -V test --no-transfer-progress
       - name: Apply automerge label
         if: matrix.java == '17' && github.actor == 'dependabot[bot]'
         run: gh pr edit "$PR_URL" --add-label "automerge"
