@@ -52,6 +52,7 @@ jobs:
           PR_URL: ${{ github.event.pull_request.html_url }}
       - name: Automerge
         if: matrix.java == '17' && github.actor == 'dependabot[bot]'
-        uses: pascalgn/automerge-action@v0.15.3
+        run: gh pr merge -m "$PR_URL"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
