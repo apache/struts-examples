@@ -1,10 +1,13 @@
 package org.apache.struts.register.model;
 
+import java.util.List;
+
 public class Person {
     private String firstName;
     private String lastName;
     private String email;
     private int age;
+    private List<Integer> options;
 
     public String getFirstName() {
         return firstName;
@@ -38,10 +41,19 @@ public class Person {
         this.age = age;
     }
 
+    public List<Integer> getOptions() {
+        return options;
+    }
+
+    public void setOptions(List<Integer> options) {
+        this.options = options;
+    }
+
     public String toString() {
         return "First Name: " + getFirstName() +
                 " Last Name: " + getLastName() +
                 " Email: " + getEmail() +
-                " Age: " + getAge();
+                " Age: " + getAge() +
+                " Options: " + getOptions();
     }
 }

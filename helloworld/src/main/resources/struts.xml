@@ -1,27 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts PUBLIC
-		"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
-		"http://struts.apache.org/dtds/struts-2.5.dtd">
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
 
-	<constant name="struts.devMode" value="true" />
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.action.extension" value=","/>
 
-	<package name="basicstruts2" extends="struts-default">
+    <package name="basicstruts2" namespace="/" extends="struts-default">
+        <default-action-ref name="index"/>
 
-        <!-- If no class attribute is specified the framework will assume success and 
+        <!-- If no class attribute is specified the framework will assume success and
         render the result index.jsp -->
         <!-- If no name value for the result node is specified the success value is the default -->
-		<action name="index">
-			<result>/index.jsp</result>
-		</action>
-		
-		<!-- If the URL is hello.action then call the execute method of class HelloWorldAction.
-		If the result returned by the execute method is success render the HelloWorld.jsp -->
-		<action name="hello" class="org.apache.struts.helloworld.action.HelloWorldAction" method="execute">
-			<result name="success">/HelloWorld.jsp</result>
-		</action>
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
 
-	</package>
+        <!-- If the URL is hello.action then call the execute method of class HelloWorldAction.
+        If the result returned by the execute method is success render the HelloWorld.jsp -->
+        <action name="hello" class="org.apache.struts.helloworld.action.HelloWorldAction" method="execute">
+            <result name="success">/HelloWorld.jsp</result>
+        </action>
+
+        <!-- Executed And Wait Test -->
+        <action name="ExecAndWaitTest" class="org.apache.struts.helloworld.action.ExecAndWaitTestAction">
+            <interceptor-ref name="basicStack"/>
+            <result>/execAndWaitTest.jsp</result>
+        </action>
+        <action name="ExecAndWaitTest_test" class="org.apache.struts.helloworld.action.ExecAndWaitTestAction" method="test">
+            <interceptor-ref name="basicStack"/>
+            <interceptor-ref name="execAndWait"/>
+            <result name="wait">/execAndWaitTest_wait.jsp</result>
+            <result type="redirectAction">ExecAndWaitTest</result>
+        </action>
+
+    </package>
 
 </struts>
