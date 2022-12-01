@@ -46,6 +46,11 @@ jobs:
           java-version: ${{ matrix.java }}
       - name: Build with Maven on Java ${{ matrix.java }}
         run: mvn -B -V test --no-transfer-progress
+  automerge:
+    if: github.event_name == 'pull_request' && github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    needs: [ build ]
+    steps:
       - name: Apply automerge label
         if: matrix.java == '17' && github.actor == 'dependabot[bot]'
         run: gh pr edit "$PR_URL" --add-label "automerge"
