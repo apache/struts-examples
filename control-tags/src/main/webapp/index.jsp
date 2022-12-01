@@ -10,6 +10,6 @@
 <body>
 <h1>Welcome To Struts 2!</h1>
 
-<p><a href='<s:url action="edit" />'>Edit your information</a></p>
+<p><a href='<s:url action="edit" includeParams="all" />'>Edit your information</a></p>
 </body>
 </html>

@@ -46,7 +46,7 @@
     </s:iterator>
 </table>
 
-<p><a href="<s:url action='index' />">Return to home page</a>.</p>
+<p><a href="<s:url action='index' includeParams="all"/>">Return to home page</a>.</p>
 
 </body>
 </html>

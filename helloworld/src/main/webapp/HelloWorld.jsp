@@ -8,5 +8,6 @@
   </head>
   <body>
     <h2><s:property value="messageStore.message" /></h2>
+    <p><a href="<s:url action="index"/>">Home</a></p>
   </body>
 </html>
