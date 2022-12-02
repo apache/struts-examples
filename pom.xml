@@ -47,6 +47,8 @@
         <log4j2.version>2.19.0</log4j2.version>
         <jetty-plugin.version>9.4.46.v20220331</jetty-plugin.version>
         <maven.javadoc.skip>true</maven.javadoc.skip>
+        <jackson.version>2.14.1</jackson.version>
+        <jackson-data-bind.version>2.14.1</jackson-data-bind.version>
     </properties>
 
     <profiles>
@@ -152,6 +154,18 @@
                 <artifactId>log4j-api</artifactId>
                 <version>${log4j2.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-data-bind.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+                <artifactId>jackson-dataformat-xml</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
