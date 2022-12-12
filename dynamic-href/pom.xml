@@ -16,7 +16,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jetty-plugin.version>9.4.35.v20201120</jetty-plugin.version>
+    <jetty-plugin.version>11.0.13</jetty-plugin.version>
   </properties>
 
   <dependencies>
