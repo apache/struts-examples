@@ -2,95 +2,92 @@ package org.apache.struts.edit.model;
 
 import java.util.Arrays;
 
-
 /**
  * Models a Person who registers.
- * @author bruce phillips
- *
  */
-public class Person
-{
+public class Person {
     private String firstName;
     private String lastName;
     private String sport;
     private String gender;
     private String residency;
     private boolean over21;
-    private String [] carModels;
- 
+    private String[] carModels;
+    private String preferredCarModel;
 
-    public String getFirstName()
-    {
+    public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName)
-    {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public String getLastName()
-    {
+    public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName)
-    {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
+    public void setSport(String sport) {
+        this.sport = sport;
+    }
 
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
+    public String getGender() {
+        return gender;
+    }
 
-	public void setSport(String sport) {
-		this.sport = sport;
-	}
+    public String getSport() {
+        return sport;
+    }
 
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
+    public void setResidency(String residency) {
+        this.residency = residency;
+    }
 
-	public String getGender() {
-		return gender;
-	}
+    public String getResidency() {
+        return residency;
+    }
 
-	public String getSport() {
-		return sport;
-	}
+    public void setOver21(boolean over21) {
+        this.over21 = over21;
+    }
 
-	public void setResidency(String residency) {
-		this.residency = residency;
-	}
+    public boolean isOver21() {
+        return over21;
+    }
 
-	public String getResidency() {
-		return residency;
-	}
+    public void setCarModels(String[] carModels) {
+        this.carModels = carModels;
+    }
 
-	public void setOver21(boolean over21) {
-		this.over21 = over21;
-	}
+    public String[] getCarModels() {
+        return carModels;
+    }
 
-	public boolean isOver21() {
-		return over21;
-	}
+    public String getPreferredCarModel() {
+        return preferredCarModel;
+    }
 
-	public void setCarModels(String [] carModels) {
-		this.carModels = carModels;
-	}
+    public void setPreferredCarModel(String preferredCarModel) {
+        this.preferredCarModel = preferredCarModel;
+    }
 
-	public String [] getCarModels() {
-		return carModels;
-	}
-
-	public String toString()
-    {
+    public String toString() {
         return "First Name: " + getFirstName() + " | " +
-        " Last Name:  " + getLastName() + " | " +
-        " Favorite Sport: " + getSport() + " | " +
-        " Gender: " + getGender() + " | " +  
-        " Residency: " + getResidency() + " | " +
-        " Over 21: " + isOver21()  + " | " +
-        " Car models: " + Arrays.asList( getCarModels() ) ;
-        
+                " Last Name:  " + getLastName() + " | " +
+                " Favorite Sport: " + getSport() + " | " +
+                " Gender: " + getGender() + " | " +
+                " Residency: " + getResidency() + " | " +
+                " Over 21: " + isOver21() + " | " +
+                " Car models: " + Arrays.asList(getCarModels()) + " | " +
+                " Preferred Car Model: " + getPreferredCarModel();
+
     }
 }
