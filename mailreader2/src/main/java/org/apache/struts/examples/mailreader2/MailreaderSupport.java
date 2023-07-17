@@ -28,8 +28,8 @@ import org.apache.struts.examples.mailreader2.dao.User;
 import org.apache.struts.examples.mailreader2.dao.UserDatabase;
 import org.apache.struts.examples.mailreader2.dao.impl.memory.MemorySubscription;
 import org.apache.struts.examples.mailreader2.dao.impl.memory.MemoryUser;
-import org.apache.struts2.interceptor.ApplicationAware;
-import org.apache.struts2.interceptor.SessionAware;
+import org.apache.struts2.action.ApplicationAware;
+import org.apache.struts2.action.SessionAware;
 
 import java.util.Map;
 
@@ -98,7 +98,7 @@ public class MailreaderSupport extends ActionSupport implements SessionAware, Ap
      *
      * @param value A Map representing application state
      */
-    public void setApplication(Map value) {
+    public void withApplication(Map value) {
         application = value;
     }
 
@@ -121,7 +121,7 @@ public class MailreaderSupport extends ActionSupport implements SessionAware, Ap
      *
      * @param value A Map representing session state
      */
-    public void setSession(Map value) {
+    public void withSession(Map value) {
         session = value;
     }
 
