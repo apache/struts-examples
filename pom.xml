@@ -43,7 +43,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <struts2.version>6.1.2.1</struts2.version>
+        <struts2.version>6.2.0</struts2.version>
         <log4j2.version>2.20.0</log4j2.version>
         <jetty-plugin.version>11.0.15</jetty-plugin.version>
         <maven.javadoc.skip>true</maven.javadoc.skip>

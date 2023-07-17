@@ -2,7 +2,7 @@ package org.apache.strutsexamples.actions;
 
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.convention.annotation.Action;
-import org.apache.struts2.interceptor.SessionAware;
+import org.apache.struts2.action.SessionAware;
 
 import java.util.Map;
 
@@ -29,7 +29,7 @@ public class Login extends ActionSupport implements SessionAware {
         }
     }
 
-    public void setSession(Map<String, Object> session) {
+    public void withSession(Map<String, Object> session) {
         this.session = session;
     }
 

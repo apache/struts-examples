@@ -19,7 +19,7 @@
 package org.apache.struts2.portlet.example.eventing;
 
 import com.opensymphony.xwork2.ActionSupport;
-import org.apache.struts2.portlet.interceptor.PortletResponseAware;
+import org.apache.struts2.portlet.action.PortletResponseAware;
 
 import javax.portlet.ActionResponse;
 import javax.portlet.PortletResponse;
@@ -41,7 +41,7 @@ public class PublishAction extends ActionSupport implements PortletResponseAware
         return SUCCESS;
     }
 
-    public void setPortletResponse(PortletResponse response) {
+    public void withPortletResponse(PortletResponse response) {
         this.response = response;
 
     }

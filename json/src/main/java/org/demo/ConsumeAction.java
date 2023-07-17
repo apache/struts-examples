@@ -20,7 +20,7 @@
 package org.demo;
 
 import com.opensymphony.xwork2.ActionSupport;
-import org.apache.struts2.interceptor.ServletRequestAware;
+import org.apache.struts2.action.ServletRequestAware;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -40,7 +40,7 @@ public class ConsumeAction extends ActionSupport implements ServletRequestAware 
         return bean;
     }
 
-    public void setServletRequest(HttpServletRequest request) {
+    public void withServletRequest(HttpServletRequest request) {
         responseAsJson = request.getHeader("Accept").contains("application/json");
     }
 }

@@ -19,8 +19,8 @@
 package org.apache.struts2.portlet.example.eventing;
 
 import com.opensymphony.xwork2.ActionSupport;
-import org.apache.struts2.portlet.interceptor.PortletRequestAware;
-import org.apache.struts2.portlet.interceptor.PortletResponseAware;
+import org.apache.struts2.portlet.action.PortletRequestAware;
+import org.apache.struts2.portlet.action.PortletResponseAware;
 
 import javax.portlet.EventRequest;
 import javax.portlet.EventResponse;
@@ -47,11 +47,11 @@ public class ProcessAction extends ActionSupport implements PortletRequestAware,
         return SUCCESS;
     }
 
-    public void setPortletRequest(PortletRequest request) {
+    public void withPortletRequest(PortletRequest request) {
         this.request = request;
     }
 
-    public void setPortletResponse(PortletResponse response) {
+    public void withPortletResponse(PortletResponse response) {
         this.response = response;
     }
 
