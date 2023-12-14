@@ -10,10 +10,10 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.web.context.ServletContextAware;
 
-public class JapserInitializer implements InitializingBean, DisposableBean, ServletContextAware {
+public class JasperInitializer implements InitializingBean, DisposableBean, ServletContextAware {
   private ServletContext sc;
 
-  private static final Logger LOG = LogManager.getLogger(JapserInitializer.class);
+  private static final Logger LOG = LogManager.getLogger(JasperInitializer.class);
 
   private static final String COMPILED_JASPER_FILE = "/WEB-INF/jasper/our_compiled_template.jasper";
 
@@ -23,7 +23,7 @@ public class JapserInitializer implements InitializingBean, DisposableBean, Serv
       LOG.info("=== Start JasperReport compile ===");
       JasperCompileManager.compileReportToFile(
           Optional.ofNullable(
-                  JapserInitializer.class.getResource("/jasper/our_jasper_template.jrxml"))
+                  JasperInitializer.class.getResource("/jasper/our_jasper_template.jrxml"))
               .orElseThrow(
                   () -> {
                     throw new IllegalStateException("our_jasper_template.jrxml File not found.");
