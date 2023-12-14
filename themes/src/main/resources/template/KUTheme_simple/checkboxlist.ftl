@@ -13,7 +13,7 @@
             <#assign itemValue = stack.findString('top')/>
         </#if>
 <#assign itemKeyStr=itemKey.toString() />
-<input type="checkbox" name="${parameters.name?html}" value="${itemKeyStr?html}" id="${parameters.name?html}-${itemCount}"<#rt/>
+<input type="checkbox" name="${parameters.name?esc}" value="${itemKeyStr?esc}" id="${parameters.name?esc}-${itemCount}"<#rt/>
         <#if tag.contains(parameters.nameValue, itemKey)>
  checked="checked"<#rt/>
         </#if>
@@ -21,17 +21,17 @@
  disabled="disabled"<#rt/>
         </#if>
         <#if parameters.title??>
- title="${parameters.title?html}"<#rt/>
+ title="${parameters.title?esc}"<#rt/>
         </#if>
         <#include "/${parameters.templateDir}/simple/scripting-events.ftl" />
         <#include "/${parameters.templateDir}/simple/common-attributes.ftl" />
 />
-<label for="${parameters.name?html}-${itemCount}" style="color:red;font-weight:bold">${itemValue?html}</label> <br />
+<label for="${parameters.name?esc}-${itemCount}" style="color:red;font-weight:bold">${itemValue?esc}</label> <br />
     </@s.iterator>
 <#else>
   &nbsp;
 </#if>
-<input type="hidden" id="__multiselect_${parameters.id?html}" name="__multiselect_${parameters.name?html}" value=""<#rt/>
+<input type="hidden" id="__multiselect_${parameters.id?esc}" name="__multiselect_${parameters.name?esc}" value=""<#rt/>
 <#if parameters.disabled?default(false)>
  disabled="disabled"<#rt/>
 </#if>
