@@ -14,7 +14,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <quarkus-plugin.version>3.6.0</quarkus-plugin.version>
+        <quarkus-plugin.version>3.6.1</quarkus-plugin.version>
     </properties>
 
     <dependencyManagement>
