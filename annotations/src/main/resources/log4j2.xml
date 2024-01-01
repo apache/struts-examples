@@ -8,6 +8,7 @@
     <Loggers>
         <Logger name="com.opensymphony.xwork2" level="info"/>
         <Logger name="org.apache.struts2" level="info"/>
+        <Logger name="org.apache.struts2.convention" level="debug"/>
         <Logger name="example" level="debug"/>
         <Root level="info">
             <AppenderRef ref="STDOUT"/>
