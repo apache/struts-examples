@@ -11,6 +11,15 @@
             <param-name>struts.devMode</param-name>
             <param-value>true</param-value>
         </init-param>
+        <!-- Log4j is using *Action suffix as well, so narrow scanning just to a given package -->
+        <init-param>
+            <param-name>struts.convention.action.packages</param-name>
+            <param-value>example.actions</param-value>
+        </init-param>
+        <init-param>
+            <param-name>struts.convention.package.locators.disable</param-name>
+            <param-value>true</param-value>
+        </init-param>
     </filter>
 
     <filter-mapping>
