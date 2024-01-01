@@ -20,10 +20,8 @@
 		<result name="input">register.jsp</result>
 	  </action>
 
-      <!-- for logger interceptor see: https://struts.apache.org/core-developers/logging-interceptor.html -->
       <!-- for timer interceptor see https://struts.apache.org/core-developers/timer-interceptor.html -->		
 	  <action name="register" class="org.apache.struts.register.action.Register" method="execute">
-	  		<interceptor-ref name="timer" />
 			<interceptor-ref name="logger" />
 			<interceptor-ref name="defaultStack">
 			   <param name="exception.logEnabled">true</param>
