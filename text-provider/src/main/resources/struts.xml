@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
     "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
-    "http://struts.apache.org/dtds/struts-2.5.dtd">
+    "https://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
   <constant name="struts.devMode" value="true"/>
   <constant name="struts.convention.action.packages" value="org.apache.struts_example"/>
@@ -15,16 +15,16 @@
   <bean type="com.opensymphony.xwork2.TextProviderFactory"
         class="org.apache.struts_example.MyTextProviderFactory"
         name="myTextProviderFactory"
-        scope="singleton"/>  
-  
+        scope="singleton"/>
+
   <constant name="struts.textProviderFactory" value="myTextProviderFactory"/>
-    
-  <!-- 
-  Alternatively, if you prefer to extend only TextProviderSupport, 
+
+  <!--
+  Alternatively, if you prefer to extend only TextProviderSupport,
   you can define the custrom TextProvider like this (see Struts v2.5.10 TextProvider Javadocs):
   -->
-  <!--  
-  <bean class="com.company.MyTextProviderSupport" name="MyTextProviderSupport" 
+  <!--
+  <bean class="com.company.MyTextProviderSupport" name="MyTextProviderSupport"
     type="com.opensymphony.xwork2.TextProvider" />
   <constant name="struts.xworkTextProvider" value="MyTextProviderSupport" />
   -->
@@ -32,7 +32,7 @@
   <bean type="com.opensymphony.xwork2.LocalizedTextProvider" name="myProvider" class="org.apache.struts_example.MyLocalizedTextProvider" scope="singleton" />
 
   <constant name="struts.localizedTextProvider" value="myProvider" />
-  
+
   <package name="default" extends="struts-default">
 
     <default-action-ref name="index"/>
