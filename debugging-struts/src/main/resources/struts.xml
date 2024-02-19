@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts PUBLIC
         "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
-        "http://struts.apache.org/dtds/struts-2.5.dtd">
+        "https://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
 
@@ -59,7 +59,7 @@
             <result name="login">/login.jsp</result>
         </action>
 
-        <!-- If no class attribute is specified the framework will assume success and 
+        <!-- If no class attribute is specified the framework will assume success and
         render the result index.jsp -->
         <!-- If no name value for the result node is specified the success value is the default -->
         <action name="index">

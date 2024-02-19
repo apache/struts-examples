@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
-	"http://struts.apache.org/dtds/struts-2.5.dtd">
+	"https://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
 	<package name="view" extends="struts-portlet-default"
@@ -27,7 +27,7 @@
 				/WEB-INF/view/formExample.jsp
 			</result>
 		</action>
-		
+
 		<action name="formExamplePrg" class="org.apache.struts2.portlet.example.FormExample">
 			<result name="input">
 				/WEB-INF/view/formExampleInputPrg.jsp
@@ -42,7 +42,7 @@
 				/WEB-INF/view/formExample.jsp
 			</result>
 		</action>
-		
+
 		<action name="formExampleModelDriven"
 			class="org.apache.struts2.portlet.example.FormExampleModelDriven">
 			<result name="input">
@@ -69,7 +69,7 @@
 				/WEB-INF/view/formExampleInputValidation.jsp
 			</result>
 		</action>
-		
+
 		<action name="fileUpload" class="org.apache.struts2.portlet.example.fileupload.FileUploadAction">
 			<result name="input">
 				/WEB-INF/view/fileUpload.jsp
@@ -117,11 +117,11 @@
 			class="org.apache.struts2.portlet.example.FormExample">
 			<result name="success">/view/processFreeMarkerView.action?firstName=${firstName}&amp;lastName=${lastName}</result>
 		</action>
-		
+
 		<action name="processFreeMarkerView" class="org.apache.struts2.portlet.example.FormExample">
 			<result type="freemarker" name="success">/WEB-INF/view/freeMarkerExample.ftl</result>
 		</action>
-		
+
 		<action name="velocityHelloWorld" class="com.opensymphony.xwork2.ActionSupport">
 			<result type="velocity" name="success">/WEB-INF/view/helloWorld.vm</result>
 		</action>

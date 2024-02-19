@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
-	"http://struts.apache.org/dtds/struts-2.5.dtd">
+	"https://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
     <package name="tiles" extends="struts-portlet-tiles-default" namespace="/tiles">
@@ -15,12 +15,12 @@
         <action name="processTilesFreemarkerExample" class="org.apache.struts2.portlet.example.FormExample" method="input">
             <result name="success" type="tiles">formExampleTiles.freemarker</result>
         </action>
-        
+
         <action name="processTilesFreemarkerExample" class="org.apache.struts2.portlet.example.FormExample" method="execute">
             <result name="input" type="tiles">formExampleTiles.freemarker</result>
             <result name="success" type="tiles">formExampleTiles.freemarkerResult</result>
         </action>
-        
+
     </package>
 </struts>
 
