@@ -15,7 +15,9 @@ public class JasperInitializer implements InitializingBean, DisposableBean, Serv
 
   private static final Logger LOG = LogManager.getLogger(JasperInitializer.class);
 
-  private static final String COMPILED_JASPER_FILE = "/WEB-INF/jasper/our_compiled_template.jasper";
+  private static final String COMPILED_JASPER_PATH = "/WEB-INF/jasper/";
+
+  private static final String COMPILED_JASPER_FILENAME = "our_compiled_template.jasper";
 
   @Override
   public void afterPropertiesSet() throws Exception {
@@ -29,7 +31,7 @@ public class JasperInitializer implements InitializingBean, DisposableBean, Serv
                     throw new IllegalStateException("our_jasper_template.jrxml File not found.");
                   })
               .getFile(),
-          sc.getRealPath(COMPILED_JASPER_FILE));
+          sc.getRealPath(COMPILED_JASPER_PATH) + COMPILED_JASPER_FILENAME);
       LOG.info("=== End JasperReport compile ===");
     } catch (Exception e) {
       throw new IllegalStateException("Failed to compile, " + e.getMessage(), e);
@@ -43,7 +45,7 @@ public class JasperInitializer implements InitializingBean, DisposableBean, Serv
 
   @Override
   public void destroy() throws Exception {
-    File templteFile = new File(sc.getRealPath(COMPILED_JASPER_FILE));
+    File templteFile = new File(sc.getRealPath(COMPILED_JASPER_PATH) + COMPILED_JASPER_FILENAME);
     LOG.info(
         "=== Compiled JasperReport file ({}) delete result: {} ===",
         templteFile.getAbsolutePath(),
