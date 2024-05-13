@@ -16,7 +16,7 @@
   <name>JasperReports Tutorial</name>
   <url>https://struts.apache.org/getting-started/jasper-reports-tutorial</url>
   <properties>
-    <jasperreports.version>6.21.2</jasperreports.version>
+    <jasperreports.version>6.21.3</jasperreports.version>
     <jetty-plugin.version>12.0.8</jetty-plugin.version>
   </properties>
 
