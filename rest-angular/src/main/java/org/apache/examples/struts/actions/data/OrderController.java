@@ -15,10 +15,11 @@ public class OrderController extends RestActionSupport implements ModelDriven<Ob
 
     private static final Logger log = LogManager.getLogger(OrderController.class);
 
+    private final OrdersService ordersService = new OrdersService();
+
     private Order model = new Order();
     private String id;
     private Collection<Order> list = null;
-    private OrdersService ordersService = new OrdersService();
 
     // GET /data/order/1
     public HttpHeaders show() {
@@ -29,7 +30,7 @@ public class OrderController extends RestActionSupport implements ModelDriven<Ob
     public HttpHeaders index() {
         list = ordersService.getAll();
         return new DefaultHttpHeaders("index")
-            .disableCaching();
+                .disableCaching();
     }
 
     // DELETE /data/order/1
@@ -37,7 +38,7 @@ public class OrderController extends RestActionSupport implements ModelDriven<Ob
         log.debug("Delete order with id: {}", id);
 
         // To demonstrate exception handling we throw an exception when someone tries to delete an order
-        if(id != null) {
+        if (id != null) {
             throw new RuntimeException(getText("exception.operation.not.supported"));
         }
 
@@ -50,7 +51,7 @@ public class OrderController extends RestActionSupport implements ModelDriven<Ob
         log.debug("Create new order: {}", model);
         ordersService.save(model);
         return new DefaultHttpHeaders("success")
-            .setLocationId(model.getId());
+                .setLocationId(model.getId());
     }
 
     // PUT /data/order/1
@@ -66,12 +67,12 @@ public class OrderController extends RestActionSupport implements ModelDriven<Ob
         }
         this.id = id;
     }
-    
+
     public Object getModel() {
-        if(list != null) {
+        if (list != null) {
             return list;
         } else {
-            if(model == null) {
+            if (model == null) {
                 model = new Order();
             }
             return model;

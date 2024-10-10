@@ -1,48 +1,53 @@
 package org.apache.examples.struts.models;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.hibernate.validator.constraints.NotBlank;
-
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 
 public class Order {
 
-
-    String id;
+    private String id;
 
     @NotBlank(message = "validation.order.client")
-    String clientName;
+    private String clientName;
 
     @Min(value = 10, message = "validation.order.amount")
     @Max(value = 666, message = "validation.order.amount")
-    int amount;
-    
-    public Order() {}
-    
+    private int amount;
+
+    public Order() {
+    }
+
     public Order(String id, String clientName, int amount) {
         super();
         this.id = id;
         this.clientName = clientName;
         this.amount = amount;
     }
+
     public int getAmount() {
         return amount;
     }
+
     public void setAmount(int amount) {
         this.amount = amount;
     }
+
     public String getClientName() {
         return clientName;
     }
+
     public void setClientName(String clientName) {
         this.clientName = clientName;
     }
+
     public String getId() {
         return id;
     }
+
     public void setId(String id) {
         this.id = id;
     }

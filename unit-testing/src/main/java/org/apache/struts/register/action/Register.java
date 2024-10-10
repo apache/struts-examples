@@ -2,63 +2,45 @@ package org.apache.struts.register.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts.register.model.Person;
+import org.apache.struts2.interceptor.parameter.StrutsParameter;
 
 /**
  * Acts as a controller to handle actions
  * related to registering a user.
- * @author bruce phillips
  *
+ * @author bruce phillips
  */
 public class Register extends ActionSupport {
-	
-	private static final long serialVersionUID = 1L;
-	
-	private Person personBean;
 
-	
-	public String execute() throws Exception {
-		
-		//call Service class to store personBean's state in database
-		
-		return SUCCESS;
-		
-	}
-	
-	public void validate(){
-		
-		if ( personBean.getFirstName() == null || personBean.getFirstName().length() == 0 ){	
+    private Person personBean;
 
-			addFieldError( "personBean.firstName", "First name is required." );
-			
-		}
-		
-				
-		if ( personBean.getEmail() == null || personBean.getEmail().length() == 0 ){	
+    public String execute() throws Exception {
+        //call Service class to store personBean's state in database
+        return SUCCESS;
+    }
 
-			addFieldError( "personBean.email", "Email is required." );
-			
-		}
-		
-		if ( personBean.getAge() < 18 ){	
+    public void validate() {
+        if (personBean.getFirstName() == null || personBean.getFirstName().isEmpty()) {
+            addFieldError("personBean.firstName", "First name is required.");
+        }
 
-			addFieldError( "personBean.age", "Age is required and must be 18 or older" );
-			
-		}
-		
-		
-	}
+        if (personBean.getEmail() == null || personBean.getEmail().isEmpty()) {
+            addFieldError("personBean.email", "Email is required.");
+        }
 
-	
-	public Person getPersonBean() {
-		
-		return personBean;
-		
-	}
-	
-	public void setPersonBean(Person person) {
-		
-		personBean = person;
-		
-	}
+        if (personBean.getAge() < 18) {
+            addFieldError("personBean.age", "Age is required and must be 18 or older");
+        }
+
+    }
+
+    @StrutsParameter(depth = 1)
+    public Person getPersonBean() {
+        return personBean;
+    }
+
+    public void setPersonBean(Person person) {
+        personBean = person;
+    }
 
 }
