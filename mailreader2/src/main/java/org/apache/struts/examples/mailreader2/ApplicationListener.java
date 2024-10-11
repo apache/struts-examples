@@ -19,13 +19,13 @@
 
 package org.apache.struts.examples.mailreader2;
 
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts.examples.mailreader2.dao.impl.memory.MemoryUserDatabase;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
 import java.io.*;
 
 /**
@@ -57,6 +57,8 @@ import java.io.*;
  */
 public final class ApplicationListener implements ServletContextListener {
 
+    private static final Logger LOG = LogManager.getLogger(ApplicationListener.class);
+
     /**
      * <p>Appication scope attribute key under which the in-memory version of
      * our database is stored.</p>
@@ -78,11 +80,6 @@ public final class ApplicationListener implements ServletContextListener {
      * The {@link MemoryUserDatabase} object we construct and make available.
      */
     private MemoryUserDatabase database = null;
-
-    /**
-     * <p>Logging output for this plug in instance.</p>
-     */
-    private Logger log = LogManager.getLogger(ApplicationListener.class);
 
     /**
      * <p>The web application resource path of our persistent database storage
@@ -115,13 +112,13 @@ public final class ApplicationListener implements ServletContextListener {
      * @param event ServletContextEvent to process
      */
     public void contextDestroyed(ServletContextEvent event) {
-        log.info("Finalizing memory database plug in");
+        LOG.info("Finalizing memory database plug in");
 
         if (database != null) {
             try {
                 database.close();
             } catch (Exception e) {
-                log.error("Closing memory database", e);
+                LOG.error("Closing memory database", e);
             }
         }
 
@@ -138,7 +135,7 @@ public final class ApplicationListener implements ServletContextListener {
      * @param event The context initialization event
      */
     public void contextInitialized(ServletContextEvent event) {
-        log.info("Initializing memory database plug in from '" + pathname + "'");
+        LOG.info("Initializing memory database plug in from '" + pathname + "'");
 
         // Remember our associated ServletContext
         this.context = event.getServletContext();
@@ -147,13 +144,13 @@ public final class ApplicationListener implements ServletContextListener {
         database = new MemoryUserDatabase();
         try {
             String path = calculatePath();
-            if (log.isDebugEnabled()) {
-                log.debug(" Loading database from '" + path + "'");
+            if (LOG.isDebugEnabled()) {
+                LOG.debug(" Loading database from '" + path + "'");
             }
             database.setPathname(path);
             database.open();
         } catch (Exception e) {
-            log.error("Opening memory database", e);
+            LOG.error("Opening memory database", e);
             throw new IllegalStateException("Cannot load database from '" +
                     pathname + "': " + e);
         }
@@ -187,7 +184,7 @@ public final class ApplicationListener implements ServletContextListener {
         FileOutputStream os =
                 new FileOutputStream(file);
         BufferedOutputStream bos = new BufferedOutputStream(os, 1024);
-        byte buffer[] = new byte[1024];
+        byte[] buffer = new byte[1024];
         while (true) {
             int n = bis.read(buffer);
             if (n <= 0) {

@@ -7,8 +7,10 @@
     <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
 
     <!-- Disable dev mode in productions -->
-    <constant name="struts.devMode" value="false"/>
+    <constant name="struts.devMode" value="true"/>
     <constant name="struts.handle.exception" value="false"/>
+
+    <constant name="struts.parameters.requireAnnotations" value="false"/>
 
     <!--  Overwrite Convention -->
     <constant name="struts.convention.action.suffix" value="Controller"/>
@@ -26,7 +28,6 @@
 
     <!-- Set validation failure status code -->
     <constant name="struts.rest.validationFailureStatusCode" value="406"/>
-
 
     <!-- Set encoding to UTF-8, default is ISO-8859-1 -->
     <constant name="struts.i18n.encoding" value="UTF-8"/>
@@ -55,7 +56,6 @@
                 <interceptor-ref name="modelDriven">
                     <param name="refreshModelBeforeResult">true</param>
                 </interceptor-ref>
-                <interceptor-ref name="fileUpload"/>
                 <interceptor-ref name="checkbox"/>
                 <interceptor-ref name="staticParams"/>
                 <interceptor-ref name="params"/>

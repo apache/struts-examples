@@ -4,7 +4,7 @@
 
     <groupId>org.apache.struts</groupId>
     <artifactId>struts-examples</artifactId>
-    <version>1.1.0</version>
+    <version>2.0.0</version>
     <packaging>pom</packaging>
 
     <name>Struts 2 Examples</name>
@@ -16,7 +16,7 @@
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
             <comments/>
         </license>
@@ -24,13 +24,13 @@
 
     <organization>
         <name>Apache Software Foundation</name>
-        <url>http://www.apache.org</url>
+        <url>https://www.apache.org</url>
     </organization>
 
     <scm>
         <connection>scm:git:git://git.apache.org/struts.git</connection>
         <developerConnection>scm:git:https://git-wip-us.apache.org/repos/asf/struts-examples.git</developerConnection>
-        <url>http://git.apache.org/struts-examples.git</url>
+        <url>https://github.com/apache/struts-examples.git</url>
         <tag>HEAD</tag>
     </scm>
 
@@ -41,14 +41,17 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <struts2.version>6.3.0.2</struts2.version>
-        <log4j2.version>2.23.1</log4j2.version>
-        <jetty-plugin.version>9.4.46.v20220331</jetty-plugin.version>
         <maven.javadoc.skip>true</maven.javadoc.skip>
+
+        <struts2.version>7.0.0-M9</struts2.version>
+        <log4j2.version>2.23.1</log4j2.version>
+        <jetty-plugin.version>11.0.18</jetty-plugin.version>
         <jackson.version>2.14.1</jackson.version>
         <jackson-data-bind.version>2.14.1</jackson-data-bind.version>
+        <hibernate-validator.version>8.0.1.Final</hibernate-validator.version>
     </properties>
 
     <profiles>
@@ -101,7 +104,6 @@
         <module>mailreader2</module>
         <module>message-resource</module>
         <module>message-store</module>
-        <module>portlet</module>
         <module>preparable-interface</module>
         <module>quarkus</module>
         <module>restful2actionmapper</module>
@@ -125,10 +127,35 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>javax.servlet-api</artifactId>
-                <version>4.0.1</version>
+                <groupId>jakarta.servlet</groupId>
+                <artifactId>jakarta.servlet-api</artifactId>
+                <version>6.0.0</version>
                 <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>jakarta.servlet.jsp</groupId>
+                <artifactId>jakarta.servlet.jsp-api</artifactId>
+                <version>3.1.0</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>jakarta.validation</groupId>
+                <artifactId>jakarta.validation-api</artifactId>
+                <version>3.0.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate.validator</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate-validator.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.glassfish</groupId>
+                <artifactId>jakarta.el</artifactId>
+                <version>5.0.0-M1</version>
             </dependency>
 
             <dependency>
@@ -179,8 +206,12 @@
             <artifactId>log4j-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.servlet.jsp</groupId>
+            <artifactId>jakarta.servlet.jsp-api</artifactId>
         </dependency>
     </dependencies>
 
