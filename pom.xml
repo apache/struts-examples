@@ -122,6 +122,7 @@
         <module>wildcard-method-selection</module>
         <module>wildcard-regex</module>
         <module>jasperreports</module>
+        <module>sitemesh3</module>
   </modules>
 
     <dependencyManagement>
