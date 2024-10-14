@@ -47,7 +47,7 @@
         <maven.javadoc.skip>true</maven.javadoc.skip>
 
         <struts2.version>7.0.0-M9</struts2.version>
-        <log4j2.version>2.23.1</log4j2.version>
+        <log4j2.version>2.24.1</log4j2.version>
         <jetty-plugin.version>11.0.18</jetty-plugin.version>
         <jackson.version>2.14.1</jackson.version>
         <jackson-data-bind.version>2.14.1</jackson-data-bind.version>
