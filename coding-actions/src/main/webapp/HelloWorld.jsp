@@ -5,6 +5,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
+    <s:script type="text/javascript">
+      function init() {
+        console.log('name: ' + window.name); //expects 'myTarget' here
+        console.log('opener: ' + window.opener);
+      }
+      window[addEventListener ? 'addEventListener' : 'attachEvent'](addEventListener ? 'load' : 'onload', init)
+    </s:script>
   </head>
 
   <body>
