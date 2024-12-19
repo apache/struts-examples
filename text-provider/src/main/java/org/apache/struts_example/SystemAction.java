@@ -19,9 +19,9 @@
 
 package org.apache.struts_example;
 
-import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.TextProvider;
-import com.opensymphony.xwork2.inject.Inject;
+import org.apache.struts2.ActionSupport;
+import org.apache.struts2.inject.Inject;
+import org.apache.struts2.text.TextProvider;
 
 public class SystemAction extends ActionSupport {
 

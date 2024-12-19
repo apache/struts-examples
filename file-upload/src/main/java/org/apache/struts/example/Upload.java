@@ -19,7 +19,7 @@
 
 package org.apache.struts.example;
 
-import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.ActionSupport;
 
 import java.io.File;
 

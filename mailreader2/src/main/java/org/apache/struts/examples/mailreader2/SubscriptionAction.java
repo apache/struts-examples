@@ -19,8 +19,8 @@
 
 package org.apache.struts.examples.mailreader2;
 
-import com.opensymphony.xwork2.Preparable;
 import org.apache.struts.examples.mailreader2.dao.Subscription;
+import org.apache.struts2.Preparable;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

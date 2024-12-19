@@ -18,9 +18,9 @@
  */
 package org.apache.struts.cache;
 
-import com.opensymphony.xwork2.ognl.OgnlDefaultCache;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.struts2.ognl.OgnlDefaultCache;
 
 public class CustomOEC extends OgnlDefaultCache<String, Object> {
 

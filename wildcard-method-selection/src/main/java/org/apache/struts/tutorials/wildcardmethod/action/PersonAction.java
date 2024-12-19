@@ -1,10 +1,10 @@
 package org.apache.struts.tutorials.wildcardmethod.action;
 
-import com.opensymphony.xwork2.ActionSupport;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts.tutorials.wildcardmethod.model.Person;
 import org.apache.struts.tutorials.wildcardmethod.service.PersonService;
+import org.apache.struts2.ActionSupport;
 
 import java.util.List;
 

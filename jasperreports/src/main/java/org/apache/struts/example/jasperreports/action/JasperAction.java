@@ -1,10 +1,10 @@
 package org.apache.struts.example.jasperreports.action;
 
-import com.opensymphony.xwork2.ActionSupport;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.struts.example.jasperreports.model.Person;
+import org.apache.struts2.ActionSupport;
 
 public class JasperAction extends ActionSupport {
   /** List to use as our JasperReports dataSource. */

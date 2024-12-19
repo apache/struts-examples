@@ -9,7 +9,7 @@
   <constant name="struts.convention.action.packages" value="org.apache.strutsexamples.web.actions"/>
   <constant name="struts.convention.default.parent.package" value="default"/>
 
-  <bean type="com.opensymphony.xwork2.UnknownHandler" name="tiles-convention" class="org.apache.strutsexamples.web.TilesUnknownHandler"/>
+  <bean type="org.apache.struts2.UnknownHandler" name="tiles-convention" class="org.apache.strutsexamples.web.TilesUnknownHandler"/>
 
   <package name="default" namespace="/" extends="struts-default">
 

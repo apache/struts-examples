@@ -1,6 +1,6 @@
 package org.apache.struts.helloworld.action;
 
-import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.ActionSupport;
 
 import java.util.concurrent.TimeUnit;
 

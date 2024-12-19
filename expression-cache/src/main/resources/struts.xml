@@ -34,7 +34,7 @@
     <constant name="struts.ognl.beanInfoCacheMaxSize" value="1000"/>
     <constant name="struts.ognl.beanInfoCacheLRUMode" value="true"/>
 
-    <bean type="com.opensymphony.xwork2.ognl.ExpressionCacheFactory"
+    <bean type="org.apache.struts2.ognl.ExpressionCacheFactory"
           class="org.apache.struts.cache.CustomOECFactory"
           name="customOgnlExpressionCacheFactory"
           scope="singleton"/>

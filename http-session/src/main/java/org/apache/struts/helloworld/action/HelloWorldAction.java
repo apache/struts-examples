@@ -1,8 +1,8 @@
 package org.apache.struts.helloworld.action;
 
-import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.interceptor.ParameterNameAware;
 import org.apache.struts.helloworld.model.MessageStore;
+import org.apache.struts2.ActionSupport;
+import org.apache.struts2.action.ParameterNameAware;
 import org.apache.struts2.action.SessionAware;
 
 import java.util.Map;
@@ -38,8 +38,6 @@ public class HelloWorldAction extends ActionSupport implements SessionAware, Par
      * increase helloCount stored in the HTTP session by 1 and
      * returns success.  The MessageStore model
      * object will be available to the view.
-     * (non-Javadoc)
-     * @see com.opensymphony.xwork2.ActionSupport#execute()
      */
     public String execute() throws Exception {
         messageStore = new MessageStore();

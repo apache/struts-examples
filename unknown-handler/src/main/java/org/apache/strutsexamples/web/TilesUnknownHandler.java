@@ -1,16 +1,16 @@
 package org.apache.strutsexamples.web;
 
-import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.Result;
-import com.opensymphony.xwork2.UnknownHandler;
-import com.opensymphony.xwork2.config.entities.ActionConfig;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.struts2.ActionContext;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.StrutsException;
+import org.apache.struts2.UnknownHandler;
+import org.apache.struts2.config.entities.ActionConfig;
+import org.apache.struts2.result.Result;
 import org.apache.struts2.views.tiles.TilesResult;
 import org.apache.tiles.api.TilesContainer;
 import org.apache.tiles.api.access.TilesAccess;
@@ -60,7 +60,7 @@ public class TilesUnknownHandler implements UnknownHandler {
             namespace = namespace.substring(1);
         }
 
-        if (!Objects.equals(namespace, "") && !Objects.equals(namespace, "/")){
+        if (!Objects.equals(namespace, "") && !Objects.equals(namespace, "/")) {
             if (namespace.endsWith("/")) {
                 definitions.add(namespace + actionName);
                 definitions.add(namespace + actionName + "-" + resultCode);

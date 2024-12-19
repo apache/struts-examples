@@ -1,9 +1,9 @@
 package org.apache.struts2.examples.quarkus;
 
-import com.opensymphony.xwork2.Action;
-import com.opensymphony.xwork2.Result;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.action.Action;
+import org.apache.struts2.result.Result;
 
 public class IndexAction {
 

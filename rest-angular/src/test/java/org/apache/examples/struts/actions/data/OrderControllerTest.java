@@ -19,8 +19,8 @@
 package org.apache.examples.struts.actions.data;
 
 import com.jayway.jsonpath.JsonPath;
-import com.opensymphony.xwork2.ActionProxy;
 import org.apache.examples.struts.models.Order;
+import org.apache.struts2.ActionProxy;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.junit.StrutsRestTestCase;
 import org.junit.Before;

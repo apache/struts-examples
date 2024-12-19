@@ -1,7 +1,7 @@
 package org.apache.struts.register.action;
 
-import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts.register.model.Person;
+import org.apache.struts2.ActionSupport;
 import org.apache.struts2.interceptor.parameter.StrutsParameter;
 
 /**

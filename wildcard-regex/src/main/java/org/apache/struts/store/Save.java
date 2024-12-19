@@ -19,7 +19,7 @@
 
 package org.apache.struts.store;
 
-import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.ActionSupport;
 
 public class Save extends ActionSupport {
 
