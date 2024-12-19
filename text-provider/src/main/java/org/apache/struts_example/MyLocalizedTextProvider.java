@@ -1,6 +1,6 @@
 package org.apache.struts_example;
 
-import com.opensymphony.xwork2.util.StrutsLocalizedTextProvider;
+import org.apache.struts2.text.StrutsLocalizedTextProvider;
 
 import java.io.File;
 import java.net.MalformedURLException;

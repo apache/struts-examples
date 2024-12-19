@@ -18,14 +18,14 @@
  */
 package org.apache.struts.cache;
 
-import com.opensymphony.xwork2.ognl.DefaultOgnlExpressionCacheFactory;
-import com.opensymphony.xwork2.ognl.OgnlCache;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.struts2.StrutsConstants;
+import org.apache.struts2.inject.Inject;
+import org.apache.struts2.ognl.DefaultOgnlExpressionCacheFactory;
+import org.apache.struts2.ognl.OgnlCache;
 
 /**
  * Placeholder custom OGNL expression cache factory
- *
+ * <p>
  * Breakpoints:
  * 1) OgnlUtil (Struts Core) - 1st line of constructor (to see what factory references are passed in).
  * 2) HelloWorldAction, IndexAction (S2_StarterApp_1) - 1st line of execute() methods (to see what is returned from the container).
@@ -33,23 +33,23 @@ import org.apache.logging.log4j.Logger;
  */
 public class CustomOECFactory extends DefaultOgnlExpressionCacheFactory<String, Object> {
 
-    private static final Logger LOG = LogManager.getLogger(CustomOECFactory.class);
-
-    public CustomOECFactory() {
-        LOG.info("Custom expression cache factory has been created");
+    public CustomOECFactory(@Inject(value = StrutsConstants.STRUTS_OGNL_EXPRESSION_CACHE_MAXSIZE) String cacheMaxSize,
+                            @Inject(value = StrutsConstants.STRUTS_OGNL_EXPRESSION_CACHE_TYPE) String defaultCacheType) {
+        super(cacheMaxSize, defaultCacheType);
     }
 
     @Override
     public OgnlCache<String, Object> buildOgnlCache() {
-        return buildOgnlCache(getCacheMaxSize(), 16, 0.75f, getUseLRUCache());
+        return buildOgnlCache(getCacheMaxSize(), 16, 0.75f, CacheType.LRU);
     }
 
     @Override
-    public OgnlCache<String, Object> buildOgnlCache(int evictionLimit, int initialCapacity, float loadFactor, boolean lruCache) {
-        if (lruCache) {
-            return new CustomOELRUC(evictionLimit, initialCapacity, loadFactor);
-        } else {
-            return new CustomOEC(evictionLimit, initialCapacity, loadFactor);
+    public OgnlCache<String, Object> buildOgnlCache(int evictionLimit, int initialCapacity, float loadFactor, CacheType cacheType) {
+        switch (cacheType) {
+            case LRU:
+                return new CustomOELRUC(evictionLimit, initialCapacity, loadFactor);
+            default:
+                return new CustomOEC(evictionLimit, initialCapacity, loadFactor);
         }
     }
 

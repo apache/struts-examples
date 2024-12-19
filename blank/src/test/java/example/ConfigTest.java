@@ -19,12 +19,12 @@
 
 package example;
 
-import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.config.RuntimeConfiguration;
-import com.opensymphony.xwork2.config.entities.ActionConfig;
-import com.opensymphony.xwork2.config.entities.ResultConfig;
-import com.opensymphony.xwork2.config.providers.XmlConfigurationProvider;
+import org.apache.struts2.ActionSupport;
+import org.apache.struts2.config.RuntimeConfiguration;
 import org.apache.struts2.config.StrutsXmlConfigurationProvider;
+import org.apache.struts2.config.entities.ActionConfig;
+import org.apache.struts2.config.entities.ResultConfig;
+import org.apache.struts2.config.providers.XmlConfigurationProvider;
 import org.apache.struts2.junit.StrutsTestCase;
 
 import java.util.List;

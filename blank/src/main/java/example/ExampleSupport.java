@@ -19,7 +19,7 @@
 
 package example;
 
-import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.ActionSupport;
 
 /**
  * Base Action class for the Tutorial package.

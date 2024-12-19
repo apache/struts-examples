@@ -1,7 +1,5 @@
 package org.apache.struts.edit.action;
 
-import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.Preparable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts.edit.model.Person;
@@ -10,6 +8,8 @@ import org.apache.struts.edit.service.CarModelsService;
 import org.apache.struts.edit.service.CarModelsServiceHardCoded;
 import org.apache.struts.edit.service.EditService;
 import org.apache.struts.edit.service.EditServiceInMemory;
+import org.apache.struts2.ActionSupport;
+import org.apache.struts2.Preparable;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -18,7 +18,7 @@
  */
 package org.apache.examples.struts.actions;
 
-import com.opensymphony.xwork2.ActionProxy;
+import org.apache.struts2.ActionProxy;
 import org.apache.struts2.junit.StrutsRestTestCase;
 import org.junit.Before;
 import org.junit.Test;

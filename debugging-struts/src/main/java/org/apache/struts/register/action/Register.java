@@ -1,16 +1,15 @@
 package org.apache.struts.register.action;
 
-import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts.register.exceptions.SecurityBreachException;
 import org.apache.struts.register.model.Person;
-
+import org.apache.struts2.ActionSupport;
 
 
 /**
  * Acts as a controller to handle actions related to registering a user.
- * 
+ *
  * @author bruce phillips
- * 
+ *
  */
 public class Register extends ActionSupport {
 

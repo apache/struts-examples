@@ -19,8 +19,8 @@
 
 package org.apache.struts.example;
 
-import com.opensymphony.xwork2.ActionSupport;
 import org.apache.commons.lang3.RandomUtils;
+import org.apache.struts2.ActionSupport;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.axis.ValueAxis;

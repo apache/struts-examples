@@ -1,7 +1,7 @@
 package org.apache.struts_example;
 
-import com.opensymphony.xwork2.Action;
-import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.ActionSupport;
+import org.apache.struts2.action.Action;
 
 import java.util.UUID;
 

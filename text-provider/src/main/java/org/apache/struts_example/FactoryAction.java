@@ -19,7 +19,7 @@
 
 package org.apache.struts_example;
 
-import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.ActionSupport;
 
 /**
  * This class is using thr factory defined in "struts.xml"

@@ -1,11 +1,11 @@
 package org.apache.struts_example;
 
-import com.opensymphony.xwork2.StrutsTextProviderFactory;
-import com.opensymphony.xwork2.TextProvider;
+import org.apache.struts2.text.StrutsTextProviderFactory;
+import org.apache.struts2.text.TextProvider;
 
 import java.util.ResourceBundle;
-/** 
- * Exdending the TextProviderFactory is optional, as Factory return the TextProvider class it gets as argument. 
+/**
+ * Exdending the TextProviderFactory is optional, as Factory return the TextProvider class it gets as argument.
  * See struts.xml for example configuration without extending TextProviderFactory.
  */
 public class MyTextProviderFactory extends StrutsTextProviderFactory {

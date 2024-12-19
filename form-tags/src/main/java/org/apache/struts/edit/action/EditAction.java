@@ -1,10 +1,10 @@
 package org.apache.struts.edit.action;
 
-import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts.edit.model.Person;
 import org.apache.struts.edit.model.State;
 import org.apache.struts.edit.service.EditService;
 import org.apache.struts.edit.service.EditServiceInMemory;
+import org.apache.struts2.ActionSupport;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,10 +1,10 @@
 package org.apache.examples.struts.actions.data;
 
-import com.opensymphony.xwork2.ModelDriven;
 import org.apache.examples.struts.models.Order;
 import org.apache.examples.struts.services.OrdersService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.struts2.ModelDriven;
 import org.apache.struts2.rest.DefaultHttpHeaders;
 import org.apache.struts2.rest.HttpHeaders;
 import org.apache.struts2.rest.RestActionSupport;

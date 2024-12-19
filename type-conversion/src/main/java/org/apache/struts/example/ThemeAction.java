@@ -19,11 +19,11 @@
 
 package org.apache.struts.example;
 
-import com.opensymphony.xwork2.ActionSupport;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts.model.ThemeDescriptor;
 import org.apache.struts.model.Themes;
+import org.apache.struts2.ActionSupport;
 
 import java.util.Map;
 

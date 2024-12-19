@@ -19,7 +19,6 @@
 
 package org.apache.struts.examples.mailreader2;
 
-import com.opensymphony.xwork2.ActionSupport;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts.examples.mailreader2.dao.ExpiredPasswordException;
@@ -28,6 +27,7 @@ import org.apache.struts.examples.mailreader2.dao.User;
 import org.apache.struts.examples.mailreader2.dao.UserDatabase;
 import org.apache.struts.examples.mailreader2.dao.impl.memory.MemorySubscription;
 import org.apache.struts.examples.mailreader2.dao.impl.memory.MemoryUser;
+import org.apache.struts2.ActionSupport;
 import org.apache.struts2.action.ApplicationAware;
 import org.apache.struts2.action.SessionAware;
 

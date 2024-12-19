@@ -19,8 +19,8 @@
 
 package org.demo;
 
-import com.opensymphony.xwork2.ActionSupport;
 import jakarta.servlet.http.HttpServletRequest;
+import org.apache.struts2.ActionSupport;
 import org.apache.struts2.action.ServletRequestAware;
 
 public class ConsumeAction extends ActionSupport implements ServletRequestAware {

@@ -1,13 +1,13 @@
 /**
- * 
+ *
  */
 package org.apache.struts2.shiro.example.interceptor;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 
-import com.opensymphony.xwork2.ActionInvocation;
-import com.opensymphony.xwork2.interceptor.Interceptor;
+import org.apache.struts2.ActionInvocation;
+import org.apache.struts2.interceptor.Interceptor;
 
 /**
  * Inserts the current Shiro user into the value stack so that it can be
@@ -16,41 +16,27 @@ import com.opensymphony.xwork2.interceptor.Interceptor;
  */
 public class ShiroUserInterceptor implements Interceptor {
 
-    /**
-     * 
-     */
-    private static final long serialVersionUID = 1L;
-
-    /* (non-Javadoc)
-     * @see com.opensymphony.xwork2.interceptor.Interceptor#destroy()
-     */
     @Override
-    public void destroy() 
+    public void destroy()
     {
         //release resources here
     }
 
-    /* (non-Javadoc)
-     * @see com.opensymphony.xwork2.interceptor.Interceptor#init()
-     */
     @Override
-    public void init() 
+    public void init()
     {
         // create resources here
     }
 
-    /* (non-Javadoc)
-     * @see com.opensymphony.xwork2.interceptor.Interceptor#intercept(com.opensymphony.xwork2.ActionInvocation)
-     */
     @Override
-    public String intercept(ActionInvocation actionInvocation) throws Exception 
+    public String intercept(ActionInvocation actionInvocation) throws Exception
     {
         if (actionInvocation.getAction() instanceof org.apache.struts2.shiro.example.action.ShiroBaseAction)
         {
             Subject shiroUser = SecurityUtils.getSubject();
             actionInvocation.getStack().setValue("shiroUser", shiroUser);
         }
-            
+
         return actionInvocation.invoke();
     }
 

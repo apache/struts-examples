@@ -1,9 +1,9 @@
 package org.apache.struts_example;
 
-import com.opensymphony.xwork2.LocaleProvider;
-import com.opensymphony.xwork2.LocalizedTextProvider;
-import com.opensymphony.xwork2.TextProviderSupport;
-import com.opensymphony.xwork2.util.ValueStack;
+import org.apache.struts2.locale.LocaleProvider;
+import org.apache.struts2.text.LocalizedTextProvider;
+import org.apache.struts2.text.TextProviderSupport;
+import org.apache.struts2.util.ValueStack;
 
 import java.util.List;
 import java.util.ResourceBundle;

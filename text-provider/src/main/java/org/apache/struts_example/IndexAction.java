@@ -19,10 +19,9 @@
 
 package org.apache.struts_example;
 
-import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.TextProvider;
-import com.opensymphony.xwork2.TextProviderFactory;
-import com.opensymphony.xwork2.config.Configuration;
+import org.apache.struts2.ActionSupport;
+import org.apache.struts2.text.TextProvider;
+import org.apache.struts2.text.TextProviderFactory;
 
 public class IndexAction extends ActionSupport {
 

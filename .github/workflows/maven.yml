@@ -19,7 +19,7 @@ on:
   pull_request:
   push:
     branches:
-      - master
+      - main
 
 permissions: write-all
 

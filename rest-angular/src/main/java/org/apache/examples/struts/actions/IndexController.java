@@ -18,7 +18,7 @@
  */
 package org.apache.examples.struts.actions;
 
-import com.opensymphony.xwork2.Action;
+import org.apache.struts2.action.Action;
 import org.apache.struts2.rest.DefaultHttpHeaders;
 import org.apache.struts2.rest.HttpHeaders;
 import org.apache.struts2.rest.RestActionSupport;

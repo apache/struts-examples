@@ -18,8 +18,8 @@
  */
 package org.apache.struts.register.action;
 
-import com.opensymphony.xwork2.ActionProxy;
-import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.ActionProxy;
+import org.apache.struts2.ActionSupport;
 import org.apache.struts2.junit.StrutsTestCase;
 import org.junit.Test;
 

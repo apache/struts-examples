@@ -1,10 +1,10 @@
 package org.apache.examples.struts.actions.data;
 
-import com.opensymphony.xwork2.Action;
-import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.ModelDriven;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.struts2.ActionContext;
+import org.apache.struts2.ModelDriven;
+import org.apache.struts2.action.Action;
 import org.apache.struts2.rest.RestActionSupport;
 
 import java.util.Locale;

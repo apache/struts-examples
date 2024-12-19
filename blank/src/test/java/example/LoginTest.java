@@ -19,8 +19,8 @@
 
 package example;
 
-import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.config.entities.ActionConfig;
+import org.apache.struts2.ActionSupport;
+import org.apache.struts2.config.entities.ActionConfig;
 
 import java.util.List;
 import java.util.Map;

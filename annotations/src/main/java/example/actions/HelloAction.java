@@ -1,8 +1,9 @@
 package example.actions;
 
-import com.opensymphony.xwork2.ActionSupport;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.struts2.ActionSupport;
+
 /**
  * Acts as a controller to handle actions
  * related to registering a user.
