@@ -5,6 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts2.ActionSupport;
 import org.apache.struts2.convention.annotation.Action;
+import org.apache.struts2.interceptor.parameter.StrutsParameter;
 
 /**
  * Acts as a controller to handle actions
@@ -37,7 +38,7 @@ public class RegisterAction extends ActionSupport {
         return SUCCESS;
     }
 
-
+    @StrutsParameter(depth = 10)
     public Person getPersonBean() {
         return personBean;
     }

@@ -12,8 +12,15 @@
 <body>
 <h1>Welcome To Struts 2!</h1>
 
-<p><a href="<s:url action='hello'  />" >Get your hello.</a></p>
-<p><a href="<s:url action='register-input'  />" > Register for the drawing.</a></p>
+<p><a href="<s:url action='hello'  />">Get your hello.</a></p>
+<p><a href="<s:url action='register-input'  />"> Register for the drawing.</a></p>
+
+<div class="fullContainer">
+    <s:iterator value="participantAccessList" var="access" status="loop">
+        <s:set var="breakLoop" value="true"/>
+        <s:textfield name="userAccess1" value="%{#access.userId}"/>
+    </s:iterator>
+</div>
 
 </body>
 </html>

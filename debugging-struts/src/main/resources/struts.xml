@@ -6,6 +6,7 @@
 <struts>
 
     <constant name="struts.devMode" value="true"/>
+    <constant name="struts.allowlist.packageNames" value="org.apache.struts.helloworld"/>
 
     <package name="basicstruts2" extends="struts-default">
 
@@ -23,10 +24,11 @@
         </interceptors>
 
         <default-interceptor-ref name="appDefault"/>
+        <default-action-ref name="index"/>
 
         <global-results>
-            <result name="error">/error.jsp</result>
-            <result name="securityerror">/securityerror.jsp</result>
+            <result name="error">/WEB-INF/content/error.jsp</result>
+            <result name="securityerror">/WEB-INF/content/securityerror.jsp</result>
         </global-results>
 
 
@@ -39,41 +41,44 @@
 
         <action name="causesecurityexception" class="org.apache.struts.register.action.Register"
                 method="throwSecurityException">
-            <result>/register.jsp</result>
+            <result>/WEB-INF/content/register.jsp</result>
         </action>
 
         <action name="causeexception" class="org.apache.struts.register.action.Register" method="throwException">
-            <result>/register.jsp</result>
+            <result>/WEB-INF/content/register.jsp</result>
         </action>
 
         <action name="causenullpointerexception" class="org.apache.struts.register.action.Register"
                 method="throwNullPointerException">
-            <result>/register.jsp</result>
+            <result>/WEB-INF/content/register.jsp</result>
         </action>
 
         <action name="actionspecificexception" class="org.apache.struts.register.action.Register"
                 method="throwSecurityException">
             <exception-mapping exception="org.apache.struts.register.exceptions.SecurityBreachException"
                                result="login"/>
-            <result>/register.jsp</result>
-            <result name="login">/login.jsp</result>
+            <result>/WEB-INF/content/register.jsp</result>
+            <result name="login">/WEB-INF/content/login.jsp</result>
         </action>
 
         <!-- If no class attribute is specified the framework will assume success and
         render the result index.jsp -->
         <!-- If no name value for the result node is specified the success value is the default -->
         <action name="index">
-            <result>/index.jsp</result>
+            <result>/WEB-INF/content/index.jsp</result>
         </action>
 
         <!-- If the URL is hello.action then call the execute method of class HelloWorldAction.
         If the result returned by the execute method is success render the HelloWorld.jsp -->
-        <action name="hello" class="org.apache.struts.helloworld.action.HelloWorldAction" method="execute">
-            <result name="success">/HelloWorld.jsp</result>
+        <action name="hello" class="org.apache.struts.helloworld.action.HelloWorldAction">
+            <result>/WEB-INF/content/HelloWorld.jsp</result>
         </action>
 
-        <action name="register" class="org.apache.struts.register.action.Register" method="execute">
-            <result name="success">/thankyou.jsp</result>
+        <action name="register-input" class="org.apache.struts.register.action.Register">
+            <result>/WEB-INF/content/register.jsp</result>
+        </action>
+        <action name="register" class="org.apache.struts.register.action.Register">
+            <result>/WEB-INF/content/thankyou.jsp</result>
         </action>
 
     </package>
