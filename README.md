@@ -17,3 +17,7 @@ In the project's root folder, Maven will build each module and create a `.war` f
 You can then copy the `.war` files to your Servlet container (e.g. Tomcat, Jetty, GlassFish, etc).
 
 There is a README file in each module with instructions and the URL to view that application.
+
+## Older versions
+
+The examples are using the latest Struts version, if you are looking for older versions please take a look on the [Releases](releases) page.
