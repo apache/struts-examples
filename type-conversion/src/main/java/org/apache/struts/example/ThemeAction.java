@@ -24,6 +24,8 @@ import org.apache.logging.log4j.Logger;
 import org.apache.struts.model.ThemeDescriptor;
 import org.apache.struts.model.Themes;
 import org.apache.struts2.ActionSupport;
+import org.apache.struts2.interceptor.parameter.StrutsParameter;
+import org.apache.struts2.validator.annotations.ConversionErrorFieldValidator;
 
 import java.util.Map;
 
@@ -32,10 +34,10 @@ public class ThemeAction extends ActionSupport {
     private static final Logger LOG = LogManager.getLogger(ThemeAction.class);
 
     private Map<String, ThemeDescriptor> themes = Themes.list();
-    private ThemeDescriptor selectedTheme = Themes.get("simple");
+    private ThemeDescriptor selectedTheme;// = Themes.get("simple");
 
     public String execute() throws Exception {
-        return SUCCESS;
+        return INPUT;
     }
 
     public Map<String, ThemeDescriptor> getThemes() {
@@ -43,12 +45,14 @@ public class ThemeAction extends ActionSupport {
     }
 
     public ThemeDescriptor getSelectedTheme() {
-        LOG.info("Existing theme: #0", String.valueOf(selectedTheme));
+        LOG.info("Existing theme: {}", String.valueOf(selectedTheme));
         return selectedTheme;
     }
 
+    @StrutsParameter
+    @ConversionErrorFieldValidator(fieldName = "selectedTheme", key = "error.theme.not.valid", message = "Invalid theme")
     public void setSelectedTheme(ThemeDescriptor selectedTheme) {
-        LOG.info("Selected theme: #0", String.valueOf(selectedTheme));
+        LOG.info("Selected theme: {}", String.valueOf(selectedTheme));
         this.selectedTheme = selectedTheme;
     }
 }

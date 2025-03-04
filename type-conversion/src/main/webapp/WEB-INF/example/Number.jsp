@@ -29,14 +29,17 @@
     <tr>
       <td>BigDecimal</td>
       <td><s:textfield name="bigDecimal"/></td>
+      <td><s:fielderror fieldName="bigDecimal"/></td>
     </tr>
     <tr>
       <td>Double</td>
       <td><s:textfield name="bigDouble"/></td>
+      <td><s:fielderror fieldName="bigDouble"/></td>
     </tr>
     <tr>
       <td>double</td>
       <td><s:textfield name="primitiveDouble"/></td>
+      <td><s:fielderror fieldName="primitiveDouble"/></td>
     </tr>
     <tr>
       <td colspan="2"><s:submit/></td>
