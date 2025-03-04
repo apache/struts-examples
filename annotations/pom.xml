@@ -14,10 +14,19 @@
     <description>Annotations example application for the Struts 2 getting started tutorials</description>
     <packaging>war</packaging>
 
+    <properties>
+        <struts2.version>7.0.0</struts2.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-convention-plugin</artifactId>
+            <version>${struts2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-config-browser-plugin</artifactId>
             <version>${struts2.version}</version>
         </dependency>
     </dependencies>
@@ -32,6 +41,7 @@
                 <configuration>
                     <webApp>
                         <contextPath>/${project.artifactId}</contextPath>
+                        <extraClasspath>${project.build.directory}/form-tags.jar</extraClasspath>
                     </webApp>
                     <stopKey>CTRL+C</stopKey>
                     <stopPort>8999</stopPort>

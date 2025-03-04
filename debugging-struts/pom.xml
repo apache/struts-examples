@@ -1,44 +1,49 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.apache.struts</groupId>
-    <artifactId>struts-examples</artifactId>
-    <version>2.0.0</version>
-  </parent>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.apache.struts</groupId>
+        <artifactId>struts-examples</artifactId>
+        <version>2.0.0</version>
+    </parent>
 
-  <artifactId>debugging-struts</artifactId>
-  <name>Debugging Struts</name>
-  <description>Exception handling example application for the Struts 2 getting started tutorials</description>
+    <artifactId>debugging-struts</artifactId>
+    <name>Debugging Struts</name>
+    <description>Exception handling example application for the Struts 2 getting started tutorials</description>
 
-  <packaging>war</packaging>
+    <properties>
+        <struts2.version>7.0.1-SNAPSHOT</struts2.version>
+    </properties>
 
-  <dependencies>
-  		<dependency>
-			<groupId>org.apache.struts</groupId>
-			<artifactId>struts2-config-browser-plugin</artifactId>
-			<version>${struts2.version}</version>
-		</dependency>
-  </dependencies>
+    <packaging>war</packaging>
 
-  <build>
-    <finalName>debugging-struts</finalName>
-    <plugins>
-      <plugin>
-        <groupId>org.eclipse.jetty</groupId>
-        <artifactId>jetty-maven-plugin</artifactId>
-        <version>${jetty-plugin.version}</version>
-        <configuration>
-          <webApp>
-            <contextPath>/${project.artifactId}</contextPath>
-          </webApp>
-          <stopKey>CTRL+C</stopKey>
-          <stopPort>8999</stopPort>
-          <scan>10</scan>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-config-browser-plugin</artifactId>
+            <version>${struts2.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>debugging-struts</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jetty-plugin.version}</version>
+                <configuration>
+                    <webApp>
+                        <contextPath>/${project.artifactId}</contextPath>
+                    </webApp>
+                    <stopKey>CTRL+C</stopKey>
+                    <stopPort>8999</stopPort>
+                    <scan>10</scan>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

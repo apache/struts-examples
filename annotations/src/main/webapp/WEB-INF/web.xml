@@ -16,6 +16,10 @@
             <param-name>struts.convention.package.locators.basePackage</param-name>
             <param-value>example</param-value>
         </init-param>
+        <init-param>
+            <param-name>struts.convention.action.includeJars</param-name>
+            <param-value>.*?/form\-tags.*?jar(!/)?</param-value>
+        </init-param>
     </filter>
 
     <filter-mapping>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
 
 <p>Please login</p>
 
-<p><a href="index.jsp">Return to the home page.</a></p>
+<p><s:a action="index">Return to the home page.</s:a></p>
 
 <hr>
 
