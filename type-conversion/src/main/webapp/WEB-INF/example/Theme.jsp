@@ -15,8 +15,10 @@
     <tr>
       <td>Choose</td>
       <td><s:select name="selectedTheme" emptyOption="true" list="themes" listKey="value" listValue="value.displayName"/></td>
-      <td><s:submit/></td>
+      <td><s:fielderror fieldName="selectedTheme"/></td>
     </tr>
+    <tr>
+      <td colspan="3"><s:submit/></td>
   </table>
 </s:form>
 

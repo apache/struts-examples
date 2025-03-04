@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
-        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
-        "https://struts.apache.org/dtds/struts-2.5.dtd">
+        "-//Apache Software Foundation//DTD Struts Configuration 6.0//EN"
+        "https://struts.apache.org/dtds/struts-6.0.dtd">
 <!--
   - This file is included by the struts.xml file as an example
   - of how to break up the configuration file into multiple files.
 -->
 <struts>
     <package name="example" namespace="/example" extends="struts-default">
-
         <default-action-ref name="Theme" />
 
         <action name="Theme" class="org.apache.struts.example.ThemeAction">
-            <result>/WEB-INF/example/Theme.jsp</result>
+            <result name="input">/WEB-INF/example/Theme.jsp</result>
         </action>
 
-        <action name="Number" class="org.apache.struts.example.IndexAction">
+        <action name="Number" class="org.apache.struts.example.NumberAction">
             <result name="input">/WEB-INF/example/Number.jsp</result>
         </action>
-
     </package>
 </struts>
