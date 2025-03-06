@@ -6,6 +6,7 @@
 
     <constant name="struts.devMode" value="true"/>
     <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+    <constant name="struts.allowlist.packageNames" value="org.apache.struts.edit.model"/>
 
     <package name="basicstruts2" extends="struts-default">
         <default-action-ref name="index"/>

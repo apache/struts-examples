@@ -4,8 +4,8 @@ import org.apache.struts.edit.model.Person;
 
 public interface EditService {
 
-	Person getPerson() ;
+    Person getPerson();
 
-	void savePerson(Person personBean);
+    void savePerson(Person personBean);
 
 }
