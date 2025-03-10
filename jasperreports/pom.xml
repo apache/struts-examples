@@ -17,7 +17,7 @@
   <url>https://struts.apache.org/getting-started/jasper-reports-tutorial</url>
   <properties>
     <jasperreports.version>7.0.1</jasperreports.version>
-    <jetty-plugin.version>12.0.16</jetty-plugin.version>
+    <jetty-plugin.version>12.0.17</jetty-plugin.version>
   </properties>
 
   <dependencies>
