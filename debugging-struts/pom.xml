@@ -14,7 +14,7 @@
     <description>Exception handling example application for the Struts 2 getting started tutorials</description>
 
     <properties>
-        <struts2.version>7.0.1-SNAPSHOT</struts2.version>
+        <struts2.version>7.0.3</struts2.version>
     </properties>
 
     <packaging>war</packaging>
