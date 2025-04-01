@@ -14,10 +14,6 @@
     <description>Annotations example application for the Struts 2 getting started tutorials</description>
     <packaging>war</packaging>
 
-    <properties>
-        <struts2.version>7.0.0</struts2.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.apache.struts</groupId>
