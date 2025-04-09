@@ -1,9 +1,8 @@
 package org.apache.struts.example.jasperreports.service;
 
+import jakarta.servlet.ServletContext;
 import java.io.File;
 import java.util.Optional;
-
-import jakarta.servlet.ServletContext;
 import net.sf.jasperreports.engine.JasperCompileManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -46,10 +45,10 @@ public class JasperInitializer implements InitializingBean, DisposableBean, Serv
 
   @Override
   public void destroy() throws Exception {
-    File templteFile = new File(sc.getRealPath(COMPILED_JASPER_PATH) + COMPILED_JASPER_FILENAME);
+    File templateFile = new File(sc.getRealPath(COMPILED_JASPER_PATH) + COMPILED_JASPER_FILENAME);
     LOG.info(
         "=== Compiled JasperReport file ({}) delete result: {} ===",
-        templteFile.getAbsolutePath(),
-        templteFile.delete());
+        templateFile.getAbsolutePath(),
+        templateFile.delete());
   }
 }
