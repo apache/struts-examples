@@ -3,6 +3,8 @@
 
 <struts>
   <constant name="struts.devMode" value="true" />
+  <constant name="struts.allowlist.packageNames" value="org.apache.struts.example.jasperreports.model"/>
+
   <package name="default" extends="jasperreports-default">
     <default-action-ref name="index" />
 
