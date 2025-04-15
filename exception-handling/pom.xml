@@ -15,6 +15,13 @@
 
     <packaging>war</packaging>
 
+    <dependencies>
+    <dependency>
+        <groupId>org.apache.struts</groupId>
+        <artifactId>struts2-config-browser-plugin</artifactId>
+    </dependency>
+    </dependencies>
+
     <build>
         <finalName>exception-handling</finalName>
         <plugins>

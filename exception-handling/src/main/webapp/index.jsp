@@ -23,7 +23,7 @@
         <s:submit value="Submit"/>
     </s:form>
 
-    <p><a href="register.jsp">Please register</a> for our prize drawing.</p>
+    <p><a href='<s:url action="registerForm" />'>Please register</a> for our prize drawing.</p>
     <p><a href='<s:url action="causeexception" />'>Cause Exception</a></p>
     <p><a href='<s:url action="causenullpointerexception" />'>Cause Null Pointer Exception</a></p>
     <p><a href='<s:url action="causesecurityexception" />'>Cause Global Security Exception</a></p>
