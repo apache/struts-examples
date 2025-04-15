@@ -17,7 +17,7 @@
 	<h4>Exception Details: <s:property value="exceptionStack"/></h4>
 
 
-	<p><a href="index.jsp">Return to the home page.</a></p>
+	<p><a href="<s:url action='index' />">Return to the home page.</a></p>
 </body>
 
 </html>

@@ -3,6 +3,7 @@ package org.apache.struts.register.action;
 import org.apache.struts.register.exceptions.SecurityBreachException;
 import org.apache.struts.register.model.Person;
 import org.apache.struts2.ActionSupport;
+import org.apache.struts2.interceptor.parameter.StrutsParameter;
 
 /**
  * Acts as a controller to handle actions related to registering a user.
@@ -43,6 +44,7 @@ public class Register extends ActionSupport {
 				"Security breach exception thrown from throwSecurityException");
 	}
 
+	@StrutsParameter(depth = 1)
 	public Person getPersonBean() {
 
 		return personBean;

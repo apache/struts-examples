@@ -11,7 +11,7 @@
 
     <p>Please login</p>
 
-    <p><a href="index.jsp">Return to the home page.</a></p>
+    <p><a href="<s:url action='index' />">Return to the home page.</a></p>
 
     <hr>
 
