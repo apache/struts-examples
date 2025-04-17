@@ -2,8 +2,8 @@ package org.apache.struts.register.action;
 
 import org.apache.struts.register.model.Person;
 import org.apache.struts2.ActionSupport;
+import org.apache.struts2.interceptor.parameter.StrutsParameter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Register extends ActionSupport {
@@ -17,15 +17,10 @@ public class Register extends ActionSupport {
     }
 
     public String input() throws Exception {
-        this.options = new ArrayList<>();
-        this.options.add(3);
         return INPUT;
     }
 
-    public String cancel2() throws Exception {
-        return SUCCESS;
-    }
-
+    @StrutsParameter(depth = 1)
     public Person getPersonBean() {
         return personBean;
     }
@@ -34,6 +29,7 @@ public class Register extends ActionSupport {
         personBean = person;
     }
 
+    @StrutsParameter(depth = 1)
     public List<Integer> getOptions() {
         return options;
     }
