@@ -25,6 +25,6 @@
 
 </s:form>
 
-<p><a href="register.jsp">Please register</a> for our prize drawing.</p>
+<p><a href="<s:url action='registerForm' />">Please register</a> for our prize drawing.</p>
 </body>
 </html>

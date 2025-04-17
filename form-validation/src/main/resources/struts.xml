@@ -22,9 +22,13 @@
 			<result name="success">/HelloWorld.jsp</result>
 		</action>
 
+		<action name="registerForm">
+			<result>/register.jsp</result>
+		</action>
+
 	  <action name="register" class="org.apache.struts.register.action.Register" method="execute">
-		<result name="success">/thankyou.jsp</result>
-		<result name="input">/register.jsp</result>
+			<result name="success">/thankyou.jsp</result>
+			<result name="input">/register.jsp</result>
 	  </action>
 
 	</package>
