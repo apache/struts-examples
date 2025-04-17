@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Basic Struts 2 Application - Welcome</title>
 </head>
 <body>
@@ -31,11 +31,11 @@
 </s:url>
 <p><a href="${registerInputLink}">Please register</a> for our prize drawing.</p>
 
-<h3>Registro español</h3>
+<h3>Registro espaÃ±ol</h3>
 <s:url action="registerInput" var="registerInputLinkES">
     <s:param name="request_locale">es</s:param>
 </s:url>
-<p><a href="${registerInputLinkES}">Por favor, regístrese</a> para nuestro sorteo</p>
+<p><a href="${registerInputLinkES}">Por favor, regÃ­strese</a> para nuestro sorteo</p>
 
 <hr />
 <s:text name="contact" />
