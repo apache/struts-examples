@@ -10,6 +10,7 @@ import org.apache.struts.edit.service.EditService;
 import org.apache.struts.edit.service.EditServiceInMemory;
 import org.apache.struts2.ActionSupport;
 import org.apache.struts2.Preparable;
+import org.apache.struts2.interceptor.parameter.StrutsParameter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -61,6 +62,7 @@ public class EditAction extends ActionSupport implements Preparable {
 		return INPUT;
 	}
 
+	@StrutsParameter(depth = 1)
 	public Person getPersonBean() {
 		return personBean;
 	}
