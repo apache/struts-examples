@@ -6,6 +6,7 @@
     <constant name="struts.devMode" value="true" />
     <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
     <constant name="struts.mapper.action.prefix.enabled" value="true"/>
+    <constant name="struts.allowlist.classes" value="org.apache.struts.helloworld.model.MessageStore"/>
 
     <package name="basicstruts" namespace="/" extends="struts-default">
         <default-action-ref name="index"/>
@@ -33,7 +34,7 @@
         <action name="register" class="org.apache.struts.register.action.Register" method="input">
             <result name="input">/WEB-INF/register.jsp</result>
         </action>
-        <action name="register-cancel" class="org.apache.struts.register.action.Register" method="cancel2">
+        <action name="register-cancel">
             <result type="redirectAction">index</result>
         </action>
         <action name="register-submit" class="org.apache.struts.register.action.Register" method="execute2">

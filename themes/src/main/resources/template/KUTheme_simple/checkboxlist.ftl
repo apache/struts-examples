@@ -1,38 +1,38 @@
 <#assign itemCount = 0/>
-<#if parameters.list??>
-    <@s.iterator value="parameters.list">
+<#if attributes.list??>
+    <@s.iterator value="attributes.list">
         <#assign itemCount = itemCount + 1/>
-        <#if parameters.listKey??>
-            <#assign itemKey = stack.findValue(parameters.listKey)/>
+        <#if attributes.listKey??>
+            <#assign itemKey = stack.findValue(attributes.listKey)/>
         <#else>
             <#assign itemKey = stack.findValue('top')/>
         </#if>
-        <#if parameters.listValue??>
-            <#assign itemValue = stack.findString(parameters.listValue)?default("")/>
+        <#if attributes.listValue??>
+            <#assign itemValue = stack.findString(attributes.listValue)?default("")/>
         <#else>
             <#assign itemValue = stack.findString('top')/>
         </#if>
 <#assign itemKeyStr=itemKey.toString() />
-<input type="checkbox" name="${parameters.name?esc}" value="${itemKeyStr?esc}" id="${parameters.name?esc}-${itemCount}"<#rt/>
-        <#if tag.contains(parameters.nameValue, itemKey)>
+<input type="checkbox" name="${attributes.name?esc}" value="${itemKeyStr?esc}" id="${attributes.name?esc}-${itemCount}"<#rt/>
+        <#if tag.contains(attributes.nameValue, itemKey)>
  checked="checked"<#rt/>
         </#if>
-        <#if parameters.disabled?default(false)>
+        <#if attributes.disabled?default(false)>
  disabled="disabled"<#rt/>
         </#if>
-        <#if parameters.title??>
- title="${parameters.title?esc}"<#rt/>
+        <#if attributes.title??>
+ title="${attributes.title?esc}"<#rt/>
         </#if>
-        <#include "/${parameters.templateDir}/simple/scripting-events.ftl" />
-        <#include "/${parameters.templateDir}/simple/common-attributes.ftl" />
+        <#include "/${attributes.templateDir}/simple/scripting-events.ftl" />
+        <#include "/${attributes.templateDir}/simple/common-attributes.ftl" />
 />
-<label for="${parameters.name?esc}-${itemCount}" style="color:red;font-weight:bold">${itemValue?esc}</label> <br />
+<label for="${attributes.name?esc}-${itemCount}" style="color:red;font-weight:bold">${itemValue?esc}</label> <br />
     </@s.iterator>
 <#else>
   &nbsp;
 </#if>
-<input type="hidden" id="__multiselect_${parameters.id?esc}" name="__multiselect_${parameters.name?esc}" value=""<#rt/>
-<#if parameters.disabled?default(false)>
+<input type="hidden" id="__multiselect_${attributes.id?esc}" name="__multiselect_${attributes.name?esc}" value=""<#rt/>
+<#if attributes.disabled?default(false)>
  disabled="disabled"<#rt/>
 </#if>
  /> 

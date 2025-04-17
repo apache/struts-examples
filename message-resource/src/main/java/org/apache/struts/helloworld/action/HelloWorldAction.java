@@ -2,6 +2,7 @@ package org.apache.struts.helloworld.action;
 
 import org.apache.struts.helloworld.model.MessageStore;
 import org.apache.struts2.ActionSupport;
+import org.apache.struts2.interceptor.parameter.StrutsParameter;
 
 /**
  * Acts as a Struts 2 controller that responds
@@ -37,6 +38,7 @@ public class HelloWorldAction extends ActionSupport {
 		return userName;
 	}
 
+	@StrutsParameter  
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}

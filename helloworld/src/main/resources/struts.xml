@@ -7,6 +7,7 @@
 
     <constant name="struts.devMode" value="true"/>
     <constant name="struts.action.extension" value=","/>
+    <constant name="struts.allowlist.packageNames" value="org.apache.struts.helloworld.model"/>
 
     <package name="basicstruts2" namespace="/" extends="struts-default">
         <default-action-ref name="index"/>

@@ -4,6 +4,7 @@ import org.apache.struts.helloworld.model.MessageStore;
 import org.apache.struts2.ActionSupport;
 import org.apache.struts2.action.ParameterNameAware;
 import org.apache.struts2.action.SessionAware;
+import org.apache.struts2.interceptor.parameter.StrutsParameter;
 
 import java.util.Map;
 
@@ -29,6 +30,7 @@ public class HelloWorldAction extends ActionSupport implements SessionAware, Par
         return userName;
     }
 
+    @StrutsParameter
     public void setUserName(String userName) {
         this.userName = userName;
     }

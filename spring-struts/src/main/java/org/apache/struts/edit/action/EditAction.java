@@ -4,6 +4,7 @@ import org.apache.struts.edit.model.Person;
 import org.apache.struts.edit.model.State;
 import org.apache.struts.edit.service.EditService;
 import org.apache.struts2.ActionSupport;
+import org.apache.struts2.interceptor.parameter.StrutsParameter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -47,6 +48,7 @@ public class EditAction extends ActionSupport {
 		return INPUT;
 	}
 
+	@StrutsParameter(depth = 1)
 	public Person getPersonBean() {
 
 
