@@ -6,9 +6,10 @@
 <struts>
 
 	<constant name="struts.devMode" value="true" />
+  <constant name="struts.allowlist.classes" value="org.apache.struts.edit.model.Person" />
 
 	<package name="basicstruts2" extends="struts-default">
-
+		<default-action-ref name="index" />
         <!-- If no class attribute is specified the framework will assume success and
         render the result index.jsp -->
         <!-- If no name value for the result node is specified the success value is the default -->
