@@ -7,9 +7,14 @@
 
    <constant name="struts.devMode" value="false" />
    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+   <constant name="struts.allowlist.packageNames" value="org.apache.struts.tutorials.wildcardmethod.model" />
 
    <package name="wildcardmethodexample" extends="struts-default">
 
+		<default-action-ref name="index" />
+		<action name="index">
+				<result>index.jsp</result>
+		</action>
         <!-- Whatever value is before Person for the name of
         the action will be the name of the method to call in
         class PersonAction.  For example action createPerson

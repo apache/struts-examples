@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.apache.struts.tutorials.wildcardmethod.model.Person;
 import org.apache.struts.tutorials.wildcardmethod.service.PersonService;
 import org.apache.struts2.ActionSupport;
+import org.apache.struts2.interceptor.parameter.StrutsParameter;
 
 import java.util.List;
 
@@ -68,7 +69,7 @@ public class PersonAction extends ActionSupport {
         return SUCCESS;
     }
 
-
+    @StrutsParameter(depth = 1)
     public Person getPerson() {
         return person;
     }
@@ -93,7 +94,7 @@ public class PersonAction extends ActionSupport {
         return id;
     }
 
-
+    @StrutsParameter
     public void setId(int id) {
         this.id = id;
     }
