@@ -20,13 +20,18 @@
 package org.apache.struts.example;
 
 import org.apache.struts2.ActionSupport;
+import org.apache.struts2.action.UploadedFilesAware;
+import org.apache.struts2.dispatcher.multipart.UploadedFile;
 
 import java.io.File;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * <code>Allows upload a file</code>
  */
-public class Upload extends ActionSupport {
+public class UploadAction extends ActionSupport implements UploadedFilesAware {
 
     private File[] upload;
     private String[] uploadFileName;
@@ -36,27 +41,26 @@ public class Upload extends ActionSupport {
         return INPUT;
     }
 
-    public File[] getUpload() {
-        return upload;
+    public String upload() throws Exception {
+        return SUCCESS;
     }
 
-    public void setUpload(File[] upload) {
-        this.upload = upload;
+    public File[] getUpload() {
+        return upload;
     }
 
     public String[] getUploadFileName() {
         return uploadFileName;
     }
 
-    public void setUploadFileName(String[] uploadFileName) {
-        this.uploadFileName = uploadFileName;
-    }
-
     public String[] getUploadContentType() {
         return uploadContentType;
     }
 
-    public void setUploadContentType(String[] uploadContentType) {
-        this.uploadContentType = uploadContentType;
+    @Override
+    public void withUploadedFiles(List<UploadedFile> uploadedFiles) {
+        upload = uploadedFiles.stream().map(UploadedFile::getContent).toArray(File[]::new);
+        uploadFileName = uploadedFiles.stream().map(UploadedFile::getName).toArray(String[]::new);
+        uploadContentType = uploadedFiles.stream().map(UploadedFile::getContentType).toArray(String[]::new);
     }
 }

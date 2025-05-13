@@ -8,7 +8,7 @@
     <constant name="struts.action.extension" value=""/>
     <constant name="struts.custom.i18n.resources" value="DefaultMessages"/>
 
-    <package name="default" extends="struts-default">
+    <package name="default" extends="struts-default" namespace="/">
         <default-action-ref name="index"/>
         <action name="index">
             <result>/WEB-INF/index.jsp</result>
@@ -20,5 +20,15 @@
             <result name="error">/WEB-INF/error.jsp</result>
         </action>
 
+    </package>
+
+    <package name="default2" extends="struts-default" namespace="/admin">
+        <default-action-ref name="index"/>
+        <action name="index">
+            <result>/WEB-INF/admin/index.jsp</result>
+        </action>
+        <action name="hello">
+            <result>/WEB-INF/admin/hello.jsp</result>
+        </action>
     </package>
 </struts>
