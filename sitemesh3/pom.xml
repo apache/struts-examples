@@ -13,6 +13,10 @@
 
     <packaging>war</packaging>
 
+    <properties>
+        <struts2.version>7.0.4-SNAPSHOT</struts2.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.sitemesh</groupId>

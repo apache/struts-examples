@@ -2,17 +2,16 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
-    <title>File upload</title>
+    <title>File upload: result</title>
 </head>
 
 <body>
 
-<s:form action="upload" method="post" enctype="multipart/form-data">
-    <s:file name="upload"/>
-    <s:file name="upload"/>
-    <s:file name="upload"/>
-    <s:submit/>
-</s:form>
+<p>
+<s:a action="input">back to input</s:a>
+</p>
+
+<s:actionerror/>
 
 <s:iterator value="upload" var="u">
     <s:property value="u"/><br/>

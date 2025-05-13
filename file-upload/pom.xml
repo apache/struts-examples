@@ -29,9 +29,7 @@
                     <webApp>
                         <contextPath>/${project.artifactId}</contextPath>
                     </webApp>
-                    <stopKey>CTRL+C</stopKey>
-                    <stopPort>8999</stopPort>
-                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <scan>10</scan>
                 </configuration>
             </plugin>
         </plugins>
