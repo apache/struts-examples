@@ -12,16 +12,11 @@
 
         <action name="index">
             <result type="redirectAction">
-                <param name="actionName">input</param>
+                <param name="actionName">upload</param>
             </result>
         </action>
 
-        <action name="input" class="org.apache.struts.example.UploadAction">
-            <result name="input">WEB-INF/input.jsp</result>
-        </action>
-
-        <action name="upload" class="org.apache.struts.example.UploadAction" method="upload">
-            <result>WEB-INF/upload.jsp</result>
+        <action name="upload" class="org.apache.struts.example.UploadAction">
             <result name="input">WEB-INF/upload.jsp</result>
         </action>
 
