@@ -41,10 +41,6 @@ public class UploadAction extends ActionSupport implements UploadedFilesAware {
         return INPUT;
     }
 
-    public String upload() throws Exception {
-        return SUCCESS;
-    }
-
     public File[] getUpload() {
         return upload;
     }

@@ -7,20 +7,23 @@
 
 <body>
 
-<p>
-<s:a action="input">back to input</s:a>
-</p>
+<s:form action="upload" method="post" enctype="multipart/form-data">
+    <s:file name="upload"/>
+    <s:file name="upload"/>
+    <s:file name="upload"/>
+    <s:submit/>
+</s:form>
 
 <s:actionerror/>
 
 <s:iterator value="upload" var="u">
-    <s:property value="u"/><br/>
+    File: <s:property value="u"/><br/>
 </s:iterator>
 <s:iterator value="uploadContentType" var="ct">
-    <s:property value="ct"/><br/>
+    Content-Type: <s:property value="ct"/><br/>
 </s:iterator>
 <s:iterator value="uploadFileName" var="fn">
-    <s:property value="fn"/><br/>
+    File name: <s:property value="fn"/><br/>
 </s:iterator>
 
 </body>
