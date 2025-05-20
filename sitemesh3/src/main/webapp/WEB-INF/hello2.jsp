@@ -5,7 +5,7 @@
     <title>SiteMesh example: Hello 2 with Decorator 2</title>
 </head>
 <body>
-<h2>SiteMesh example: Hello 2 with Decorator 2</h1>
+<h2>SiteMesh example: Hello 2 with Decorator 2</h2>
 <h3>Decorators</h3>
 <div>
     <s:form action="hello" method="get">
@@ -14,5 +14,6 @@
     </s:form>
 </div>
 <p>Selected decorator: <s:property value="decorator"/></p>
+<s:a action="index">Index</s:a>
 </body>
 </html>

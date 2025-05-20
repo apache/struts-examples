@@ -14,5 +14,6 @@
     </s:form>
 </div>
 <p>Selected decorator: <s:property value="decorator"/></p>
+<s:a action="index">Index</s:a>
 </body>
 </html>
