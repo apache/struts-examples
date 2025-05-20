@@ -3,4 +3,5 @@
     <mapping path="/WEB-INF/error.jsp" exclude="true"/>
     <mapping path="/WEB-INF/hello1.jsp" decorator="decorator1.html"/>
     <mapping path="/WEB-INF/hello2.jsp" decorator="decorator2.html"/>
+    <mapping path="/WEB-INF/upload.jsp" decorator="upload-decorator.html"/>
 </sitemesh>

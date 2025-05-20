@@ -9,14 +9,16 @@
 
     <filter>
         <filter-name>struts2</filter-name>
-        <filter-class>
-            org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter
-        </filter-class>
+        <filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>REQUEST</dispatcher>
     </filter>
 
     <filter-mapping>
         <filter-name>struts2</filter-name>
         <url-pattern>/*</url-pattern>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>REQUEST</dispatcher>
     </filter-mapping>
 
     <welcome-file-list>
