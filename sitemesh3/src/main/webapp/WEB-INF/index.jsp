@@ -10,5 +10,7 @@
     <s:param name="decorator" value="1"/>
 </s:url>
 <s:a href="%{url}">Hello</s:a>
+<s:a action="index" namespace="/admin">Admin</s:a>
+<s:a action="upload">Upload</s:a>
 </body>
 </html>
