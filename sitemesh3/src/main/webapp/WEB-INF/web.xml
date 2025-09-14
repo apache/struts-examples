@@ -5,7 +5,7 @@
          http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
-    <display-name>Struts Tiles 2 Demo</display-name>
+    <display-name>Struts Sitemesh 3 Demo</display-name>
 
     <filter>
         <filter-name>struts2-prepare</filter-name>
@@ -38,7 +38,7 @@
     </filter-mapping>
 
     <welcome-file-list>
-        <welcome-file>/index.html</welcome-file>
+        <welcome-file>/index</welcome-file>
     </welcome-file-list>
 
 </web-app>
