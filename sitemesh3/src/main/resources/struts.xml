@@ -20,6 +20,9 @@
             <result name="error">/WEB-INF/error.jsp</result>
         </action>
 
+        <action name="upload" class="org.apache.struts.examples.sitemesh3.UploadAction">
+            <result name="input">/WEB-INF/upload.jsp</result>
+        </action>
     </package>
 
     <package name="default2" extends="struts-default" namespace="/admin">
