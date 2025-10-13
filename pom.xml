@@ -51,7 +51,7 @@
         <jetty-plugin.version>11.0.18</jetty-plugin.version>
         <jackson.version>2.14.1</jackson.version>
         <jackson-data-bind.version>2.14.1</jackson-data-bind.version>
-        <hibernate-validator.version>8.0.1.Final</hibernate-validator.version>
+        <hibernate-validator.version>9.0.1.Final</hibernate-validator.version>
     </properties>
 
     <profiles>
