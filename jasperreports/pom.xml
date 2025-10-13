@@ -18,7 +18,7 @@
   <properties>
     <jasperreports6.version>6.21.4</jasperreports6.version>
     <jasperreports.version>${jasperreports6.version}</jasperreports.version>
-    <jetty-plugin.version>12.1.0</jetty-plugin.version>
+    <jetty-plugin.version>12.1.2</jetty-plugin.version>
   </properties>
 
   <dependencies>
