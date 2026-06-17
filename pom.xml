@@ -110,6 +110,7 @@
         <module>rest-angular</module>
         <module>shiro-basic</module>
         <module>spring-struts</module>
+        <module>struts-parameter</module>
         <module>text-provider</module>
         <module>tiles</module>
         <module>themes</module>
