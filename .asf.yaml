@@ -23,9 +23,9 @@ github:
         includes:
           - "~DEFAULT_BRANCH"
           - "release/*"
-          - "rel/*"
         excludes: []
       bypass_teams:
         - root
+        - "struts-committers"
       restrict_deletion: true
       restrict_force_push: true
