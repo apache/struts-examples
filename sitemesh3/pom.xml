@@ -20,7 +20,7 @@
         <struts2.version>7.0.4-SNAPSHOT</struts2.version>
         -->
         <!-- it works with version where FORWARD_SERVLET_PATH is updated -->
-        <struts2.version>7.0.3</struts2.version>
+        <struts2.version>7.2.1</struts2.version>
     </properties>
 
     <dependencies>
