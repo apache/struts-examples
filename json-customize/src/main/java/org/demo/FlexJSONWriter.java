@@ -21,12 +21,11 @@ package org.demo;
 
 import flexjson.JSONSerializer;
 import flexjson.transformer.DateTransformer;
-import org.apache.struts2.json.JSONException;
-import org.apache.struts2.json.JSONWriter;
-
 import java.util.Collection;
 import java.util.Date;
 import java.util.regex.Pattern;
+import org.apache.struts2.json.JSONException;
+import org.apache.struts2.json.JSONWriter;
 
 /**
  * Customized JSONWriter using Flexjson
@@ -41,7 +40,7 @@ public class FlexJSONWriter implements JSONWriter {
     public String write(Object object, Collection<Pattern> excludeProperties, Collection<Pattern> includeProperties,
                         boolean excludeNullProperties) throws JSONException {
 
-        JSONSerializer serializer = new JSONSerializer();
+        JSONSerializer serializer = new JSONSerializer().exclude("*.class");
         if (excludeProperties != null) {
             for (Pattern p : excludeProperties) {
                 serializer = serializer.exclude(p.pattern());
