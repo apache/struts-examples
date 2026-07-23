@@ -5,7 +5,6 @@
 <struts>
   <constant name="struts.devMode" value="true"/>
   <constant name="struts.convention.action.packages" value="org.apache.struts_example"/>
-  <constant name="struts.action.extension" value=","/>
 
   <constant name="struts.custom.i18n.resources" value="DefaultMessages"/>
 
