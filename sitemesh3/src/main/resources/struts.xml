@@ -5,7 +5,6 @@
 <struts>
     <constant name="struts.devMode" value="true"/>
     <constant name="struts.ui.theme" value="simple"/>
-    <constant name="struts.action.extension" value=""/>
     <constant name="struts.custom.i18n.resources" value="DefaultMessages"/>
 
     <package name="default" extends="struts-default" namespace="/">
