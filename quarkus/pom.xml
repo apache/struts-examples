@@ -10,7 +10,7 @@
     </parent>
     <groupId>org.apache.struts.examples</groupId>
     <artifactId>quarkus</artifactId>
-    <name>Struts 2 Quarkus</name>
+    <name>Apache Struts Quarkus</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

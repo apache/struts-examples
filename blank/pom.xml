@@ -29,7 +29,7 @@
 
     <artifactId>blank</artifactId>
     <packaging>war</packaging>
-    <name>Struts 2 Blank Webapp</name>
+    <name>Apache Struts Blank Webapp</name>
 
     <dependencies>
 

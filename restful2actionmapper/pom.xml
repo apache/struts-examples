@@ -11,7 +11,7 @@
 
     <artifactId>restful2actionmapper</artifactId>
     <name>REST to Action Mapper Example Application</name>
-    <description>Example of using Rest style URLs for Struts 2 Getting Started tutorials</description>
+    <description>Example of using Rest style URLs for Apache Struts Getting Started tutorials</description>
 
     <packaging>war</packaging>
 

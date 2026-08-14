@@ -11,7 +11,7 @@
 
     <artifactId>basic-struts</artifactId>
     <name>Basic Struts2 Example</name>
-    <description>Basic Struts 2 example application</description>
+    <description>Basic Apache Struts example application</description>
 
     <packaging>war</packaging>
 

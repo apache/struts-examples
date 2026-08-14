@@ -10,8 +10,8 @@
     </parent>
 
     <artifactId>helloworld</artifactId>
-    <name>Hello World Struts 2 Example Application</name>
-    <description>Hello world example application for the Struts 2 Getting Started tutorials</description>
+    <name>Hello World Apache Struts Example Application</name>
+    <description>Hello world example application for the Apache Struts Getting Started tutorials</description>
 
     <packaging>war</packaging>
 

@@ -9,7 +9,7 @@
 
     <artifactId>bean-validation</artifactId>
     <name>Bean Validation</name>
-    <description>bean (JSR 303) validation example application for the Struts 2 getting started tutorials</description>
+    <description>bean (JSR 303) validation example application for the Apache Struts getting started tutorials</description>
 
     <packaging>war</packaging>
 

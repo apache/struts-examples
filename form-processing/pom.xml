@@ -11,7 +11,7 @@
 
     <artifactId>form-processing</artifactId>
     <name>Form Processing</name>
-    <description>Form processing example application for the Struts 2 getting started tutorials</description>
+    <description>Form processing example application for the Apache Struts getting started tutorials</description>
 
     <packaging>war</packaging>
 

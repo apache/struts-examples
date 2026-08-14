@@ -10,8 +10,8 @@
     </parent>
 
     <artifactId>interceptors</artifactId>
-    <name>Struts 2 Interceptors</name>
-    <description>Form XML validation example application for the Struts 2 getting started tutorials</description>
+    <name>Apache Struts Interceptors</name>
+    <description>Form XML validation example application for the Apache Struts getting started tutorials</description>
 
     <packaging>war</packaging>
 

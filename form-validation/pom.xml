@@ -11,7 +11,7 @@
 
     <artifactId>form-validation</artifactId>
     <name>Form validation</name>
-    <description>Form validation example application for the Struts 2 getting started tutorials</description>
+    <description>Form validation example application for the Apache Struts getting started tutorials</description>
 
     <packaging>war</packaging>
 

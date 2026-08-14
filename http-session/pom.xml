@@ -11,7 +11,7 @@
 
     <artifactId>http-session</artifactId>
     <name>Http Session</name>
-    <description>Struts 2 example application for the HTTP Session getting started tutorial</description>
+    <description>Apache Struts example application for the HTTP Session getting started tutorial</description>
 
     <packaging>war</packaging>
 

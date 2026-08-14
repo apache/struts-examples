@@ -10,8 +10,8 @@
     </parent>
 
     <artifactId>themes-override</artifactId>
-    <name>Struts 2 Themes Override</name>
-    <description>Struts 2 themes override example application for the Struts 2 getting started tutorials</description>
+    <name>Apache Struts Themes Override</name>
+    <description>Apache Struts themes override example application for the Apache Struts getting started tutorials</description>
 
     <packaging>war</packaging>
 

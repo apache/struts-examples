@@ -15,7 +15,7 @@
     <name>CRUD Example</name>
 
     <description>
-        Example of using Struts 2 for a web app that allows users to
+        Example of using Apache Struts for a web app that allows users to
         Create, Read, Update, and Delete data.
     </description>
 

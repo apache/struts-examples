@@ -10,7 +10,7 @@
 
     <artifactId>validation-messages</artifactId>
     <name>validation-messages</name>
-    <description>Struts 2 example application how to customise validation messages</description>
+    <description>Apache Struts example application how to customise validation messages</description>
 
     <packaging>war</packaging>
 

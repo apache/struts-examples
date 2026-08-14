@@ -11,8 +11,8 @@
 
     <artifactId>coding-actions</artifactId>
 
-    <name>Coding Struts 2 Action</name>
-    <description>Struts 2 example application for the Getting Started coding Struts 2 actions</description>
+    <name>Coding Apache Struts Action</name>
+    <description>Example application for the Getting Started coding Struts actions</description>
 
     <packaging>war</packaging>
 

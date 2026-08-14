@@ -11,7 +11,7 @@
 
     <artifactId>wildcard-method-selection</artifactId>
     <name>Wildcard Method Selection</name>
-    <description>Wildcard method selection example application for the Struts 2 getting started tutorials</description>
+    <description>Wildcard method selection example application for the Apache Struts getting started tutorials</description>
 
     <packaging>war</packaging>
 

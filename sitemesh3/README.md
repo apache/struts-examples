@@ -1,6 +1,6 @@
-Struts 2 Sitemesh 3 example
+Apache Struts Sitemesh 3 example
 ==================
 
-Simple Struts 2 project which demonstrates Sitemesh 3 usage
+Simple Apache Struts project which demonstrates Sitemesh 3 usage
 
-Published under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+Published under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0.html)

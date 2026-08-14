@@ -7,10 +7,10 @@
     <version>2.0.0</version>
     <packaging>pom</packaging>
 
-    <name>Struts 2 Examples</name>
+    <name>Apache Struts Examples</name>
     <description>
-        This is the parent pom for the Struts 2 examples that
-        go with the Struts 2 Getting Started series of tutorials.
+        This is the parent pom for the Apache Struts examples that
+        go with the Struts Getting Started series of tutorials.
     </description>
 
     <licenses>

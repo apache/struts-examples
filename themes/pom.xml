@@ -10,8 +10,8 @@
     </parent>
 
     <artifactId>themes</artifactId>
-    <name>Struts 2 Themes</name>
-    <description>Struts 2 themes example application for the Struts 2 getting started tutorials</description>
+    <name>Apache Struts Themes</name>
+    <description>Apache Struts themes example application for the Apache Struts getting started tutorials</description>
 
     <packaging>war</packaging>
 
