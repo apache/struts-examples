@@ -30,6 +30,7 @@ import org.apache.struts.examples.mailreader2.dao.impl.memory.MemoryUser;
 import org.apache.struts2.ActionSupport;
 import org.apache.struts2.action.ApplicationAware;
 import org.apache.struts2.action.SessionAware;
+import org.apache.struts2.interceptor.parameter.StrutsParameter;
 
 import java.util.Map;
 
@@ -160,6 +161,7 @@ public class MailreaderSupport extends ActionSupport implements SessionAware, Ap
      *
      * @param value The task to set.
      */
+    @StrutsParameter
     public void setTask(String value) {
         task =  value;
     }
@@ -216,6 +218,7 @@ public class MailreaderSupport extends ActionSupport implements SessionAware, Ap
      *
      * @param value
      */
+    @StrutsParameter
     public void setHost(String value) {
         host = value;
     }
@@ -245,6 +248,7 @@ public class MailreaderSupport extends ActionSupport implements SessionAware, Ap
      *
      * @param value The password to set.
      */
+    @StrutsParameter
     public void setPassword(String value) {
         password = value;
     }
@@ -275,6 +279,7 @@ public class MailreaderSupport extends ActionSupport implements SessionAware, Ap
      *
      * @param value The confirmation password to set.
      */
+    @StrutsParameter
     public void setPassword2(String value) {
         password2 = value;
     }
@@ -304,6 +309,7 @@ public class MailreaderSupport extends ActionSupport implements SessionAware, Ap
      *
      * @param value The username to set.
      */
+    @StrutsParameter
     public void setUsername(String value) {
         username = value;
     }
@@ -341,6 +347,7 @@ public class MailreaderSupport extends ActionSupport implements SessionAware, Ap
      *
      * @return User object for authenticated user.
      */
+    @StrutsParameter(depth = 1)
     public User getUser() {
         return (User) getSession().get(Constants.USER_KEY);
     }
@@ -465,6 +472,7 @@ public class MailreaderSupport extends ActionSupport implements SessionAware, Ap
      *
      * @return Cached Subscription object or null
      */
+    @StrutsParameter(depth = 1)
     public Subscription getSubscription() {
         return (Subscription) getSession().get(Constants.SUBSCRIPTION_KEY);
     }

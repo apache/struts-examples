@@ -311,7 +311,9 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 
 ### Task 4: Fix missing `@StrutsParameter` annotations
 
-Eight fixes across five classes in four modules. Each was hand-verified against the submitting JSP form. **Do not add annotations beyond these eight** — the audit confirmed every other action is either correct, ModelDriven-exempt, or has a property that is never submitted (annotating those would wrongly widen the injection surface).
+Eight fixes across five classes in four modules. Each was hand-verified against the submitting JSP form.
+
+**Correction (added after the final whole-branch review):** the audit above was not exhaustive. It matched only `name=` on `<s:*>` tags — missing `key=`, which also sets the parameter name — and it did not consider accessors inherited from a superclass. This let three modules slip through with every submitted parameter silently dropped: `bean-validation` and `themes-override` (`EditAction.getPersonBean()`, JSPs use `key=`) and `mailreader2` (`MailreaderSupport`, the shared base class for `RegistrationAction`, `SubscriptionAction`, and `LoginAction`). The final review caught these and 9 further `@StrutsParameter` annotations were added, bringing the total to 17 across 8 modules.
 
 Rules being applied, from `ParametersInterceptor.hasValidAnnotatedPropertyDescriptor`:
 - depth 0 → annotation goes on the **setter**
@@ -764,4 +766,4 @@ Expected: roughly 140–150 files. The per-task counts are the authoritative che
   - `text-provider` — `SystemAction.setTextProvider` is `@Inject`-driven, not a request parameter.
   - `file-upload` and `sitemesh3` — `UploadAction implements UploadedFilesAware` and receives files via `withUploadedFiles(List<UploadedFile>)`. There is no `setUpload`; `<s:file>` is consumed by the file-upload interceptor, not `ParametersInterceptor`.
   - `struts-parameter` — `users[%{#status.index}].id` evaluates to `users[0].id`, depth 2. The existing `@StrutsParameter(depth = 2)` is already correct.
-- **No `unverified` rows.** Every action's parameters were traceable to a JSP form, a validation descriptor, or an assignment in `execute()`.
+- **No `unverified` rows** — but this was not accurate: the audit missed three modules by matching only `name=` on `<s:*>` tags (not `key=`) and by not considering accessors inherited from a superclass. The final whole-branch review caught `bean-validation`, `themes-override`, and `mailreader2` and added 9 further annotations, bringing the total to 17 across 8 modules.
