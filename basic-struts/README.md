@@ -20,5 +20,5 @@ In a web browser go to:  [http://localhost:8080/basic-struts/index.action](http:
 You should see a web page with 
 
 ```
-Welcome to Struts 2!
+Welcome To Struts 2!
 ```
