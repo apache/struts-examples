@@ -8,6 +8,7 @@ import org.apache.struts.crud.service.DefaultPersonService;
 import org.apache.struts.crud.service.PersonService;
 import org.apache.struts2.ActionSupport;
 import org.apache.struts2.Preparable;
+import org.apache.struts2.interceptor.parameter.StrutsParameter;
 
 /**
  * Acts as a controller to handle actions related to editing a Person.
@@ -77,6 +78,7 @@ public class PersonAction extends ActionSupport implements Preparable {
         return persons;
     }
 
+    @StrutsParameter(depth = 2)
     public Person getPerson() {
         return person;
     }
