@@ -1,1 +1,1 @@
-Template application for building professional crud applications with Struts2.
+Template application for building professional crud applications with Apache Struts.

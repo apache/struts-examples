@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>basic-struts</artifactId>
-    <name>Basic Struts2 Example</name>
+    <name>Basic Apache Struts Example</name>
     <description>Basic Apache Struts example application</description>
 
     <packaging>war</packaging>

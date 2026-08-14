@@ -8,7 +8,7 @@
     </parent>
 
     <artifactId>shiro-basic</artifactId>
-    <name>Struts2 with Basic Shiro Security Integration</name>
+    <name>Apache Struts with Basic Shiro Security Integration</name>
 
     <packaging>war</packaging>
 

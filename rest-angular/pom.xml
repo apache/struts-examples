@@ -10,7 +10,7 @@
 
     <artifactId>rest-angular</artifactId>
     <name>REST Plugin based application with AngularJS</name>
-    <description>A REST Plugin based Struts2 application with AngularJS frontend, Bean validation, Exception Handling and multi language support.</description>
+    <description>A REST Plugin based Apache Struts application with AngularJS frontend, Bean validation, Exception Handling and multi language support.</description>
 
     <packaging>war</packaging>
 

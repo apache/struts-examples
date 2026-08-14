@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>spring-struts</artifactId>
-    <name>Struts2 with Spring Integration</name>
+    <name>Apache Struts with Spring Integration</name>
 
     <packaging>war</packaging>
 
