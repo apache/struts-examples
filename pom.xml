@@ -49,7 +49,7 @@
         <struts2.version>7.3.0</struts2.version>
         <log4j2.version>2.25.4</log4j2.version>
         <jetty-plugin.version>11.0.18</jetty-plugin.version>
-        <jackson.version>2.22.0</jackson.version>
+        <jackson.version>2.22.1</jackson.version>
         <hibernate-validator.version>8.0.1.Final</hibernate-validator.version>
         <spring-web.version>6.2.12</spring-web.version>
     </properties>
