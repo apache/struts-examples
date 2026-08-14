@@ -1,13 +1,11 @@
 package org.demo;
 
+import static net.javacrumbs.jsonunit.assertj.JsonAssertions.assertThatJson;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 
-import com.jayway.jsonpath.JsonPath;
 import jakarta.servlet.ServletException;
 import java.io.UnsupportedEncodingException;
-import java.util.List;
 import org.apache.struts2.dispatcher.mapper.ActionMapping;
 import org.apache.struts2.junit.StrutsJUnit4TestCase;
 import org.junit.Test;
@@ -31,20 +29,20 @@ public class ProduceActionTest extends StrutsJUnit4TestCase<ProduceAction> {
     log.info("output: {}", output);
 
     assertNotNull(output);
-    assertEquals("William Shakespeare", JsonPath.read(output, "$.name"));
-    assertEquals("WillShak", JsonPath.read(output, "$.username"));
-    assertEquals("******", JsonPath.read(output, "$.password"));
-    assertEquals("04/26/1564", JsonPath.read(output, "$.birthday"));
 
-    assertEquals("Stratford-upon-Avon", JsonPath.read(output, "$.addresses[0].city"));
-    assertEquals("home", JsonPath.read(output, "$.addresses[0].name"));
-    assertEquals("Henley", JsonPath.read(output, "$.addresses[0].street"));
+    assertThatJson(output).node("nickname").isAbsent();
 
-    List<Object> addresses = JsonPath.read(output, "$.addresses");
-    assertEquals(1, addresses.size());
+    assertThatJson(output).node("name").isEqualTo("William Shakespeare");
+    assertThatJson(output).node("username").isEqualTo("WillShak");
+    assertThatJson(output).node("password").isEqualTo("******");
+    assertThatJson(output).node("birthday").isEqualTo("04/26/1564");
 
-    String lastLogin = JsonPath.read(output, "$.lastLogin");
-    assertNotNull(lastLogin);
-    assertTrue(lastLogin.matches("\\d{2}/\\d{2}/\\d{4}"));
+    assertThatJson(output).node("addresses[0].city").isEqualTo("Stratford-upon-Avon");
+    assertThatJson(output).node("addresses[0].name").isEqualTo("home");
+    assertThatJson(output).node("addresses[0].street").isEqualTo("Henley");
+
+    assertThatJson(output).node("addresses").isArray().hasSize(1);
+
+    assertThatJson(output).node("lastLogin").isString().matches("\\d{2}/\\d{2}/\\d{4}");
   }
 }
