@@ -38,7 +38,7 @@ public class RegisterAction extends ActionSupport {
         return SUCCESS;
     }
 
-    @StrutsParameter(depth = 10)
+    @StrutsParameter(depth = 1)
     public Person getPersonBean() {
         return personBean;
     }

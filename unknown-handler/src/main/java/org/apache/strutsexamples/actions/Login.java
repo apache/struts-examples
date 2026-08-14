@@ -3,6 +3,7 @@ package org.apache.strutsexamples.actions;
 import org.apache.struts2.ActionSupport;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.action.SessionAware;
+import org.apache.struts2.interceptor.parameter.StrutsParameter;
 
 import java.util.Map;
 
@@ -37,6 +38,7 @@ public class Login extends ActionSupport implements SessionAware {
         return email;
     }
 
+    @StrutsParameter
     public void setEmail(String email) {
         this.email = email;
     }
@@ -45,6 +47,7 @@ public class Login extends ActionSupport implements SessionAware {
         return password;
     }
 
+    @StrutsParameter
     public void setPassword(String password) {
         this.password = password;
     }

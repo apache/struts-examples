@@ -1,5 +1,5 @@
 This is the example project referred to in the
-Struts 2 documentation, JasperReport tutorial.
+Apache Struts documentation, JasperReport tutorial.
 
 * See: https://struts.apache.org/getting-started/jasper-reports-tutorial.
 

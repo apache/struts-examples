@@ -1,4 +1,4 @@
-This is the example project referred to in the Struts 2 documentation, [How To Create A Struts 2 Web Application](http://struts.apache.org/getting-started/how-to-create-a-struts2-web-application.html) tutorial.
+This is the example project referred to in the Apache Struts documentation, [How To Create An Apache Struts Web Application](https://struts.apache.org/getting-started/how-to-create-a-struts2-web-application.html) tutorial.
 
 ## Building the war
 ### Using Maven
@@ -20,5 +20,5 @@ In a web browser go to:  [http://localhost:8080/basic-struts/index.action](http:
 You should see a web page with 
 
 ```
-Welcome to Struts 2!
+Welcome To Struts 2!
 ```

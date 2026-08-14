@@ -1,6 +1,6 @@
 # Quarkus example
 
-This is a simple example how to use Struts 2 with [Quarkus](https://quarkus.io/). Quarkus doesn't support JSPs
+This is a simple example how to use Apache Struts with [Quarkus](https://quarkus.io/). Quarkus doesn't support JSPs
 but yoy can use Freemarker instead or writing directly into HttpServletResponse.
 
 In `application.properties` has been defined `quarkus.oidc.enabled=false` to disable redirecting to `/auth` even 

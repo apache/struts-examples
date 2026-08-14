@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
@@ -11,7 +11,7 @@
 
     <artifactId>form-processing</artifactId>
     <name>Form Processing</name>
-    <description>Form processing example application for the Struts 2 getting started tutorials</description>
+    <description>Form processing example application for the Apache Struts getting started tutorials</description>
 
     <packaging>war</packaging>
 

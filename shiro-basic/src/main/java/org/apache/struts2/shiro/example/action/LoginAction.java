@@ -12,6 +12,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts2.ActionSupport;
 import org.apache.struts2.Preparable;
+import org.apache.struts2.interceptor.parameter.StrutsParameter;
 
 public class LoginAction extends ActionSupport implements Preparable
 {
@@ -98,6 +99,7 @@ public class LoginAction extends ActionSupport implements Preparable
         return username;
     }
 
+    @StrutsParameter
     public void setUsername(String username)
     {
         this.username = username;
@@ -108,6 +110,7 @@ public class LoginAction extends ActionSupport implements Preparable
         return password;
     }
 
+    @StrutsParameter
     public void setPassword(String password)
     {
         this.password = password;

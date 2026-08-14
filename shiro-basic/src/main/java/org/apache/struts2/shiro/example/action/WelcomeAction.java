@@ -3,6 +3,7 @@ package org.apache.struts2.shiro.example.action;
 import org.apache.shiro.session.Session;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.struts2.interceptor.parameter.StrutsParameter;
 
 public class WelcomeAction extends ShiroBaseAction
 {
@@ -99,6 +100,7 @@ public class WelcomeAction extends ShiroBaseAction
         return username;
     }
 
+    @StrutsParameter
     public void setUsername(String username) 
     {
         this.username = username;

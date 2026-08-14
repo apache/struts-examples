@@ -19,6 +19,8 @@
 
 package org.apache.struts.validation_messages;
 
+import org.apache.struts2.interceptor.parameter.StrutsParameter;
+
 public class Login extends ExampleSupport {
 
     public String execute() {
@@ -40,6 +42,7 @@ public class Login extends ExampleSupport {
         return username;
     }
 
+    @StrutsParameter
     public void setUsername(String username) {
         this.username = username;
     }
@@ -50,6 +53,7 @@ public class Login extends ExampleSupport {
         return password;
     }
 
+    @StrutsParameter
     public void setPassword(String password) {
         this.password = password;
     }

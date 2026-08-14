@@ -1,5 +1,5 @@
 <!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
-    "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+    "https://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
 <validators>
   <validator type="requiredstring">
     <param name="fieldName">personBean.firstName</param>

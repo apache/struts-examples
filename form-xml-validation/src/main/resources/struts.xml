@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts PUBLIC
-    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
-    "https://struts.apache.org/dtds/struts-2.5.dtd">
+    "-//Apache Software Foundation//DTD Struts Configuration 6.5//EN"
+    "https://struts.apache.org/dtds/struts-6.5.dtd">
 
 <struts>
 
