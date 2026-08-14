@@ -4,6 +4,14 @@
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
   <display-name>struts2shiro</display-name>
+
+  <!-- Track sessions with a cookie only. Without this the container rewrites
+       redirect URLs as ...;jsessionid=... on a visitor's first request, and
+       Jetty 11 rejects its own rewritten URI with HTTP 400 Invalid request. -->
+  <session-config>
+    <tracking-mode>COOKIE</tracking-mode>
+  </session-config>
+
   <listener>
     <listener-class>org.apache.shiro.web.env.EnvironmentLoaderListener</listener-class>
   </listener>
