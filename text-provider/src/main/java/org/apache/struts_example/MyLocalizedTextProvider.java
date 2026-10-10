@@ -1,13 +1,11 @@
 package org.apache.struts_example;
 
-import org.apache.struts2.text.StrutsLocalizedTextProvider;
-
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
 
-public class MyLocalizedTextProvider extends StrutsLocalizedTextProvider {
+public class MyLocalizedTextProvider extends WildcardLocalizedTextProvider {
 
     public MyLocalizedTextProvider() {
         super();
