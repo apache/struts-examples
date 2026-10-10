@@ -15,6 +15,13 @@
   <s:text name="global.key"/>
 </h2>
 
+<h3>Bundles registered with a wildcard</h3>
+<ul>
+  <li><s:text name="common.greeting"/></li>
+  <li><s:text name="labels.title"/></li>
+  <li><s:text name="shared.key"/></li>
+</ul>
+
 <h3>Select your provider</h3>
 <ul>
   <li>

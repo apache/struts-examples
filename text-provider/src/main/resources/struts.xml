@@ -6,7 +6,10 @@
   <constant name="struts.devMode" value="true"/>
   <constant name="struts.convention.action.packages" value="org.apache.struts_example"/>
 
-  <constant name="struts.custom.i18n.resources" value="DefaultMessages"/>
+  <!--
+  The ".*" entry is expanded by WildcardLocalizedTextProvider, plain Struts does not support wildcards here
+  -->
+  <constant name="struts.custom.i18n.resources" value="DefaultMessages,org.apache.struts_example.messages.*"/>
 
   <!--
   This factory overrides the one defined in Struts and will be used a default one across the framework
