@@ -44,7 +44,7 @@ tutorial link and the URL to open.
 
 These examples are teaching material, so keep config files on the current standard:
 
-- Struts config DOCTYPE: `struts-6.5.dtd` (`https://struts.apache.org/dtds/struts-6.5.dtd`);
+- Struts config DOCTYPE: `struts-7.5.dtd` (`https://struts.apache.org/dtds/struts-7.5.dtd`);
   `web.xml` on `web-app_6_0.xsd`, `version="6.0"`; Jakarta (`jakarta.*`) namespaces only.
 - **`@StrutsParameter` is required** for request parameters to reach an action
   (`struts.parameters.requireAnnotations=true` is the default). A missing annotation silently drops
