@@ -4,7 +4,7 @@
 <s:url var="ordersUrl" action="orders" namespace="/legacy"/>
 <s:url var="reportUrl" action="report" namespace="/legacy"/>
 <h2>Generated links</h2>
-<p>Each link is built with <code>&lt;s:url&gt;</code>, which uses the target action's extension, not the extension of this page.</p>
+<p>Each link is built with <code>&lt;s:url&gt;</code>, which uses the target action's extensions: it keeps this page's extension only when the target accepts it, otherwise it uses the target's first entry.</p>
 <table>
     <tr><th>Layer</th><th>Link</th><th>Generated URL</th><th>Wrong extension</th></tr>
     <tr>

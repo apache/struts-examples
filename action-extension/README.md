@@ -26,14 +26,16 @@ An action's extensions are taken from the most specific place that declares them
 
 action → package → parent packages → `struts.action.extension`
 
-Every place uses the same format: a comma-separated list. The first entry is the one generated
-URLs use, and an empty entry means "no extension" (`extension=""`, or `action,,`).
+Every place uses the same format: a comma-separated list. The first entry is the default, and an
+empty entry means "no extension" (`extension=""`, or `action,,`).
 
 ## Generated URLs
 
 `<s:url>`, `<s:a>`, `<s:form>` and the `redirectAction` result build the URL from the
-**target** action's extensions. A link to `orders` from `/legacy/report` comes out as
-`/legacy/orders.do`, and a link to `hello` from `/legacy/orders.do` comes out as `/hello.action`.
+**target** action's extensions. The URL keeps the current page's extension when the target
+accepts it, otherwise it uses the target's first entry. Every list in this example has a single
+entry, so a link to `orders` from `/legacy/report` comes out as `/legacy/orders.do`, and a link to
+`hello` from `/legacy/orders.do` comes out as `/hello.action`.
 
 ## Wrong extensions
 
