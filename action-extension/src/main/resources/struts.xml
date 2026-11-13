@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 7.5//EN"
+        "https://struts.apache.org/dtds/struts-7.5.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.devMode" value="true"/>
+
+    <!-- Global: actions that declare nothing answer only on .action -->
+    <constant name="struts.action.extension" value="action"/>
+
+    <package name="default" namespace="/" extends="struts-default">
+        <global-results>
+            <result name="bad-extension">/WEB-INF/jsp/badExtension.jsp</result>
+        </global-results>
+
+        <action name="index">
+            <result>/WEB-INF/jsp/index.jsp</result>
+        </action>
+
+        <action name="hello">
+            <result>/WEB-INF/jsp/hello.jsp</result>
+        </action>
+    </package>
+
+    <!-- Package override: every action in this package answers on .do -->
+    <package name="legacy" namespace="/legacy" extends="struts-default" extension="do">
+        <global-results>
+            <result name="bad-extension">/WEB-INF/jsp/badExtension.jsp</result>
+        </global-results>
+
+        <action name="orders">
+            <result>/WEB-INF/jsp/orders.jsp</result>
+        </action>
+
+        <!-- Action override: an empty extension means no extension at all -->
+        <action name="report" extension="">
+            <result>/WEB-INF/jsp/report.jsp</result>
+        </action>
+    </package>
+</struts>
