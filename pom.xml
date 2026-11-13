@@ -124,6 +124,7 @@
         <module>wildcard-regex</module>
         <module>jasperreports</module>
         <module>sitemesh3</module>
+        <module>action-extension</module>
   </modules>
 
     <dependencyManagement>

@@ -1,0 +1,28 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<s:url var="helloUrl" action="hello" namespace="/"/>
+<s:url var="ordersUrl" action="orders" namespace="/legacy"/>
+<s:url var="reportUrl" action="report" namespace="/legacy"/>
+<h2>Generated links</h2>
+<p>Each link is built with <code>&lt;s:url&gt;</code>, which uses the target action's extensions: it keeps this page's extension only when the target accepts it, otherwise it uses the target's first entry.</p>
+<table>
+    <tr><th>Layer</th><th>Link</th><th>Generated URL</th><th>Wrong extension</th></tr>
+    <tr>
+        <td>Global (<code>struts.action.extension</code>)</td>
+        <td><s:a href="%{#helloUrl}">hello</s:a></td>
+        <td><code><s:property value="#helloUrl"/></code></td>
+        <td><a href="${pageContext.request.contextPath}/hello.do">hello.do</a> (plain 404)</td>
+    </tr>
+    <tr>
+        <td>Package (<code>&lt;package extension="do"&gt;</code>)</td>
+        <td><s:a href="%{#ordersUrl}">orders</s:a></td>
+        <td><code><s:property value="#ordersUrl"/></code></td>
+        <td><a href="${pageContext.request.contextPath}/legacy/orders.action">orders.action</a> (rejected)</td>
+    </tr>
+    <tr>
+        <td>Action (<code>&lt;action extension=""&gt;</code>)</td>
+        <td><s:a href="%{#reportUrl}">report</s:a></td>
+        <td><code><s:property value="#reportUrl"/></code></td>
+        <td><a href="${pageContext.request.contextPath}/legacy/report.do">report.do</a> (rejected)</td>
+    </tr>
+</table>
